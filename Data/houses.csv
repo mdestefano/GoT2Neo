@@ -1,0 +1,15 @@
+name,words,region,seat,lord,coa,alive,religion
+Bolton,Our Blades are Sharp,North,Dreadfort,"None, extinct",https://awoiaf.westeros.org//images/thumb/0/0c/House_Bolton.svg/250px-House_Bolton.svg.png,FALSE,Old Gods of The Forest
+Tyrell,Growing Strong,Reach,Highgarden,"None, extinct",https://awoiaf.westeros.org//images/thumb/3/31/House_Tyrell.svg/250px-House_Tyrell.svg.png,FALSE,Faith of the Seven
+Umber,Unknown,North,Last Hearth,"None, extinct",https://awoiaf.westeros.org//images/thumb/f/f2/Umbercrest.png/250px-Umbercrest.png,FALSE,Old Gods of The Forest
+Stark,Winter is Coming,North,Winterfell,Sansa Stark,https://awoiaf.westeros.org//images/thumb/7/7e/House_Stark.svg/250px-House_Stark.svg.png,TRUE,Old Gods of The Forest
+Targaryen,Fire and Blood,"Slavers Bay, Crownlands, Valyria","Great Pyramid, Meereen, Aegonfort, Red Keep, Dragonstone, Summerhall","None, Aegon Targaryen",https://awoiaf.westeros.org//images/thumb/1/1e/House_Targaryen.svg/250px-House_Targaryen.svg.png,TRUE,Faith of the Seven
+Lannister,Hear Me Roar,Westerlands,Casterly Rock,Tyrion Lannister,https://awoiaf.westeros.org//images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png,TRUE,Faith of the Seven
+Martell,"Unbowed, Unbent, Unbroken",Dorne,"Old Palace, Sunspear",Prince Martell,https://awoiaf.westeros.org//images/thumb/6/60/House_Martell.svg/250px-House_Martell.svg.png,TRUE,Faith of the Seven
+Frey,Unknown,Riverlands,Twins,"None, extinct",https://awoiaf.westeros.org//images/thumb/d/da/House_Frey.svg/250px-House_Frey.svg.png,FALSE,Faith of the Seven
+Mormont,Here We Stand,North,Mormont Keep,"None, extinct",https://awoiaf.westeros.org//images/thumb/4/46/House_Mormont.svg/250px-House_Mormont.svg.png,FALSE,Old Gods of The Forest
+Tarly,First in Battle,Reach,Horn Hill,Talla Tarly,https://awoiaf.westeros.org//images/thumb/c/cc/House_Tarly.svg/250px-House_Tarly.svg.png,TRUE,Faith of the Seven
+Tully,"Family, Duty, Honor",Riverlands,Riverrun,Edmure Tully,https://awoiaf.westeros.org//images/thumb/6/61/House_Tully.svg/250px-House_Tully.svg.png,TRUE,Faith of the Seven
+Baratheon,Ours is the Fury,Stormlands,Storms End,Gendry Baratheon,https://awoiaf.westeros.org//images/thumb/2/2d/House_Baratheon.svg/250px-House_Baratheon.svg.png,TRUE,Faith of the Seven
+Greyjoy,We Do Not Sow,Iron Islands,Pyke,Yara Greyjoy,https://awoiaf.westeros.org//images/thumb/5/5b/House_Greyjoy.svg/250px-House_Greyjoy.svg.png,TRUE,Drowned God
+Arryn,As High as Honor,The Vale of Arryn,The Eyre,Robin Arryn,https://vignette.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest/scale-to-width-down/350?cb=20170101094153,TRUE,Faith of the Seven
