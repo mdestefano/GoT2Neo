@@ -9,3 +9,5 @@
   - The data on the scenes instead show start and end times of the scene, the location, the characters that appear and any relevant events
 - **location.json**: The locations of the series.
   - Each data is composed of the main location and the relative sub-locations
+- **houses.csv**: The major houses in the series
+  - Each record contains: house name, words, region, seat, current lord (s8), coat of arms, is alive (s8), religion
