@@ -1,0 +1,1262 @@
+{
+  "sexes": [
+    {
+      "id": 1,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Ros"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 23
+    },
+    {
+      "id": 2,
+      "character": "Ros",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 23
+    },
+    {
+      "id": 3,
+      "character": "Khal Drogo",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 34
+    },
+    {
+      "id": 4,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Khal Drogo"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 34
+    },
+    {
+      "id": 5,
+      "character": "Jaime Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 36
+    },
+    {
+      "id": 6,
+      "character": "Cersei Lannister",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 36
+    },
+    {
+      "id": 7,
+      "character": "Khal Drogo",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 47
+    },
+    {
+      "id": 8,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Khal Drogo"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 47
+    },
+    {
+      "id": 9,
+      "character": "Khal Drogo",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 56
+    },
+    {
+      "id": 10,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Khal Drogo"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 56
+    },
+    {
+      "id": 11,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Khal Drogo"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 90
+    },
+    {
+      "id": 12,
+      "character": "Khal Drogo",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 90
+    },
+    {
+      "id": 13,
+      "character": "Viserys Targaryen",
+      "with": [
+        "Doreah"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 100
+    },
+    {
+      "id": 14,
+      "character": "Doreah",
+      "with": [
+        "Viserys Targaryen"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 100
+    },
+    {
+      "id": 15,
+      "character": "Ros",
+      "with": [
+        "Theon Greyjoy"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 128
+    },
+    {
+      "id": 16,
+      "character": "Theon Greyjoy",
+      "with": [
+        "Ros"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 128
+    },
+    {
+      "id": 17,
+      "character": "Renly Baratheon",
+      "with": [
+        "Loras Tyrell"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 144
+    },
+    {
+      "id": 18,
+      "character": "Loras Tyrell",
+      "with": [
+        "Renly Baratheon"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 144
+    },
+    {
+      "id": 19,
+      "character": "Ros",
+      "with": [
+        "Armeca"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 170
+    },
+    {
+      "id": 20,
+      "character": "Armeca",
+      "with": [
+        "Ros"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 170
+    },
+    {
+      "id": 21,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Shae"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 243
+    },
+    {
+      "id": 22,
+      "character": "Shae",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 243
+    },
+    {
+      "id": 23,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Shae"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 245
+    },
+    {
+      "id": 24,
+      "character": "Shae",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 245
+    },
+    {
+      "id": 25,
+      "character": "Cersei Lannister",
+      "with": [
+        "Lancel Lannister"
+      ],
+      "type": "incest",
+      "when": "past",
+      "sceneId": 266
+    },
+    {
+      "id": 26,
+      "character": "Lancel Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "incest",
+      "when": "past",
+      "sceneId": 266
+    },
+    {
+      "id": 27,
+      "character": "Shae",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 273
+    },
+    {
+      "id": 28,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Shae"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 273
+    },
+    {
+      "id": 29,
+      "character": "Grand Maester Pycelle",
+      "with": [
+        "Ros"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 277
+    },
+    {
+      "id": 30,
+      "character": "Ros",
+      "with": [
+        "Grand Maester Pycelle"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 277
+    },
+    {
+      "id": 31,
+      "character": "Theon Greyjoy",
+      "with": [
+        "Captain's Daughter"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 328
+    },
+    {
+      "id": 32,
+      "character": "Captain's Daughter",
+      "with": [
+        "Theon Greyjoy"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 328
+    },
+    {
+      "id": 33,
+      "character": "Brothel Customer",
+      "with": [
+        "Armeca"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 329
+    },
+    {
+      "id": 34,
+      "character": "Armeca",
+      "with": [
+        "Brothel Customer"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 329
+    },
+    {
+      "id": 35,
+      "character": "Stannis Baratheon",
+      "with": [
+        "Melisandre"
+      ],
+      "type": "ambition",
+      "when": "present",
+      "sceneId": 345
+    },
+    {
+      "id": 36,
+      "character": "Melisandre",
+      "with": [
+        "Stannis Baratheon"
+      ],
+      "type": "ambition",
+      "when": "present",
+      "sceneId": 345
+    },
+    {
+      "id": 37,
+      "character": "Renly Baratheon",
+      "with": [
+        "Loras Tyrell"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 365
+    },
+    {
+      "id": 38,
+      "character": "Loras Tyrell",
+      "with": [
+        "Renly Baratheon"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 365
+    },
+    {
+      "id": 39,
+      "character": "Grand Maester Pycelle",
+      "with": [
+        "Daisy"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 371
+    },
+    {
+      "id": 40,
+      "character": "Daisy",
+      "with": [
+        "Grand Maester Pycelle"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 371
+    },
+    {
+      "id": 41,
+      "character": "Ros",
+      "with": [
+        "Daisy"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 389
+    },
+    {
+      "id": 42,
+      "character": "Daisy",
+      "with": [
+        "Ros"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 389
+    },
+    {
+      "id": 43,
+      "character": "Theon Greyjoy",
+      "with": [
+        "Osha"
+      ],
+      "type": "served",
+      "when": "future",
+      "sceneId": 488
+    },
+    {
+      "id": 44,
+      "character": "Osha",
+      "with": [
+        "Theon Greyjoy"
+      ],
+      "type": "served",
+      "when": "future",
+      "sceneId": 488
+    },
+    {
+      "id": 45,
+      "character": "Robb Stark",
+      "with": [
+        "Talisa Maegyr"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 564
+    },
+    {
+      "id": 46,
+      "character": "Talisa Maegyr",
+      "with": [
+        "Robb Stark"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 564
+    },
+    {
+      "id": 47,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Shae"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 581
+    },
+    {
+      "id": 48,
+      "character": "Shae",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 581
+    },
+    {
+      "id": 49,
+      "character": "Xaro Xhoan Daxos",
+      "with": [
+        "Doreah"
+      ],
+      "type": "coerced",
+      "when": "past",
+      "sceneId": 746
+    },
+    {
+      "id": 50,
+      "character": "Doreah",
+      "with": [
+        "Xaro Xhoan Daxos"
+      ],
+      "type": "coerced",
+      "when": "past",
+      "sceneId": 746
+    },
+    {
+      "id": 51,
+      "character": "Tyrion Lannister",
+      "with": [
+        "Shae"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 840
+    },
+    {
+      "id": 52,
+      "character": "Shae",
+      "with": [
+        "Tyrion Lannister"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 840
+    },
+    {
+      "id": 53,
+      "character": "Podrick Payne",
+      "with": [
+        "Genna",
+        "Marei",
+        "Kayla"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 885
+    },
+    {
+      "id": 54,
+      "character": "Genna",
+      "with": [
+        "Podrick Payne"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 885
+    },
+    {
+      "id": 55,
+      "character": "Marei",
+      "with": [
+        "Podrick Payne"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 885
+    },
+    {
+      "id": 56,
+      "character": "Kayla",
+      "with": [
+        "Podrick Payne"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 885
+    },
+    {
+      "id": 57,
+      "character": "Jon Snow",
+      "with": [
+        "Ygritte"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 950
+    },
+    {
+      "id": 58,
+      "character": "Ygritte",
+      "with": [
+        "Jon Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 950
+    },
+    {
+      "id": 59,
+      "character": "Loras Tyrell",
+      "with": [
+        "Olyvar"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 979
+    },
+    {
+      "id": 60,
+      "character": "Olyvar",
+      "with": [
+        "Loras Tyrell"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 979
+    },
+    {
+      "id": 61,
+      "character": "Talisa Maegyr",
+      "with": [
+        "Robb Stark"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1014
+    },
+    {
+      "id": 62,
+      "character": "Robb Stark",
+      "with": [
+        "Talisa Maegyr"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1014
+    },
+    {
+      "id": 63,
+      "character": "Theon Greyjoy",
+      "with": [
+        "Myranda",
+        "Violet"
+      ],
+      "type": "torture",
+      "when": "present",
+      "sceneId": 1042
+    },
+    {
+      "id": 64,
+      "character": "Myranda",
+      "with": [
+        "Theon Greyjoy"
+      ],
+      "type": "torture",
+      "when": "present",
+      "sceneId": 1042
+    },
+    {
+      "id": 65,
+      "character": "Violet",
+      "with": [
+        "Theon Greyjoy"
+      ],
+      "type": "torture",
+      "when": "present",
+      "sceneId": 1042
+    },
+    {
+      "id": 66,
+      "character": "Gendry",
+      "with": [
+        "Melisandre"
+      ],
+      "type": "magic",
+      "when": "present",
+      "sceneId": 1076
+    },
+    {
+      "id": 67,
+      "character": "Melisandre",
+      "with": [
+        "Gendry"
+      ],
+      "type": "magic",
+      "when": "present",
+      "sceneId": 1076
+    },
+    {
+      "id": 68,
+      "character": "Cersei Lannister",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 1380
+    },
+    {
+      "id": 69,
+      "character": "Jaime Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 1380
+    },
+    {
+      "id": 70,
+      "character": "Ellaria Sand",
+      "with": [
+        "Olyvar",
+        "Marei",
+        "King's Landing Whore",
+        "Oberyn Martell"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 1395
+    },
+    {
+      "id": 71,
+      "character": "Olyvar",
+      "with": [
+        "Ellaria Sand",
+        "Marei",
+        "King's Landing Whore",
+        "Oberyn Martell"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 1395
+    },
+    {
+      "id": 72,
+      "character": "Marei",
+      "with": [
+        "Ellaria Sand",
+        "Olyvar",
+        "King's Landing Whore",
+        "Oberyn Martell"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 1395
+    },
+    {
+      "id": 73,
+      "character": "King's Landing Whore",
+      "with": [
+        "Ellaria Sand",
+        "Olyvar",
+        "Marei",
+        "Oberyn Martell"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 1395
+    },
+    {
+      "id": 74,
+      "character": "Oberyn Martell",
+      "with": [
+        "Ellaria Sand",
+        "Olyvar",
+        "Marei",
+        "King's Landing Whore"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 1395
+    },
+    {
+      "id": 75,
+      "character": "Lysa Arryn",
+      "with": [
+        "Petyr Baelish"
+      ],
+      "type": "married",
+      "when": "future",
+      "sceneId": 1477
+    },
+    {
+      "id": 76,
+      "character": "Petyr Baelish",
+      "with": [
+        "Lysa Arryn"
+      ],
+      "type": "married",
+      "when": "future",
+      "sceneId": 1477
+    },
+    {
+      "id": 77,
+      "character": "Myranda",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1518
+    },
+    {
+      "id": 78,
+      "character": "Ramsay Snow",
+      "with": [
+        "Myranda"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1518
+    },
+    {
+      "id": 79,
+      "character": "Myranda",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1520
+    },
+    {
+      "id": 80,
+      "character": "Ramsay Snow",
+      "with": [
+        "Myranda"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1520
+    },
+    {
+      "id": 81,
+      "character": "Myranda",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1522
+    },
+    {
+      "id": 82,
+      "character": "Ramsay Snow",
+      "with": [
+        "Myranda"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1522
+    },
+    {
+      "id": 83,
+      "character": "Myranda",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1524
+    },
+    {
+      "id": 84,
+      "character": "Ramsay Snow",
+      "with": [
+        "Myranda"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1524
+    },
+    {
+      "id": 85,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Daario Naharis"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 1561
+    },
+    {
+      "id": 86,
+      "character": "Daario Naharis",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 1561
+    },
+    {
+      "id": 87,
+      "character": "Jaime Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1709
+    },
+    {
+      "id": 88,
+      "character": "Cersei Lannister",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1709
+    },
+    {
+      "id": 89,
+      "character": "Loras Tyrell",
+      "with": [
+        "Olyvar"
+      ],
+      "type": "fun",
+      "when": "past",
+      "sceneId": 1768
+    },
+    {
+      "id": 90,
+      "character": "Olyvar",
+      "with": [
+        "Loras Tyrell"
+      ],
+      "type": "fun",
+      "when": "past",
+      "sceneId": 1768
+    },
+    {
+      "id": 91,
+      "character": "Daario Naharis",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 1775
+    },
+    {
+      "id": 92,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Daario Naharis"
+      ],
+      "type": "love",
+      "when": "past",
+      "sceneId": 1775
+    },
+    {
+      "id": 93,
+      "character": "Tommen Baratheon",
+      "with": [
+        "Margaery Tyrell"
+      ],
+      "type": "marriage",
+      "when": "present",
+      "sceneId": 1841
+    },
+    {
+      "id": 94,
+      "character": "Margaery Tyrell",
+      "with": [
+        "Tommen Baratheon"
+      ],
+      "type": "marriage",
+      "when": "present",
+      "sceneId": 1841
+    },
+    {
+      "id": 95,
+      "character": "Myranda",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1957
+    },
+    {
+      "id": 96,
+      "character": "Ramsay Snow",
+      "with": [
+        "Myranda"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 1957
+    },
+    {
+      "id": 97,
+      "character": "Sansa Stark",
+      "with": [
+        "Ramsay Snow"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 2027
+    },
+    {
+      "id": 98,
+      "character": "Ramsay Snow",
+      "with": [
+        "Sansa Stark"
+      ],
+      "type": "rape",
+      "when": "present",
+      "sceneId": 2027
+    },
+    {
+      "id": 99,
+      "character": "Gilly",
+      "with": [
+        "Samwell Tarly"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2048
+    },
+    {
+      "id": 100,
+      "character": "Samwell Tarly",
+      "with": [
+        "Gilly"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2048
+    },
+    {
+      "id": 101,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Daario Naharis"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2051
+    },
+    {
+      "id": 102,
+      "character": "Daario Naharis",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2051
+    },
+    {
+      "id": 103,
+      "character": "Meryn Trant",
+      "with": [
+        "Aya"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 2166
+    },
+    {
+      "id": 104,
+      "character": "Aya",
+      "with": [
+        "Meryn Trant"
+      ],
+      "type": "paid",
+      "when": "future",
+      "sceneId": 2166
+    },
+    {
+      "id": 105,
+      "character": "Dothraki Woman Having Sex",
+      "with": [
+        "Dothraki Man Having Sex"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 2392
+    },
+    {
+      "id": 106,
+      "character": "Dothraki Man Having Sex",
+      "with": [
+        "Dothraki Woman Having Sex"
+      ],
+      "type": "fun",
+      "when": "present",
+      "sceneId": 2392
+    },
+    {
+      "id": 107,
+      "character": "Jaime Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 2562
+    },
+    {
+      "id": 108,
+      "character": "Cersei Lannister",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 2562
+    },
+    {
+      "id": 109,
+      "character": "Grand Maester Pycelle",
+      "with": [
+        "Marei"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 2746
+    },
+    {
+      "id": 110,
+      "character": "Marei",
+      "with": [
+        "Grand Maester Pycelle"
+      ],
+      "type": "paid",
+      "when": "past",
+      "sceneId": 2746
+    },
+    {
+      "id": 111,
+      "character": "Grey Worm",
+      "with": [
+        "Missandei"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2882
+    },
+    {
+      "id": 112,
+      "character": "Missandei",
+      "with": [
+        "Grey Worm"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2882
+    },
+    {
+      "id": 113,
+      "character": "Jaime Lannister",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2944
+    },
+    {
+      "id": 114,
+      "character": "Cersei Lannister",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 2944
+    },
+    {
+      "id": 115,
+      "character": "Jon Snow",
+      "with": [
+        "Daenerys Targaryen"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 3258
+    },
+    {
+      "id": 116,
+      "character": "Daenerys Targaryen",
+      "with": [
+        "Jon Snow"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 3258
+    },
+    {
+      "id": 117,
+      "character": "Bronn",
+      "with": [
+        "Marei"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 3333
+    },
+    {
+      "id": 118,
+      "character": "Marei",
+      "with": [
+        "Bronn"
+      ],
+      "type": "paid",
+      "when": "present",
+      "sceneId": 3333
+    },
+    {
+      "id": 119,
+      "character": "Cersei Lannister",
+      "with": [
+        "Euron Greyjoy"
+      ],
+      "type": "fun",
+      "when": "past",
+      "sceneId": 3338
+    },
+    {
+      "id": 120,
+      "character": "Euron Greyjoy",
+      "with": [
+        "Cersei Lannister"
+      ],
+      "type": "fun",
+      "when": "past",
+      "sceneId": 3338
+    },
+    {
+      "id": 121,
+      "character": "Arya Stark",
+      "with": [
+        "Gendry"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 3436
+    },
+    {
+      "id": 122,
+      "character": "Gendry",
+      "with": [
+        "Arya Stark"
+      ],
+      "type": "love",
+      "when": "present",
+      "sceneId": 3436
+    },
+    {
+      "id": 123,
+      "character": "Jaime Lannister",
+      "with": [
+        "Brienne of Tarth"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 3787
+    },
+    {
+      "id": 124,
+      "character": "Brienne of Tarth",
+      "with": [
+        "Jaime Lannister"
+      ],
+      "type": "love",
+      "when": "future",
+      "sceneId": 3787
+    }
+  ]
+}
