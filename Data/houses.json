@@ -1,142 +1,144 @@
-[
-  {
-    "name": "Bolton",
-    "words": "Our Blades are Sharp",
-    "region": "The North",
-    "seat": "The Dreadfort",
-    "lord": "None, extinct",
-    "coa": "https://awoiaf.westeros.org//images/thumb/0/0c/House_Bolton.svg/250px-House_Bolton.svg.png",
-    "alive": "FALSE",
-    "religion": "Old Gods of The Forest"
-  },
-  {
-    "name": "Tyrell",
-    "words": "Growing Strong",
-    "region": "The Reach",
-    "seat": "Highgarden",
-    "lord": "None, extinct",
-    "coa": "https://awoiaf.westeros.org//images/thumb/3/31/House_Tyrell.svg/250px-House_Tyrell.svg.png",
-    "alive": "FALSE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Umber",
-    "words": "Unknown",
-    "region": "The North",
-    "seat": "Last Hearth",
-    "lord": "None, extinct",
-    "coa": "https://awoiaf.westeros.org//images/thumb/f/f2/Umbercrest.png/250px-Umbercrest.png",
-    "alive": "FALSE",
-    "religion": "Old Gods of The Forest"
-  },
-  {
-    "name": "Stark",
-    "words": "Winter is Coming",
-    "region": "The North",
-    "seat": "Winterfell",
-    "lord": "Sansa Stark",
-    "coa": "https://awoiaf.westeros.org//images/thumb/7/7e/House_Stark.svg/250px-House_Stark.svg.png",
-    "alive": "TRUE",
-    "religion": "Old Gods of The Forest"
-  },
-  {
-    "name": "Targaryen",
-    "words": "Fire and Blood",
-    "region": "The Crownlands",
-    "seat": "Dragonstone",
-    "lord": "None, Aegon Targaryen",
-    "coa": "https://awoiaf.westeros.org//images/thumb/1/1e/House_Targaryen.svg/250px-House_Targaryen.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Lannister",
-    "words": "Hear Me Roar",
-    "region": "The Westerlands",
-    "seat": "Casterly Rock",
-    "lord": "Tyrion Lannister",
-    "coa": "https://awoiaf.westeros.org//images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Martell",
-    "words": "Unbowed, Unbent, Unbroken",
-    "region": "Dorne",
-    "seat": "Old Palace, Sunspear",
-    "lord": "Prince Martell",
-    "coa": "https://awoiaf.westeros.org//images/thumb/6/60/House_Martell.svg/250px-House_Martell.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Frey",
-    "words": "Unknown",
-    "region": "The Riverlands",
-    "seat": "The Twins",
-    "lord": "None, extinct",
-    "coa": "https://awoiaf.westeros.org//images/thumb/d/da/House_Frey.svg/250px-House_Frey.svg.png",
-    "alive": "FALSE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Mormont",
-    "words": "Here We Stand",
-    "region": "The North",
-    "seat": "Mormont Keep",
-    "lord": "None, extinct",
-    "coa": "https://awoiaf.westeros.org//images/thumb/4/46/House_Mormont.svg/250px-House_Mormont.svg.png",
-    "alive": "FALSE",
-    "religion": "Old Gods of The Forest"
-  },
-  {
-    "name": "Tarly",
-    "words": "First in Battle",
-    "region": "The Reach",
-    "seat": "Horn Hill",
-    "lord": "Talla Tarly",
-    "coa": "https://awoiaf.westeros.org//images/thumb/c/cc/House_Tarly.svg/250px-House_Tarly.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Tully",
-    "words": "Family, Duty, Honor",
-    "region": "The Riverlands",
-    "seat": "Riverrun",
-    "lord": "Edmure Tully",
-    "coa": "https://awoiaf.westeros.org//images/thumb/6/61/House_Tully.svg/250px-House_Tully.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Baratheon",
-    "words": "Ours is the Fury",
-    "region": "The Stormlands",
-    "seat": "Storm's End",
-    "lord": "Gendry Baratheon",
-    "coa": "https://awoiaf.westeros.org//images/thumb/2/2d/House_Baratheon.svg/250px-House_Baratheon.svg.png",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  },
-  {
-    "name": "Greyjoy",
-    "words": "We Do Not Sow",
-    "region": "The Iron Islands",
-    "seat": "Pyke",
-    "lord": "Yara Greyjoy",
-    "coa": "https://awoiaf.westeros.org//images/thumb/5/5b/House_Greyjoy.svg/250px-House_Greyjoy.svg.png",
-    "alive": "TRUE",
-    "religion": "Drowned God"
-  },
-  {
-    "name": "Arryn",
-    "words": "As High as Honor",
-    "region": "The Vale",
-    "seat": "The Eyrie",
-    "lord": "Robin Arryn",
-    "coa": "https://vignette.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest/scale-to-width-down/350?cb=20170101094153",
-    "alive": "TRUE",
-    "religion": "Faith of the Seven"
-  }
-]
+{
+  "houses": [
+    {
+      "name": "Bolton",
+      "words": "Our Blades are Sharp",
+      "region": "The North",
+      "seat": "The Dreadfort",
+      "lord": "None, extinct",
+      "coa": "https://awoiaf.westeros.org//images/thumb/0/0c/House_Bolton.svg/250px-House_Bolton.svg.png",
+      "alive": "FALSE",
+      "religion": "Old Gods of The Forest"
+    },
+    {
+      "name": "Tyrell",
+      "words": "Growing Strong",
+      "region": "The Reach",
+      "seat": "Highgarden",
+      "lord": "None, extinct",
+      "coa": "https://awoiaf.westeros.org//images/thumb/3/31/House_Tyrell.svg/250px-House_Tyrell.svg.png",
+      "alive": "FALSE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Umber",
+      "words": "Unknown",
+      "region": "The North",
+      "seat": "Last Hearth",
+      "lord": "None, extinct",
+      "coa": "https://awoiaf.westeros.org//images/thumb/f/f2/Umbercrest.png/250px-Umbercrest.png",
+      "alive": "FALSE",
+      "religion": "Old Gods of The Forest"
+    },
+    {
+      "name": "Stark",
+      "words": "Winter is Coming",
+      "region": "The North",
+      "seat": "Winterfell",
+      "lord": "Sansa Stark",
+      "coa": "https://awoiaf.westeros.org//images/thumb/7/7e/House_Stark.svg/250px-House_Stark.svg.png",
+      "alive": "TRUE",
+      "religion": "Old Gods of The Forest"
+    },
+    {
+      "name": "Targaryen",
+      "words": "Fire and Blood",
+      "region": "The Crownlands",
+      "seat": "Dragonstone",
+      "lord": "None, Aegon Targaryen",
+      "coa": "https://awoiaf.westeros.org//images/thumb/1/1e/House_Targaryen.svg/250px-House_Targaryen.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Lannister",
+      "words": "Hear Me Roar",
+      "region": "The Westerlands",
+      "seat": "Casterly Rock",
+      "lord": "Tyrion Lannister",
+      "coa": "https://awoiaf.westeros.org//images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Martell",
+      "words": "Unbowed, Unbent, Unbroken",
+      "region": "Dorne",
+      "seat": "Old Palace, Sunspear",
+      "lord": "Prince Martell",
+      "coa": "https://awoiaf.westeros.org//images/thumb/6/60/House_Martell.svg/250px-House_Martell.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Frey",
+      "words": "Unknown",
+      "region": "The Riverlands",
+      "seat": "The Twins",
+      "lord": "None, extinct",
+      "coa": "https://awoiaf.westeros.org//images/thumb/d/da/House_Frey.svg/250px-House_Frey.svg.png",
+      "alive": "FALSE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Mormont",
+      "words": "Here We Stand",
+      "region": "The North",
+      "seat": "Mormont Keep",
+      "lord": "None, extinct",
+      "coa": "https://awoiaf.westeros.org//images/thumb/4/46/House_Mormont.svg/250px-House_Mormont.svg.png",
+      "alive": "FALSE",
+      "religion": "Old Gods of The Forest"
+    },
+    {
+      "name": "Tarly",
+      "words": "First in Battle",
+      "region": "The Reach",
+      "seat": "Horn Hill",
+      "lord": "Talla Tarly",
+      "coa": "https://awoiaf.westeros.org//images/thumb/c/cc/House_Tarly.svg/250px-House_Tarly.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Tully",
+      "words": "Family, Duty, Honor",
+      "region": "The Riverlands",
+      "seat": "Riverrun",
+      "lord": "Edmure Tully",
+      "coa": "https://awoiaf.westeros.org//images/thumb/6/61/House_Tully.svg/250px-House_Tully.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Baratheon",
+      "words": "Ours is the Fury",
+      "region": "The Stormlands",
+      "seat": "Storm's End",
+      "lord": "Gendry Baratheon",
+      "coa": "https://awoiaf.westeros.org//images/thumb/2/2d/House_Baratheon.svg/250px-House_Baratheon.svg.png",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    },
+    {
+      "name": "Greyjoy",
+      "words": "We Do Not Sow",
+      "region": "The Iron Islands",
+      "seat": "Pyke",
+      "lord": "Yara Greyjoy",
+      "coa": "https://awoiaf.westeros.org//images/thumb/5/5b/House_Greyjoy.svg/250px-House_Greyjoy.svg.png",
+      "alive": "TRUE",
+      "religion": "Drowned God"
+    },
+    {
+      "name": "Arryn",
+      "words": "As High as Honor",
+      "region": "The Vale",
+      "seat": "The Eyrie",
+      "lord": "Robin Arryn",
+      "coa": "https://vignette.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest/scale-to-width-down/350?cb=20170101094153",
+      "alive": "TRUE",
+      "religion": "Faith of the Seven"
+    }
+  ]
+}
