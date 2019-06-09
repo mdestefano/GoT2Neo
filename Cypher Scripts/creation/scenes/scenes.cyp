@@ -6,6 +6,7 @@ FOREACH (episode IN episodesL |
   FOREACH (scenesEpisode IN episode.scenes |
     FOREACH (scene IN scenesEpisode |
       CREATE(s:Scene {
+        id:          scene.id,
         start:       localtime(scene.sceneStart),
         end:         localtime(scene.sceneEnd),
         season:      episode.seasonNum,
