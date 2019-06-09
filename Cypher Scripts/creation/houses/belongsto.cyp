@@ -9,11 +9,3 @@ MATCH (h:House)
 MERGE (c)-[:BELONGS_TO]->(h)
 
 //MATCH (h:House)<-[:BELONGS_TO]-(c:Character) return h,c
-
-/*
-WITH 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/houses.json' AS url
-CALL apoc.load.json(url) YIELD value
-UNWIND value.houses AS houses
-MATCH (h:House {name: houses.name}), (c:Character {house: h.name})
-MERGE (c)-[:BELONGS_TO]->(h)
-*/
