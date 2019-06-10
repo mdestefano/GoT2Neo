@@ -732,7 +732,6 @@
             "Khal Forzho",
             "Khal Moro",
             "Dothraki Bloodrider",
-            "Dothraki Bloodrider",
             "Randyll Tarly",
             "Dickon Tarly",
             "Eleanor",
@@ -895,17 +894,6 @@
          "characterLink":"/character/ch0542918/",
          "actorName":"Diogo Sales",
          "actorLink":"/name/nm6088160/",
-         "killedBy":[
-            "Daenerys Targaryen"
-         ]
-      },
-      {
-         "characterName":"Dothraki Bloodrider",
-         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1._SX100_SY140_.jpg",
-         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
-         "characterLink":"/character/ch0542918/",
-         "actorName":"Junade Khan",
-         "actorLink":"/name/nm2999602/",
          "killedBy":[
             "Daenerys Targaryen"
          ]
@@ -1361,14 +1349,6 @@
          "actorLink":"/name/nm6301068/"
       },
       {
-         "characterName":"Handmaid",
-         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
-         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
-         "characterLink":"/character/ch0537855/",
-         "actorName":"Sara Dylan",
-         "actorLink":"/name/nm2407387/"
-      },
-      {
          "characterName":"Harald Karstark",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
@@ -1408,14 +1388,6 @@
          "killedBy":[
             "Kings Landing Rioters"
          ]
-      },
-      {
-         "characterName":"High Septon",
-         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDYyYTc3OTgtMmE1Mi00NDVmLWIyNjYtOTIwNDAyYmVmN2E5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
-         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDYyYTc3OTgtMmE1Mi00NDVmLWIyNjYtOTIwNDAyYmVmN2E5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
-         "characterLink":"/character/ch0508056/",
-         "actorName":"Paul Bentley",
-         "actorLink":"/name/nm0072855/"
       },
       {
          "characterName":"High Sparrow",
@@ -2845,13 +2817,6 @@
          "actorLink":"/name/nm4475182/"
       },
       {
-         "characterName":"Night's Watch Officer",
-         "characterLink":"/character/ch0305036/",
-         "houseName":"Night's Watch",
-         "actorName":"Michael Stuart",
-         "actorLink":"/name/nm5792452/"
-      },
-      {
          "characterName":"Night's Watchman",
          "characterLink":"/character/ch0509452/",
          "houseName":"Night's Watch",
@@ -3332,14 +3297,6 @@
          "characterLink":"/character/ch0540866/",
          "actorName":"Melanie Liburd",
          "actorLink":"/name/nm4927489/"
-      },
-      {
-         "characterName":"Red Priestess",
-         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5MjlkYjItM2YzOC00NGQwLTllZDktYmY3YmMxYjNjMzVjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
-         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5MjlkYjItM2YzOC00NGQwLTllZDktYmY3YmMxYjNjMzVjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
-         "characterLink":"/character/ch0540866/",
-         "actorName":"Rila Fukushima",
-         "actorLink":"/name/nm3822462/"
       },
       {
          "characterName":"Renly Baratheon",
@@ -3878,12 +3835,6 @@
          "actorLink":"/name/nm0352901/"
       },
       {
-         "characterName":"Septon",
-         "characterLink":"/character/ch0540865/",
-         "actorName":"Terry Byrne",
-         "actorLink":"/name/nm0126298/"
-      },
-      {
          "characterName":"Ser Endrew Tarth",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjJmYzRlZTUtODkwNS00OTE4LTllYWUtOTdiMGQ1MTE2MTU4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjJmYzRlZTUtODkwNS00OTE4LTllYWUtOTdiMGQ1MTE2MTU4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
@@ -4027,24 +3978,6 @@
          "characterLink":"/character/ch0305311/",
          "actorName":"Faolan Morgan",
          "actorLink":"/name/nm4335246/"
-      },
-      {
-         "characterName":"Stark Guard",
-         "characterLink":"/character/ch0305311/",
-         "actorName":"Rick Burn",
-         "actorLink":"/name/nm4492916/"
-      },
-      {
-         "characterName":"Stark Guard",
-         "characterLink":"/character/ch0305311/",
-         "actorName":"David Sheehan",
-         "actorLink":"/name/nm1423916/"
-      },
-      {
-         "characterName":"Stark Guard",
-         "characterLink":"/character/ch0305311/",
-         "actorName":"Paul Monahan",
-         "actorLink":"/name/nm5981376/"
       },
       {
          "characterName":"Steelshanks Walton",
