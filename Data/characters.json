@@ -303,6 +303,9 @@
          ]
       },
       {
+         "characterName":"Belicho Paenymion"
+      },
+      {
          "characterName":"Benjen Stark",
          "houseName":"Stark",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjFiY2M5MjgtZmRiMS00ZTAyLTk2Y2UtMjdjZTRkZmVlYTMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
@@ -321,9 +324,6 @@
          "killedBy":[
             "Wight"
          ]
-      },
-      {
-        "characterName":"Belicho Paenymion"
       },
       {
          "characterName":"Beric Dondarrion",
@@ -628,6 +628,12 @@
          ]
       },
       {
+         "characterName":"Champion of Meereen"
+      },
+      {
+         "characterName":"City watch guard"
+      },
+      {
          "characterName":"Child of the Forest",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdjYmYxNjctODU1OC00NzIwLTk0ODktNDc3NzA2MzRhYzIwXkEyXkFqcGdeQXVyNTcxMzMwNTA@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdjYmYxNjctODU1OC00NzIwLTk0ODktNDc3NzA2MzRhYzIwXkEyXkFqcGdeQXVyNTcxMzMwNTA@._V1_.jpg",
@@ -648,6 +654,9 @@
          "characterLink":"/character/ch0350989/",
          "actorName":"Darren Killeen",
          "actorLink":"/name/nm4007028/"
+      },
+      {
+         "characterName":"Common citizen"
       },
       {
          "characterName":"Craster",
@@ -1491,6 +1500,17 @@
          ]
       },
       {
+         "characterName":"Iggo",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODRhNGQwNDgtNDEwNS00MWRlLWJmZTQtMTJlNjNmZTI1ZDk5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODRhNGQwNDgtNDEwNS00MWRlLWJmZTQtMTJlNjNmZTI1ZDk5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
+         "characterLink":"/character/ch0305026/",
+         "actorName":"Jefferson Hall",
+         "actorLink":"/name/nm2131630/",
+         "killedBy":[
+            "Gregor Clegane"
+         ]
+      },
+      {
          "characterName":"Illyrio Mopatis",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM1OWY0ZmUtNWM5Ny00NzgzLWFhMmUtOWY1Njc3NmNkZmM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM1OWY0ZmUtNWM5Ny00NzgzLWFhMmUtOWY1Njc3NmNkZmM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
@@ -1844,6 +1864,9 @@
             "Johnna",
             "Willa"
          ]
+      },
+      {
+         "characterName":"Karstark soldier"
       },
       {
          "characterName":"Kayla",
@@ -2523,6 +2546,9 @@
          "actorLink":"/name/nm2047170/"
       },
       {
+         "characterName":"Martell soldier"
+      },
+      {
          "characterName":"Martyn Lannister",
          "houseName":"Lannister",
          "characterLink":"/character/ch0395355/",
@@ -2573,6 +2599,9 @@
          "parents":[
             "Howland Reed"
          ]
+      },
+      {
+         "characterName":"Meereen Common citizen"
       },
       {
          "characterName":"Meereen Slave Master",
@@ -2703,6 +2732,9 @@
          "characterLink":"/character/ch0229099/",
          "actorName":"Ciaran Bermingham",
          "actorLink":"/name/nm2197118/"
+      },
+      {
+         "characterName":"Mormont soldier"
       },
       {
          "characterName":"Mossador",
@@ -3044,6 +3076,9 @@
          ]
       },
       {
+         "characterName":"Pit fighter"
+      },
+      {
          "characterName":"Podrick Payne",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTU5NjczOTQyNl5BMl5BanBnXkFtZTcwMzMwNTk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTU5NjczOTQyNl5BMl5BanBnXkFtZTcwMzMwNTk4OQ@@._V1_.jpg",
@@ -3085,6 +3120,9 @@
          "killedBy":[
             "Daario Naharis"
          ]
+      },
+      {
+         "characterName":"Prisoner"
       },
       {
          "characterName":"Pyat Pree",
@@ -3759,6 +3797,9 @@
          ]
       },
       {
+         "characterName":"Second son"
+      },
+      {
          "characterName":"Selyse Baratheon",
          "houseName":"Baratheon",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGZjNDA5YWUtZjE5OC00NGE2LWI3Y2UtOTQ1Yjg1MDc3MTk4L2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
@@ -4032,6 +4073,9 @@
          ]
       },
       {
+         "characterName":"Stone Man"
+      },
+      {
          "characterName":"Styr",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNDM4Mjc1M15BMl5BanBnXkFtZTgwODQyMTg1MTE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNDM4Mjc1M15BMl5BanBnXkFtZTgwODQyMTg1MTE@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
@@ -4089,6 +4133,9 @@
          "killedBy":[
             "Lothar Frey"
          ]
+      },
+      {
+         "characterName":"Tansy"
       },
       {
          "characterName":"Talla Tarly",
@@ -4338,6 +4385,9 @@
             "Rattleshirt",
             "Smalljon Umber"
          ]
+      },
+      {
+         "characterName":"Torrhen Karstark"
       },
       {
          "characterName":"Trystane Martell",
