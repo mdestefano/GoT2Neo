@@ -391,7 +391,7 @@
          "actorLink":"/name/nm5279916/"
       },
       {
-        "characterName":"Bolton Soldier",
+        "characterName":"Bolton soldier",
         "characterImageFull":"https://vignette.wikia.nocookie.net/gameofthrones/images/b/b7/Skinner-3x02.jpg/revision/latest/scale-to-width-down/350?cb=20160805021917"
       },
       {
@@ -1070,7 +1070,7 @@
          "actorLink":"/name/nm0050520/"
       },
       {
-        "characterName":"Frey Soldier",        
+        "characterName":"Frey soldier",        
         "characterImageFull":"https://vignette.wikia.nocookie.net/gameofthrones/images/2/27/Freysoldier1.jpg/revision/latest/scale-to-width-down/350?cb=20170613015122"
      },
       {
@@ -1274,7 +1274,7 @@
          ]
       },
       {
-        "characterName":"Greyjoy Soldier",
+        "characterName":"Greyjoy soldier",
         "characterImageFull":"http://www.scifimoviezone.com/imagefantasy/gameofthrones265.png"
       },
       {
@@ -1294,7 +1294,7 @@
             "Rennick"
          ],
          "killedBy":[
-            "Frey Soldier"
+            "Frey soldier"
          ]
       },
       {
@@ -2032,7 +2032,7 @@
          ]
       },
       {
-         "characterName":"Lannister Soldier",
+         "characterName":"Lannister soldier",
          "characterLink":"/character/ch0305308/",
          "characterImageFull":"https://vignette.wikia.nocookie.net/gameofthrones/images/6/66/Lannister_spearman.jpg/revision/latest/scale-to-width-down/350?cb=20170808215912",   
          "actorName":"Aiden Condron",
@@ -3028,7 +3028,7 @@
          "kingsguard":true,
          "killed":[
             "Mandon Moore",
-            "Bolton Soldier"
+            "Bolton soldier"
          ],
          "serves":[
             "Tyrion Lannister",
@@ -3686,7 +3686,7 @@
             "Kings Landing Rioter #2",
             "Kings Landing Rioter #3",
             "Beric Dondarrion",
-            "Frey Soldier",
+            "Frey soldier",
             "Lowell",
             "Dying Man",
             "Biter",
