@@ -1,5 +1,6 @@
 from . import houses
+from flask import render_template
 
 @houses.route('/houses')
 def index():
-    return '<h1> Houses Index</h1>'
+    return render_template('houses/index.html')
