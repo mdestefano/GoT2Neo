@@ -70,6 +70,9 @@
          ]
       },
       {
+        "characterName":"Aggo"
+      },
+      {
          "characterName":"Akho",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE4ZDZmOGUtNGE4Ny00Y2VmLThiOGItMjk3Y2U0ZDY3OWQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE4ZDZmOGUtNGE4Ny00Y2VmLThiOGItMjk3Y2U0ZDY3OWQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
@@ -226,6 +229,15 @@
          ]
       },
       {
+        "characterName":"Arryn soldier"
+      },
+      {
+        "characterName":"Astapor slaver"
+      },
+      {
+        "characterName":"Astapor soldier"
+      },
+      {
          "characterName":"Baby Sam",
          "characterLink":"/character/ch0547881/",
          "actors":[
@@ -311,6 +323,9 @@
          ]
       },
       {
+        "characterName":"Belicho Paenymion"
+      },
+      {
          "characterName":"Beric Dondarrion",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwMTEwNTg2MF5BMl5BanBnXkFtZTgwNTAxODYxOTE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwMTEwNTg2MF5BMl5BanBnXkFtZTgwNTAxODYxOTE@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
@@ -339,6 +354,7 @@
             "Wight"
          ]
       },
+
       {
          "characterName":"Bianca",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWJhYjcxYzgtMDlhZi00OGNhLWE0NzAtMWFhMDJlYTZmYzY2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
@@ -346,6 +362,9 @@
          "characterLink":"/character/ch0541364/",
          "actorName":"Eline Powell",
          "actorLink":"/name/nm4730958/"
+      },
+      {
+        "characterName":"Billy"
       },
       {
          "characterName":"Biter",
@@ -1163,6 +1182,9 @@
          "actorLink":"/name/nm3354768/"
       },
       {
+        "characterName":"Golden Company soldier"
+      },
+      {
          "characterName":"Grand Maester Pycelle",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyNDA4MzQ3MF5BMl5BanBnXkFtZTcwNTM3ODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyNDA4MzQ3MF5BMl5BanBnXkFtZTcwNTM3ODg4OQ@@._V1_.jpg",
@@ -1505,6 +1527,9 @@
          "characterLink":"/character/ch0540561/",
          "actorName":"Richard E. Grant",
          "actorLink":"/name/nm0001290/"
+      },
+      {
+        "characterName":"Jack"
       },
       {
          "characterName":"Jacks",
@@ -3908,7 +3933,7 @@
       },
 
       {
-        "characterName":"Son of the harpy",
+        "characterName":"Son of the Harpy",
         "characterImageFull":"https://vignette.wikia.nocookie.net/gameofthrones/images/9/9e/Sons_of_the_harpy_killer_season_5.jpg/revision/latest?cb=20150504173501",
         "houseName":"Sons of the Harpy"
       },
@@ -4773,6 +4798,9 @@
          "characterLink":"/character/ch0171391/",
          "actorName":"Fergus Leathem",
          "actorLink":"/name/nm7509186/"
+      },
+      {
+        "characterName":"Yunkai soldier"
       },
       {
          "characterName":"Zanrush",
