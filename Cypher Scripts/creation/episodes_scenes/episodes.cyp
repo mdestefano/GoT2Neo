@@ -2,7 +2,7 @@ LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/mdestefano/GoT2Neo
 MERGE (e:Episode {
   title:                row.title,
   season:               toInt(row.season),
-  episode:              toInt(row.episode),
+  episode:              toInt(row.episodeInSeason),
   episodeGlobal:        toInt(row.episode),
   director:             row.director,
   writer:               row.writer,
