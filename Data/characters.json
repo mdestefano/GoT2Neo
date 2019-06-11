@@ -9,6 +9,7 @@
       {
          "characterName":"Aegon Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "royal":true,
          "parents":[
             "Elia Martell",
@@ -25,6 +26,7 @@
       {
          "characterName":"Aeron Greyjoy",
          "houseName":"Greyjoy",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1_.jpg",
          "characterLink":"/character/ch0540081/",
@@ -39,6 +41,7 @@
       {
          "characterName":"Aerys II Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWQzOWViN2ItNDZhOS00MmZlLTkxZTYtZDg5NGUwMGRmYWZjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWQzOWViN2ItNDZhOS00MmZlLTkxZTYtZDg5NGUwMGRmYWZjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541362/",
@@ -100,6 +103,7 @@
       {
          "characterName":"Alton Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NTU1NTAzOF5BMl5BanBnXkFtZTcwNzA2NDk4OA@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NTU1NTAzOF5BMl5BanBnXkFtZTcwNzA2NDk4OA@@._V1_.jpg",
          "characterLink":"/character/ch0305012/",
@@ -264,6 +268,7 @@
       {
          "characterName":"Balon Greyjoy",
          "houseName":"Greyjoy",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNjkwODczN15BMl5BanBnXkFtZTcwODMwNTgzNw@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNjkwODczN15BMl5BanBnXkFtZTcwODMwNTgzNw@@._V1_SY1000_CR0,0,637,1000_AL_.jpg",
          "characterLink":"/character/ch0292152/",
@@ -284,6 +289,7 @@
       {
          "characterName":"Baratheon Guard",
          "houseName":"Baratheon",
+         "alive":false,
          "characterLink":"/character/ch0350989/",
          "actorName":"Phil Barnhill",
          "actorLink":"/name/nm4207240/"
@@ -308,6 +314,7 @@
       {
          "characterName":"Benjen Stark",
          "houseName":"Stark",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjFiY2M5MjgtZmRiMS00ZTAyLTk2Y2UtMjdjZTRkZmVlYTMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjFiY2M5MjgtZmRiMS00ZTAyLTk2Y2UtMjdjZTRkZmVlYTMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0153996/",
@@ -388,6 +395,7 @@
       {
          "characterName":"Black Walder Rivers",
          "houseName":"Frey",
+         "alive":false,
          "characterLink":"/character/ch0014591/",
          "actorName":"Tim Plester",
          "actorLink":"/name/nm1043031/",
@@ -430,6 +438,7 @@
       {
          "characterName":"Brandon Stark",
          "houseName":"Stark",
+         "alive": false,
          "killedBy":[
             "Aerys II Targaryen"
          ],
@@ -526,6 +535,7 @@
       {
          "characterName":"Brynden Tully",
          "houseName":"Tully",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTg5ZDIwOWUtMjQ1OS00YjgxLThmMDgtOWUwZjQ4MzE3ZDhlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTg5ZDIwOWUtMjQ1OS00YjgxLThmMDgtOWUwZjQ4MzE3ZDhlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0381563/",
@@ -707,6 +717,7 @@
       {
          "characterName":"Daenerys Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MzIxMTQwMF5BMl5BanBnXkFtZTcwMzY2NDg1Nw@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MzIxMTQwMF5BMl5BanBnXkFtZTcwMzY2NDg1Nw@@._V1_SY1000_CR0,0,810,1000_AL_.jpghttps://images-na.ssl-images-amazon.com/images/M/MV5BMTgwNzIxMTU1OV5BMl5BanBnXkFtZTcwNzI2ODg5NA@@._V1._SX100_SY140_.jpg",
          "characterLink":"/character/ch0158597/",
@@ -798,6 +809,7 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541363/",
          "houseName":"Tarly",
+         "alive":false,
          "actors":[
             {
                "actorName":"Freddie Stroma",
@@ -857,6 +869,7 @@
       {
          "characterName":"Doran Martell",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWU5NzJkNWMtYTM4MS00YmE2LWExYmItNDNiOTE3YzI5YzAxXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWU5NzJkNWMtYTM4MS00YmE2LWExYmItNDNiOTE3YzI5YzAxXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY1000_CR0,0,913,1000_AL_.jpg",
          "characterLink":"/character/ch0468006/",
@@ -934,6 +947,7 @@
       {
          "characterName":"Eddard Stark",
          "houseName":"Stark",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODcwMjg0MDQ5MF5BMl5BanBnXkFtZTcwMTk2NDk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODcwMjg0MDQ5MF5BMl5BanBnXkFtZTcwMTk2NDk4OQ@@._V1_SY1000_CR0,0,827,1000_AL_.jpg",
          "characterLink":"/character/ch0154681/",
@@ -1008,6 +1022,7 @@
       {
          "characterName":"Ellaria Sand",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWQ0ZDE5NDUtNDVmZi00ZTI5LTkyOTgtNDhiNjMwZjY3ZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWQ0ZDE5NDUtNDVmZi00ZTI5LTkyOTgtNDhiNjMwZjY3ZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0309687/",
@@ -1052,6 +1067,7 @@
       {
          "characterName":"Euron Greyjoy",
          "houseName":"Greyjoy",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzg1MTJhMjMtMmY4Yy00NTU2LTliZWUtNjM4YzAxY2M3ZDBkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzg1MTJhMjMtMmY4Yy00NTU2LTliZWUtNjM4YzAxY2M3ZDBkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0518715/",
@@ -1210,6 +1226,7 @@
          "actorName":"Clive Mantle",
          "actorLink":"/name/nm0544139/",
          "houseName":"Umber",
+         "alive":false,
          "parentOf":[
             "Smalljon Umber"
          ]
@@ -1217,6 +1234,7 @@
       {
          "characterName":"Gregor Clegane",
          "houseName":"Clegane",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3OTg2MTM2MF5BMl5BanBnXkFtZTcwNDk1NzE5OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3OTg2MTM2MF5BMl5BanBnXkFtZTcwNDk1NzE5OQ@@._V1_.jpg",
          "characterLink":"/character/ch0245401/",
@@ -1299,6 +1317,7 @@
       {
          "characterName":"Grey Wind",
          "houseName":"Stark",
+         "alive": false,
          "siblings":[
             "Lady",
             "Nymeria",
@@ -1428,6 +1447,7 @@
       {
          "characterName":"Hoster Tully",
          "houseName":"Tully",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540082/",
@@ -1543,6 +1563,7 @@
       {
          "characterName":"Jaime Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzU1NjM1MF5BMl5BanBnXkFtZTcwMzIxODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzU1NjM1MF5BMl5BanBnXkFtZTcwMzIxODg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0158527/",
@@ -1626,6 +1647,7 @@
             "Mormont",
             "Night's Watch"
             ],
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODAwODYyNzk0NV5BMl5BanBnXkFtZTcwNDI2NDk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODAwODYyNzk0NV5BMl5BanBnXkFtZTcwNDI2NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0251492/",
@@ -1647,6 +1669,7 @@
       {
          "characterName":"Joffrey Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk1NDg5MTAwMl5BMl5BanBnXkFtZTcwOTIwODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk1NDg5MTAwMl5BMl5BanBnXkFtZTcwOTIwODg4OQ@@._V1_SY1000_CR0,0,818,1000_AL_.jpg",
          "characterLink":"/character/ch0156278/",
@@ -1698,6 +1721,7 @@
          "characterLink":"/character/ch0251737/",
          "actorName":"John Standing",
          "houseName":"Arryn",
+         "alive":false,
          "actorLink":"/name/nm0822062/",
          "guardianOf":[
             "Eddard Stark",
@@ -1764,7 +1788,7 @@
       },
       {
          "characterName":"Jorah Mormont",
-         "houseName":"Mormont",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNTcxMDI2NV5BMl5BanBnXkFtZTcwMzgxNzI4OQ@@._V1._CR225,437,407,405._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNTcxMDI2NV5BMl5BanBnXkFtZTcwMzgxNzI4OQ@@._V1._CR225,437,407,405_.jpg",
          "characterLink":"/character/ch0158221/",
@@ -1865,6 +1889,7 @@
       {
          "characterName":"Kevan Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjZkMzliOWYtODIwNS00ZTU2LWIxNTAtYjFlNTA1YjdhNzc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjZkMzliOWYtODIwNS00ZTU2LWIxNTAtYjFlNTA1YjdhNzc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305013/",
@@ -1960,6 +1985,7 @@
       {
          "characterName":"Kitty Frey",
          "houseName":"Frey",
+         "alive":false,         
          "characterLink":"/character/ch0576869/",
          "actorName":"Lucy Hayes",
          "actorLink":"/name/nm8314450/",
@@ -2012,6 +2038,7 @@
       {
          "characterName":"Lady",
          "houseName":"Stark",
+         "alive": false,
          "killedBy":[
             "Eddard Stark"
          ],
@@ -2040,6 +2067,7 @@
       {
          "characterName":"Lancel Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0MTQ5MzEzNV5BMl5BanBnXkFtZTgwNTQ4MDA2NTE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0MTQ5MzEzNV5BMl5BanBnXkFtZTgwNTQ4MDA2NTE@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0376927/",
@@ -2181,6 +2209,7 @@
       {
          "characterName":"Loras Tyrell",
          "houseName":"Tyrell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzcwNDAxZGMtODU1Mi00YzA2LWJhMzYtN2FjZjg2YWZlMTQ4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzcwNDAxZGMtODU1Mi00YzA2LWJhMzYtN2FjZjg2YWZlMTQ4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0231428/",
@@ -2228,6 +2257,7 @@
       {
          "characterName":"Lothar Frey",
          "houseName":"Frey",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDc0NDA3YmYtZTNjYi00ZDExLWE2NTUtNzk5NjI3MGI3NzM0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDc0NDA3YmYtZTNjYi00ZDExLWE2NTUtNzk5NjI3MGI3NzM0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0384471/",
@@ -2267,6 +2297,7 @@
       {
          "characterName":"Lyanna Mormont",
          "houseName":"Mormont",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTY3MWNmYjAtZjZhYi00M2IzLWJjNDMtMjUzZmU3NTYyYWUxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTY3MWNmYjAtZjZhYi00M2IzLWJjNDMtMjUzZmU3NTYyYWUxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541884/",         
@@ -2282,6 +2313,7 @@
       {
          "characterName":"Lyanna Stark",
          "houseName":"Stark",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTE5NTczY2QtNmQxYS00NTAwLWE2ZTAtYzc1MTkyZGU5MzRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTE5NTczY2QtNmQxYS00NTAwLWE2ZTAtYzc1MTkyZGU5MzRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0543804/",
@@ -2320,6 +2352,7 @@
             "Arryn",
             "Tully"
          ],
+         "alive":false,
          "killed":[
             "Jon Arryn"
          ],
@@ -2340,6 +2373,7 @@
       {
          "characterName":"Mace Tyrell",
          "houseName":"Tyrell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTcyZWFjZjItYmI4NS00ZDE2LTg4Y2YtYWJkYWI5MWJlNWFjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTcyZWFjZjItYmI4NS00ZDE2LTg4Y2YtYWJkYWI5MWJlNWFjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0384328/",
@@ -2356,6 +2390,7 @@
       {
          "characterName":"Maester Aemon",
          "houseName":"Targaryen",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4NDY4MzI5NV5BMl5BanBnXkFtZTcwMTk0ODg5NA@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4NDY4MzI5NV5BMl5BanBnXkFtZTcwMTk0ODg5NA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
          "characterLink":"/character/ch0246936/",
@@ -2486,6 +2521,7 @@
       {
          "characterName":"Margaery Tyrell",
          "houseName":"Tyrell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzODQ1MDg3NV5BMl5BanBnXkFtZTcwODA4NDk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzODQ1MDg3NV5BMl5BanBnXkFtZTcwODA4NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0251974/",
@@ -2528,6 +2564,7 @@
       {
          "characterName":"Martyn Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterLink":"/character/ch0395355/",
          "actorName":"Dean-Charles Chapman",
          "actorLink":"/name/nm2835616/",
@@ -2755,6 +2792,7 @@
       {
          "characterName":"Myrcella Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTA4OTA1MTIxMzdeQTJeQWpwZ15BbWU3MDY2NjQ4NTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTA4OTA1MTIxMzdeQTJeQWpwZ15BbWU3MDY2NjQ4NTc@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
          "characterLink":"/character/ch0238585/",
@@ -2796,6 +2834,7 @@
       {
          "characterName":"Ned Umber",
          "houseName":"Umber",
+         "alive":false,
          "characterLink":"/title/tt0944947/characters/nm9132255",
          "actorName":"Harry Grasby",
          "actorLink":"/name/nm9132255/",
@@ -2854,6 +2893,7 @@
       {
          "characterName":"Nymeria Sand",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDZmN2FkMTEtMmMyYy00ZTcwLWE3MGQtNGU1NzY4MjAxNjQ0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDZmN2FkMTEtMmMyYy00ZTcwLWE3MGQtNGU1NzY4MjAxNjQ0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0468074/",
@@ -2869,6 +2909,7 @@
       {
          "characterName":"Obara Sand",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOWU3OTRmYmItZTZiYi00Mjk1LTk2NTItMzBjZmQ3NDZhMDMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOWU3OTRmYmItZTZiYi00Mjk1LTk2NTItMzBjZmQ3NDZhMDMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0468001/",
@@ -2888,6 +2929,7 @@
       {
          "characterName":"Oberyn Martell",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTJmYjViYjctYTU0My00NTJiLWE2YzUtOWZkNTg4MTZkZmEyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTJmYjViYjctYTU0My00NTJiLWE2YzUtOWZkNTg4MTZkZmEyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0392307/",
@@ -2926,6 +2968,7 @@
       {
          "characterName":"Olenna Tyrell",
          "houseName":"Tyrell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMjgwOTQ3Nl5BMl5BanBnXkFtZTcwMjE2NzE5OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMjgwOTQ3Nl5BMl5BanBnXkFtZTcwMjE2NzE5OQ@@._V1_SY1000_CR0,0,662,1000_AL_.jpg",
          "characterLink":"/character/ch0010188/",
@@ -3191,6 +3234,7 @@
       {
          "characterName":"Ramsay Snow",
          "houseName":"Bolton",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5Nzk3NTU5N15BMl5BanBnXkFtZTgwNzczMjk5NTE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5Nzk3NTU5N15BMl5BanBnXkFtZTgwNzczMjk5NTE@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
          "characterLink":"/character/ch0321004/",
@@ -3225,6 +3269,7 @@
          "actorName":"James Faulkner",
          "actorLink":"/name/nm0269077/",
          "houseName":"Tarly",
+         "alive":false,
          "killedBy":[
             "Daenerys Targaryen"
          ],
@@ -3309,6 +3354,7 @@
       {
          "characterName":"Renly Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjA4OTE5MzcyOF5BMl5BanBnXkFtZTcwNDA1ODg5NA@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjA4OTE5MzcyOF5BMl5BanBnXkFtZTcwNDA1ODg5NA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
          "characterLink":"/character/ch0246253/",
@@ -3328,6 +3374,7 @@
       {
          "characterName":"Rhaegal",
          "houseName":"Targaryen",
+         "alive":false,
          "siblings":[
             "Drogon",
             "Viserion"
@@ -3346,6 +3393,7 @@
       {
          "characterName":"Rhaegar Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "royal":true,
          "parents":[
             "Rhaella Targaryen",
@@ -3384,6 +3432,7 @@
       {
          "characterName":"Rhaella Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "royal":true,
          "parentOf":[
             "Daenerys Targaryen",
@@ -3400,6 +3449,7 @@
       {
          "characterName":"Rhaenys Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "royal":true,
          "parents":[
             "Elia Martell",
@@ -3449,6 +3499,7 @@
       {
          "characterName":"Rickard Stark",
          "houseName":"Stark",
+         "alive": false,
          "parentOf":[
             "Brandon Stark",
             "Benjen Stark",
@@ -3462,6 +3513,7 @@
       {
          "characterName":"Rickon Stark",
          "houseName":"Stark",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWZiOGNjMDAtOTRlNi00MDJmLWEyMTMtOGEwZTM5ODJlNDAyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWZiOGNjMDAtOTRlNi00MDJmLWEyMTMtOGEwZTM5ODJlNDAyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0233141/",
@@ -3487,6 +3539,7 @@
       {
          "characterName":"Robb Stark",
          "houseName":"Stark",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI2NDE1NzczNF5BMl5BanBnXkFtZTcwNjcwODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI2NDE1NzczNF5BMl5BanBnXkFtZTcwNjcwODg4OQ@@._V1_SY1000_CR0,0,845,1000_AL_.jpg",
          "characterLink":"/character/ch0158596/",
@@ -3521,6 +3574,7 @@
       {
          "characterName":"Robert Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzQwMDcwNzY5MF5BMl5BanBnXkFtZTcwMzIyMTE5OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzQwMDcwNzY5MF5BMl5BanBnXkFtZTcwMzIyMTE5OQ@@._V1_.jpg",
          "characterLink":"/character/ch0155776/",
@@ -3593,6 +3647,7 @@
       {
          "characterName":"Roose Bolton",
          "houseName":"Bolton",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMjE3MTExN15BMl5BanBnXkFtZTcwMTI3NDk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMjE3MTExN15BMl5BanBnXkFtZTcwMTI3NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0305006/",
@@ -3635,7 +3690,7 @@
       },
       {
          "characterName":"Roslin Frey",
-         "houseName":"Frey",
+         "houseName":"Frey",         
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzhhZGIxYjctMjBkNC00YTJhLTlmMDAtOWUyYjlhNWE3Yzg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzhhZGIxYjctMjBkNC00YTJhLTlmMDAtOWUyYjlhNWE3Yzg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0391563/",
@@ -3702,6 +3757,7 @@
       {
          "characterName":"Sandor Clegane",
          "houseName":"Clegane",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjEwNDQ1MF5BMl5BanBnXkFtZTcwMzAxODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjEwNDQ1MF5BMl5BanBnXkFtZTcwMzAxODg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0162882/",
@@ -3767,6 +3823,7 @@
       {
          "characterName":"Selyse Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGZjNDA5YWUtZjE5OC00NGE2LWI3Y2UtOTQ1Yjg1MDc3MTk4L2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGZjNDA5YWUtZjE5OC00NGE2LWI3Y2UtOTQ1Yjg1MDc3MTk4L2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0316924/",
@@ -3872,6 +3929,7 @@
       {
          "characterName":"Shaggydog",
          "houseName":"Stark",
+         "alive": false,
          "siblings":[
             "Grey Wind",
             "Lady",
@@ -3889,6 +3947,7 @@
       {
          "characterName":"Shireen Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjUzNmYzZDktZGY4ZS00ZDA1LWE1MGItMDAwM2E1ZGVlODg1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjUzNmYzZDktZGY4ZS00ZDA1LWE1MGItMDAwM2E1ZGVlODg1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0306346/",
@@ -3921,6 +3980,7 @@
          "actorName":"Dean S. Jagger",
          "actorLink":"/name/nm2746504/",
          "houseName":"Umber",
+         "alive":false,
          "killed":[
             "Shaggydog"
          ],
@@ -3934,6 +3994,7 @@
 
       {
         "characterName":"Son of the Harpy",
+        "alive":false,
         "characterImageFull":"https://vignette.wikia.nocookie.net/gameofthrones/images/9/9e/Sons_of_the_harpy_killer_season_5.jpg/revision/latest?cb=20150504173501",
         "houseName":"Sons of the Harpy"
       },
@@ -3952,6 +4013,7 @@
       {
          "characterName":"Stannis Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNzY0NzI0NF5BMl5BanBnXkFtZTcwNjA2NDk4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNzY0NzI0NF5BMl5BanBnXkFtZTcwNjA2NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0250897/",
@@ -3998,6 +4060,7 @@
       {
          "characterName":"Stevron Frey",
          "houseName":"Frey",
+         "alive":false,
          "characterLink":"/character/ch0305329/",
          "actorName":"Colin Carnegie",
          "actorLink":"/name/nm1794801/"
@@ -4033,6 +4096,7 @@
       {
          "characterName":"Summer",
          "houseName":"Stark",
+         "alive": false,
          "siblings":[
             "Grey Wind",
             "Lady",
@@ -4183,6 +4247,7 @@
       {
          "characterName":"Theon Greyjoy",
          "houseName":"Greyjoy",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3ODUyOTY3N15BMl5BanBnXkFtZTcwNjI4MTg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3ODUyOTY3N15BMl5BanBnXkFtZTcwNjI4MTg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0158526/",
@@ -4273,6 +4338,7 @@
       {
          "characterName":"Tommen Baratheon",
          "houseName":"Baratheon",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTY1YWUxM2QtZjhmZC00ZmQ2LThkM2YtNTk2MmQ5OTk3NGMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTY1YWUxM2QtZjhmZC00ZmQ2LThkM2YtNTk2MmQ5OTk3NGMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0256424/",
@@ -4333,6 +4399,7 @@
       {
          "characterName":"Trystane Martell",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTBkMjZhMjItN2QwYS00MTg2LTg2YzMtNWJiYjBiYmVkMDk3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTBkMjZhMjItN2QwYS00MTg2LTg2YzMtNWJiYjBiYmVkMDk3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0506400/",
@@ -4359,6 +4426,7 @@
       {
          "characterName":"Tyene Sand",
          "houseName":"Martell",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDY5NzBiMTQtYzhmMS00Y2FmLTkzYzYtYzM2ODBjNGZlNGNiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDY5NzBiMTQtYzhmMS00Y2FmLTkzYzYtYzM2ODBjNGZlNGNiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0468075/",
@@ -4405,6 +4473,7 @@
       {
          "characterName":"Tywin Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTA4ODMxMzE1OV5BMl5BanBnXkFtZTcwMTM0ODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTA4ODMxMzE1OV5BMl5BanBnXkFtZTcwMTM0ODg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0242185/",
@@ -4460,6 +4529,7 @@
       {
          "characterName":"Viserion",
          "houseName":"Targaryen",
+         "alive":false,
          "siblings":[
             "Drogon",
             "Rhaegal"
@@ -4479,6 +4549,7 @@
       {
          "characterName":"Viserys Targaryen",
          "houseName":"Targaryen",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwNzIxMTU1OV5BMl5BanBnXkFtZTcwNzI2ODg5NA@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwNzIxMTU1OV5BMl5BanBnXkFtZTcwNzI2ODg5NA@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0155775/",
@@ -4518,6 +4589,7 @@
       {
          "characterName":"Walder Frey",
          "houseName":"Frey",
+         "alive":false,
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzU0YzZjMTktZDA2Ni00YTRhLWFkZTgtOTQ4Yjg2MmQ2OGUzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzU0YzZjMTktZDA2Ni00YTRhLWFkZTgtOTQ4Yjg2MmQ2OGUzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305328/",
@@ -4609,6 +4681,7 @@
       {
          "characterName":"Willem Lannister",
          "houseName":"Lannister",
+         "alive": false,
          "characterLink":"/character/ch0395356/",
          "actorName":"Timothy Gibbons",
          "actorLink":"/name/nm5624523/",
@@ -4742,53 +4815,6 @@
          "killedBy":[
             "Amory Lorch"
          ]
-      },
-      {
-         "characterName":"Young Benjen Stark",
-         "houseName":"Stark",
-         "characterLink":"/character/ch0153996/",
-         "actorName":"Matteo Elezi",
-         "actorLink":"/name/nm5502295/"
-      },
-      {
-         "characterName":"Young Cersei Lannister",
-         "houseName":"Lannister",
-         "characterLink":"/character/ch0159526/",
-         "actorName":"Nell Williams",
-         "actorLink":"/name/nm5309709/"
-      },
-      {
-         "characterName":"Young Lyanna Stark",
-         "houseName":"Stark",
-         "characterLink":"/character/ch0543804/",
-         "actorName":"Cordelia Hill",
-         "actorLink":"/name/nm8108764/"
-      },
-      {
-         "characterName":"Young Nan",
-         "characterLink":"/character/ch0305018/",
-         "actorName":"Annette Tierney",
-         "actorLink":"/name/nm1519719/"
-      },
-      {
-         "characterName":"Young Ned",
-         "houseName":"Stark",
-         "characterLink":"/character/ch0154681/",
-         "actorName":"Robert Aramayo",
-         "actorLink":"/name/nm7075019/"
-      },
-      {
-         "characterName":"Young Ned Stark",
-         "houseName":"Stark",
-         "characterLink":"/character/ch0154681/",
-         "actorName":"Sebastian Croft",
-         "actorLink":"/name/nm7509185/"
-      },
-      {
-         "characterName":"Young Rodrik Cassel",
-         "characterLink":"/character/ch0171391/",
-         "actorName":"Fergus Leathem",
-         "actorLink":"/name/nm7509186/"
       },
       {
         "characterName":"Yunkai soldier"
