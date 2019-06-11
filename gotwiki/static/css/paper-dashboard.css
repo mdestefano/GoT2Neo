@@ -5020,7 +5020,7 @@ License - nucleoapp.com/license/
 .main-panel {
   position: relative;
   float: right;
-  width: 100%;
+  width: calc(100% - 260px);
   background-color: #f4f3ef;
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
