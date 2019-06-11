@@ -1,10 +1,13 @@
-WITH 'https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master/data/episodes.json' AS url
-CALL apoc.load.json(url) YIELD value
-UNWIND value.episodes AS episodes
-WITH episodes.episodeTitle AS episodeTitle, episodes.seasonNum AS seasonNum, episodes.episodeNum AS episodeNum
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/episodes_Scores.csv' AS row
 MERGE (e:Episode {
-  title:   episodeTitle,
-  season:  seasonNum,
-  episode: episodeNum
+  title:                row.title,
+  season:               toInt(row.season),
+  episode:              toInt(row.episode),
+  episodeGlobal:        toInt(row.episode),
+  director:             row.director,
+  writer:               row.writer,
+  airDate:              row.airDate,
+  viewers:              toFloat(row.viewers),
+  IMBD_Score:           toFloat(row.IMDB_Score),
+  RottenTomatoes_Score: toFloat(row.RottenTomatoes_Score)
 })
-RETURN e
