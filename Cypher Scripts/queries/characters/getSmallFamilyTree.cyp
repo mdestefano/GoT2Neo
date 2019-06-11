@@ -1,6 +1,4 @@
-OPTIONAL MATCH (c:Character {name: 'Joffrey Baratheon'})-[son_r:SON_OF*1..2]->(par:Character)
-WITH c, son_r, par
-OPTIONAL MATCH (c)-[sib_r:SIBLING_OF]->(sib:Character)
-WITH c, son_r, par, sib_r, sib
-OPTIONAL MATCH (c)-[eng_r:ENGAGED]->(eng:Character)
-RETURN c, son_r, par, sib_r, sib, eng_r, eng
+match (c:Character{name:'Eddard Stark'})-[r1:SON_OF*1..5]->(m:Character)
+optional match (q:Character)-[r2:SON_OF]->(c)
+optional match(z:Character)-[r3:ENGAGED]->(c)
+return c,m,q,z,r1,r2,r3
