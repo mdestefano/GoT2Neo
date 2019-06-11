@@ -2,8 +2,8 @@ LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/mdestefano/GoT2Neo
 AS row
 MATCH (c1:Character {name: row.killer}), (c2:Character {name: row.character_killed})
 CREATE (c1)-[r:KILLED {
-  season:     row.season,
-  episode:    row.episode,
+  season:     toInt(row.season),
+  episode:    toInt(row.episode),
   method:     row.method,
   methodCat:  row.method_cat,
   reason:     row.reason,
