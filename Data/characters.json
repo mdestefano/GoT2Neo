@@ -1432,7 +1432,12 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540082/",
          "actorName":"Christopher Newman",
-         "actorLink":"/name/nm0628040/"
+         "actorLink":"/name/nm0628040/",
+         "parentOf":[
+           "Catelyn Stark",
+           "Lysa Arryn",
+           "Edmure Tully"
+         ]
       },
       {
          "characterName":"Hot Pie",
@@ -2570,6 +2575,9 @@
          ],
          "parents":[
             "Howland Reed"
+         ],
+         "siblings":[
+          "Jojen Reed"
          ]
       },
       {
