@@ -1,5 +1,5 @@
 MATCH
-  (c1:Character)-[:BELONGS_TO]->(h1:House {name: 'Baratheon'}),
-  (c2:Character)-[:BELONGS_TO]->(h2:House {name: 'Lannister'}), (e:Event {kind: 'sex'})
-  WHERE (e)-[:INVOLVES]->(c1) AND (e)-[:INVOLVES]->(c2)
-RETURN e, h1, c1, h2, c2
+  (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: 'Baratheon'}),
+  (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: 'Lannister'}),
+  (c1)<-[i1:INVOLVES]-(e:Event {kind: 'sex'})-[i2:INVOLVES]->(c2)
+RETURN c1, b1, h1, c2, b2, h2, e, i1, i2
