@@ -12,7 +12,8 @@ GoT2Neo = Graph(GoT2NeoUrl, username = GoT2NeoUsername, password = GoT2NeoPasswo
 # Clean the graph
 GoT2Neo.delete_all()
 
-## Constraints on characters ! TODO
+# Constraints on node with label 'Characters' on property 'name'
+GoT2Neo.schema.create_index('Character','name')
 
 # Get file characters.json
 charactersJsonUrl = 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/characters.json'
