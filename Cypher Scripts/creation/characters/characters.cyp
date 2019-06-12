@@ -16,5 +16,5 @@ MERGE (c:Character {
   imageThumb: coalesce(characterImageThumb, 'N/A'),
   nickname:   coalesce(characterNickname, 'None'),
   isRoyal:    toBoolean(coalesce(characterIsRoyal, 'false')),
-  isAlive:    toBoolean(coalesce(characterIsAlive, 'N/A'))
+  isAlive:    coalesce(characterIsAlive, 'N/A')
 })
