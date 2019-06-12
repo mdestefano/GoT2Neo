@@ -1,4 +1,4 @@
-WITH 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/episodes.json' AS url
+WITH 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/scenes.json' AS url
 CALL apoc.load.json(url) YIELD value
 WITH value.episodes AS episodes
 WITH [episode IN episodes | episode] AS episodesL
