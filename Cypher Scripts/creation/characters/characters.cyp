@@ -1,5 +1,4 @@
-WITH 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/characters.json' AS url
-CALL apoc.load.json(url) YIELD value
+WITH {data} as value
 UNWIND value.characters AS characters
 WITH characters.characterName AS characterName,
      characters.houseName AS houseName,
