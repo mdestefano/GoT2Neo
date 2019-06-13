@@ -4,11 +4,11 @@ import urllib.request, json
 from py2neo import Graph, Node, Relationship, Database
 
 # Set connection variables
-GoT2NeoUsername = GoT2NeoPassword = 'GoT2Neo'
+GoT2NeoUsername = GoT2NeoPassword = 'Got2Neo'
 GoT2NeoUrl = os.environ.get('GoT2NeoUrl',"http://localhost:7474/db/data/")
 # Connect to local instance of the graph
-GoT2Neo = Graph(GoT2NeoUrl, username = GoT2NeoUsername, password = GoT2NeoPassword)
-
+GoT2Neo = Graph(GoT2NeoUrl, auth= (GoT2NeoUsername,GoT2NeoPassword))
+print(GoT2Neo)
 # Clean the graph
 GoT2Neo.delete_all()
 
