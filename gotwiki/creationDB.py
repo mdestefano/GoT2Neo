@@ -1,7 +1,5 @@
-import os
-import requests
-import urllib.request, json 
-from py2neo import Graph, Node, Relationship, Database
+import os, requests, urllib.request, json 
+from py2neo import Graph
 
 # Set connection variables
 GoT2NeoUsername = GoT2NeoPassword = 'Got2Neo'
