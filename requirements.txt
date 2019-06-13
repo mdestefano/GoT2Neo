@@ -1,3 +1,5 @@
 flask
 flask_restful
 py2neo
+pandas
+plotly
