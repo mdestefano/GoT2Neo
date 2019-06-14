@@ -8,7 +8,7 @@ password = 'GoT2Neo'
 graph = Graph(url + '/db/data/', auth=(username,password))
 
 class House:
-    def __init__(self, name,region,seat,words,coa,is_alive,alive_characters,dead_characters,religion):
+    def __init__(self, name,region,seat,words,coa,is_alive,alive_characters,dead_characters,religion,lord):
         self.name = name
         self.region = region
         self.seat = seat
@@ -20,6 +20,7 @@ class House:
         self.dead_characters = dead_characters
         self.dead_c_no = len(self.dead_characters)
         self.religion = religion
+        self.lord = lord.strip()
 
     def __str__(self):
         return '''[name={},region={}, seat={}, words={}, coa={}, is_alive={}, religion={}, alive_characters={}, #alive={}, dead_characters={},  
@@ -50,7 +51,7 @@ class HouseModel:
         dead_members = graph.run(alive_characters_query,alive=False,name=self.name).data()
 
         house = House(houseNode["name"],houseNode["region"],houseNode["seat"],houseNode["words"],houseNode["coa"],
-                        houseNode["is_alive"],alive_members,dead_members,houseNode["religion"])
+                        houseNode["is_alive"],alive_members,dead_members,houseNode["religion"],houseNode["lord"])
         return house
 
         

@@ -21,7 +21,24 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
 */
+/*----------------------custom----------------------*/
 
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*--------------------------------------------*/
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
