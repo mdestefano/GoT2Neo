@@ -31,6 +31,18 @@ def getScoreStatsPerSeason():
     getScoreStatsPerSeasonQuery = __read_query('gotwiki/episodes/queries/getScoreStatsPerSeason.cyp')
     return {"query": getScoreStatsPerSeasonQuery, "data": GoT2Neo.run(getScoreStatsPerSeasonQuery)}
 
+def getTotalDuration():
+    getTotalDurationQuery = __read_query('gotwiki/episodes/queries/getTotalDuration.cyp')
+    return {"query": getTotalDurationQuery, "data": GoT2Neo.run(getTotalDurationQuery)}
+
+def getDurationPerSeason():
+    getDurationPerSeasonQuery = __read_query('gotwiki/episodes/queries/getDurationPerSeason.cyp')
+    return {"query": getDurationPerSeasonQuery, "data": GoT2Neo.run(getDurationPerSeasonQuery)}
+
+def getDurationEpisodesPerGivenSeason(season):
+    getDurationEpisodesPerGivenSeasonQuery = __read_query('gotwiki/episodes/queries/getDurationEpisodesPerGivenSeason.cyp')
+    return {"query": getDurationEpisodesPerGivenSeasonQuery, "data": GoT2Neo.run(getDurationEpisodesPerGivenSeasonQuery,season = season)}
+
 def __read_query(query_path):
     with open(query_path, 'r') as file:
         query = file.read().replace('\n', ' ')
