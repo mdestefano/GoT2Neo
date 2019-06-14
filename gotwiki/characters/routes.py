@@ -1,6 +1,6 @@
 from gotwiki.characters.models import CharacterManager
 from . import characters
-from flask import render_template, make_response
+from flask import render_template, make_response, escape
 
 index_template = 'characters/index.html'
 result_template = 'characters/result.html'
@@ -11,23 +11,46 @@ def index():
     return render_template(index_template)
 
 
-@characters.route('/getCharactersInLongestScenes')
-def getCharactersInLongestScenes():
-    cm = CharacterManager()
-    result = cm.getCharactersInLongestScenes()
-    data = result["data"]
-    query = result["query"]
-    response = make_response(render_template(result_template, data=data, query=query))
-    return response
-
-
 @characters.route('/getDeathCountPerKillCategory')
 def getDeathCountPerKillCategory():
     cm = CharacterManager()
     result = cm.getDeathCountPerKillCategory()
-    data = result["data"]
-    query = result["query"]
-    response = make_response(render_template(result_template, data=data, query=query))
-    return response
+    description = 'Death count for each kill category'
+    query_title = 'getDeathCountPerKillCategory'
+    return __make_response(result, description, query_title)
 
-# TODO the other routes
+
+@characters.route('/getKillCountPerCharacter')
+def getKillCountPerCharacter():
+    cm = CharacterManager()
+    result = cm.getKillCountPerCharacter()
+    description = 'Kill count for each characters'
+    query_title = 'getKillCountPerCharacter'
+    return __make_response(result, description, query_title)
+
+
+@characters.route('/getMurdersByCharacter/<killerName>')
+def getMurdersByCharacter(killerName):
+    cm = CharacterManager()
+    result = cm.getMurdersByCharacter(killerName)
+    description = 'Murders of ' + killerName
+    query_title = 'getMurdersByCharacter'
+    return __make_response(result, description, query_title)
+
+
+@characters.route('/getSuicides')
+def getSuicides():
+    cm = CharacterManager()
+    result = cm.getSuicides()
+    description = 'Characters who committed suicide'
+    query_title = 'getSuicides'
+    return __make_response(result, description, query_title)
+
+
+def __make_response(result, description, query_title):
+    data = result['data']
+    query = result['query']
+    response = make_response(
+        render_template(result_template, description=escape(description), data_json=escape(data), query=escape(query),
+                        query_title=escape(query_title)))
+    return response

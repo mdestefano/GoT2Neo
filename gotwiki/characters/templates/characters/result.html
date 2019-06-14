@@ -1,20 +1,28 @@
 {% extends "layout.html" %}
 {% block main_result_title %}
-    Main Result    
+    <div id="description">
+        {{ description }}
+    </div>
 {% endblock %}
 
-{% block main_result_body%}
-    <p>
-        {{ data }}
-    </p>
+{% block main_result_body %}
+    <div id="data" data-json="{{ data_json }}">
+    </div>
 {% endblock %}
 
 {% block query_title %}
-   Query 
+    <div id="query_title" data-query_title="{{ query_title }}">
+        {{ query_title }}
+    </div>
 {% endblock %}
 
-{% block query_body%}
-    <p>
+{% block query_body %}
+    <div id="query">
         {{ query }}
-    </p>
+    </div>
+{% endblock %}
+
+{% block script_block %}
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/characters.js')}}" type="text/javascript"></script>
 {% endblock %}
