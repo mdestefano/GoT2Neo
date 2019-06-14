@@ -1,5 +1,4 @@
-WITH 'https://raw.githubusercontent.com/mdestefano/GoT2Neo/master/Data/characters.json' AS url
-CALL apoc.load.json(url) YIELD value
+WITH {data} as value
 UNWIND value.characters AS characters
 WITH characters.characterName AS characterName,
      characters.houseName AS houseName,
@@ -7,7 +6,8 @@ WITH characters.characterName AS characterName,
      characters.characterImageFull AS characterImageFull,
      characters.characterImageThumb AS characterImageThumb,
      characters.nickname AS characterNickname,
-     characters.royal AS characterIsRoyal
+     characters.royal AS characterIsRoyal,
+     characters.alive AS characterIsAlive
 MERGE (c:Character {
   name:       characterName,
   house:      coalesce(houseName, 'unknown'),
@@ -15,5 +15,6 @@ MERGE (c:Character {
   imageFull:  coalesce(characterImageFull, 'N/A'),
   imageThumb: coalesce(characterImageThumb, 'N/A'),
   nickname:   coalesce(characterNickname, 'None'),
-  isRoyal:    toBoolean(coalesce(characterIsRoyal, 'false'))
+  isRoyal:    toBoolean(coalesce(characterIsRoyal, 'false')),
+  isAlive:    coalesce(characterIsAlive, 'N/A')
 })
