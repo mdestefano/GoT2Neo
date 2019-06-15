@@ -12,3 +12,13 @@ class scenesModel:
         GoT2Neo = getConnection()
         getTop10LongestScenesQuery = read_query('gotwiki/episodes/queries/getTop10LongestScenes.cyp')
         return {"query": getTop10LongestScenesQuery, "data": GoT2Neo.run(getTop10LongestScenesQuery)}
+
+    def getCharactersInLongestScenePerEpisode():
+        GoT2Neo = getConnection()
+        getCharactersInLongestScenePerEpisodeQuery = read_query('gotwiki/episodes/queries/getCharactersInLongestScenePerEpisode.cyp')
+        return {"query": getCharactersInLongestScenePerEpisodeQuery, "data": GoT2Neo.run(getCharactersInLongestScenePerEpisodeQuery)}
+
+    def getLongestScenePerEpisode():
+        GoT2Neo = getConnection()
+        getLongestScenePerEpisodeQuery = read_query('gotwiki/episodes/queries/getLongestScenePerEpisode.cyp')
+        return {"query": getLongestScenePerEpisodeQuery, "data": GoT2Neo.run(getLongestScenePerEpisodeQuery)}
