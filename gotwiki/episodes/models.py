@@ -43,6 +43,19 @@ def getDurationEpisodesPerGivenSeason(season):
     getDurationEpisodesPerGivenSeasonQuery = __read_query('gotwiki/episodes/queries/getDurationEpisodesPerGivenSeason.cyp')
     return {"query": getDurationEpisodesPerGivenSeasonQuery, "data": GoT2Neo.run(getDurationEpisodesPerGivenSeasonQuery,season = season)}
 
+def getSexScenesCountPerSeason():
+    getSexScenesCountPerSeasonQuery = __read_query('gotwiki/episodes/queries/getSexScenesCountPerSeason.cyp')
+    return {"query": getSexScenesCountPerSeasonQuery, "data": GoT2Neo.run(getSexScenesCountPerSeasonQuery)}
+
+def getSexScenesPercentagePerSeason():
+    getSexScenesPercentagePerSeasonQuery = __read_query('gotwiki/episodes/queries/getSexScenesPercentagePerSeason.cyp')
+    return {"query": getSexScenesPercentagePerSeasonQuery, "data": GoT2Neo.run(getSexScenesPercentagePerSeasonQuery)}
+
+def getViewersStatsPerSeason():
+    getViewersStatsPerSeasonQuery = __read_query('gotwiki/episodes/queries/getViewersStatsPerSeason.cyp')
+    return {"query": getViewersStatsPerSeasonQuery, "data": GoT2Neo.run(getViewersStatsPerSeasonQuery)}
+
+# Utility function for reading query file
 def __read_query(query_path):
     with open(query_path, 'r') as file:
         query = file.read().replace('\n', ' ')
