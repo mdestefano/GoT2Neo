@@ -1,6 +1,9 @@
-from . import episodes
-# TODO change import and make functions statics
-from .models import Episodes, getDeathPercentagesPerSeason, getNumberOfScenesPerCharacter, getTop10LongestScenes, getScorePerEpisode, getScoreStatsPerSeason, getTotalDuration, getDurationPerSeason,getDurationEpisodesPerGivenSeason, getSexScenesCountPerSeason, getSexScenesPercentagePerSeason, getViewersStatsPerSeason
+from . import *
+from .seasons import seasonModel
+from .episodesStats import episodeModel
+from .scenes import scenesModel
+from .mainEvents import eventsModel
+
 from flask import render_template, request
 
 @episodes.route('/')
@@ -10,7 +13,7 @@ def visualization():
 # Scenes:Get number of scenes for each character: (characterName, numberOfScenes)
 @episodes.route('/num_scenes_characters')
 def num_scenes_characters():
-    result = getNumberOfScenesPerCharacter()
+    result = scenesModel.getNumberOfScenesPerCharacter()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -18,7 +21,7 @@ def num_scenes_characters():
 # Scenes: Get top longest scenes: info of the scene and minutes of that
 @episodes.route('/longest_scenes')
 def longest_scenes():
-    result = getTop10LongestScenes()
+    result = scenesModel.getTop10LongestScenes()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -26,7 +29,7 @@ def longest_scenes():
 # Scores: Get score for every episodes in order of score Desc: (episodeInfo, meanScore)
 @episodes.route('/score_episodes')
 def score_episodes():
-    result = getScorePerEpisode()
+    result = episodeModel.getScorePerEpisode()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -34,7 +37,7 @@ def score_episodes():
 # Scores: Get mean score and stDev for every season: (season, avgScore, stDevScore)
 @episodes.route('/score_season')
 def score_season():
-    result = getScoreStatsPerSeason()
+    result = seasonModel.getScoreStatsPerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -43,7 +46,7 @@ def score_season():
 # Main events: Get deaths for each season: (season number, percentageOfDeaths)
 @episodes.route('/deaths_in_seasons')
 def deaths_in_seasons():
-    result = getDeathPercentagesPerSeason()
+    result = eventsModel.getDeathPercentagesPerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -51,7 +54,7 @@ def deaths_in_seasons():
 # Main events: Get sex scenes number for each season: (season number, sexScenesNumber)
 @episodes.route('/sex_count')
 def sex_count():
-    result = getSexScenesCountPerSeason()
+    result = eventsModel.getSexScenesCountPerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -59,7 +62,7 @@ def sex_count():
 # Main events: Get sex scenes percentage for each season: (season number, sexScenesPercentage)
 @episodes.route('/sex_percentage')
 def sex_percentage():
-    result = getSexScenesPercentagePerSeason()
+    result = eventsModel.getSexScenesPercentagePerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -67,7 +70,7 @@ def sex_percentage():
 # Episodes facts: Get stats on viewers: (season, numberViewers, mean, std)
 @episodes.route('/viewer_stats')
 def viewer_stats():
-    result = getViewersStatsPerSeason()
+    result = seasonModel.getViewersStatsPerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -75,7 +78,7 @@ def viewer_stats():
 # Episodes facts: Get getTotalDuration of all season: (time)
 @episodes.route('/total_duration')
 def total_duration():
-    result = getTotalDuration()
+    result = seasonModel.getTotalDuration()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -83,7 +86,7 @@ def total_duration():
 # Episodes facts: Get duration of each season: (season, toFloat(sum(seconds)) / 3600)
 @episodes.route('/season_duration')
 def season_duration():
-    result = getDurationPerSeason()
+    result = seasonModel.getDurationPerSeason()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
@@ -93,7 +96,7 @@ def season_duration():
 @episodes.route('/episodes_duration')
 def episodes_duration():
     season = int(request.args.get('season'))
-    result = getDurationEpisodesPerGivenSeason(season)
+    result = episodeModel.getDurationEpisodesPerGivenSeason(season)
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
