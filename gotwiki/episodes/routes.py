@@ -3,6 +3,7 @@ from .seasons import seasonModel
 from .episodesStats import episodeModel
 from .scenes import scenesModel
 from .mainEvents import eventsModel
+from .locations import locationModel
 
 from flask import render_template, request
 
@@ -97,6 +98,31 @@ def season_duration():
 def episodes_duration():
     season = int(request.args.get('season'))
     result = episodeModel.getDurationEpisodesPerGivenSeason(season)
+    data = result["data"]
+    query = result["query"]
+    return render_template('episodes/visualization.html', result = data)
+
+# Locations: Get location and count where a character belongs to a given a house has killed someone: (location, numbDeaths)
+@episodes.route('/kill_house_location')
+def kill_house_location():
+    house = request.args.get('house')
+    result = locationModel.getDeathCountOfHousePerLocation(house)
+    data = result["data"]
+    query = result["query"]
+    return render_template('episodes/visualization.html', result = data)
+
+# Locations: Get location and death count of the location : (location, numbDeaths)
+@episodes.route('/kill_location_numb')
+def kill_location_numb():
+    result = locationModel.getDeathCountPerLocation()
+    data = result["data"]
+    query = result["query"]
+    return render_template('episodes/visualization.html', result = data)
+
+# Locations: Get location and number of scenes set in that location : (location, numbScenes)
+@episodes.route('/frequency_locations')
+def frequency_locations():
+    result = locationModel.getFrequencyPerLocation()
     data = result["data"]
     query = result["query"]
     return render_template('episodes/visualization.html', result = data)
