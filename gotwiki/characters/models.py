@@ -34,19 +34,23 @@ class CharacterManager:
         data_json = json.dumps(data)
         return {"query": query, "data": data_json}
 
+    def getLoversKillers(self):
+        query = self.__read_query('gotwiki/characters/queries/getLoversKillers.cyp')
+        cursor = self.graph.run(query)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
     def getMurdersByCharacter(self, killerName):
         query = self.__read_query('gotwiki/characters/queries/getMurdersByCharacter.cyp')
         cursor = self.graph.run(query, characterName=killerName)
         data = cursor.data()
-        data_json = json.dumps(data)
-        return {"query": query, "data": data_json}
+        return {"query": query, "data": data}
 
     def getSuicides(self):
         query = self.__read_query('gotwiki/characters/queries/getSuicides.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
-        data_json = json.dumps(data)
-        return {"query": query, "data": data_json}
+        return {"query": query, "data": data}
 
     @staticmethod
     def __read_query(query_path):

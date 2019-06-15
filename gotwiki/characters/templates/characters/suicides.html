@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block main_result_title %}
+    <div id="description">
+        {{ description }}
+    </div>
+{% endblock %}
+
+{% block main_result_body %}
+    <div class="container" id="data" data-data="{{ data }}">
+        <div class="row mb-5">
+            {% for row in data %}
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                    <table class="table">
+                        <tr>
+                            <td scope="row">Name</td>
+                            <td>{{ row['character']['name'] }}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Nickname</td>
+                            <td>{{ row['character']['nickname'] }}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Actor name</td>
+                            <td>{{ row['character']['actor'] }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <img src="{{ row['character']['imageFull'] }}"/>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block query_title %}
+    <div id="query_title" data-query_title="{{ query_title }}">
+        {{ query_title }}
+    </div>
+{% endblock %}
+
+{% block query_body %}
+    <div id="query">
+        {{ query }}
+    </div>
+{% endblock %}
