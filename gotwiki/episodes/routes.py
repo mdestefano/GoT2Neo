@@ -1,11 +1,15 @@
 from . import *
+from pandas import DataFrame
 from .seasons import seasonModel
 from .episodesStats import episodeModel
 from .scenes import scenesModel
 from .mainEvents import eventsModel
 from .locations import locationModel
-
 from flask import render_template, request
+from .utilities import getUIParameter
+import plotly
+import plotly.graph_objs as go
+import json
 
 # Route for episode index where user can choose the section of interest
 @episodes.route('/')
@@ -15,6 +19,22 @@ def visualization():
 
 
 ############# SEASONS #############
+##ROUTE
+@episodes.route('/seasons')
+def seasons():
+    result = seasonModel.getScoreStatsPerSeason()
+    data = result["data"]
+    query = result["query"]
+    
+    scoresDataframe = DataFrame(data)
+    season = scoresDataframe[0].tolist()
+    mean = scoresDataframe[1].tolist()
+    std = scoresDataframe[2].tolist()
+
+    dataMean = getUIParameter(season, mean)
+    dataStd = getUIParameter(season, std)
+
+    return render_template('episodes/seasons.html', dataMean = dataMean, dataStd = dataStd, query = query)
 
 # Season: Get duration of each season: (season, toFloat(sum(seconds)) / 3600)
 @episodes.route('/season_duration')
@@ -22,7 +42,7 @@ def season_duration():
     result = seasonModel.getDurationPerSeason()
     data = result["data"]
     query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    return render_template('episodes/seasons.html', result = data)
 
 # Season: Get mean score and stDev for every season: (season, avgScore, stDevScore)
 @episodes.route('/score_season')
@@ -30,7 +50,7 @@ def score_season():
     result = seasonModel.getScoreStatsPerSeason()
     data = result["data"]
     query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    return render_template('episodes/seasons.html', result = data)
 
 # Season: Get stats on viewers: (season, numberViewers, mean, std)
 @episodes.route('/viewer_stats')
@@ -38,7 +58,7 @@ def viewer_stats():
     result = seasonModel.getViewersStatsPerSeason()
     data = result["data"]
     query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    return render_template('episodes/seasons.html', result = data)
 
 # Season: Get getTotalDuration of all season: (time)
 @episodes.route('/total_duration')
@@ -46,7 +66,7 @@ def total_duration():
     result = seasonModel.getTotalDuration()
     data = result["data"]
     query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    return render_template('episodes/seasons.html', result = data)
 
 
 

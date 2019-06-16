@@ -225,7 +225,7 @@ img.slide {
 
 .change-section:hover {
     text-decoration: none;
-    color: #FFF;
+    color:rgb(82, 203, 206);
 }
 
 .change-section:hover .black-bg > h2 {

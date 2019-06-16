@@ -1,0 +1,50 @@
+{% extends "episodes/layout.html" %}
+{% block script_block %}
+    <script src="{{ url_for('static', filename='js/bar-chart.js')}}" type="text/javascript"></script>
+{% endblock%}
+{% block section_name %}
+Seasons
+{% endblock %}
+
+{% block content_visualization %}
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header">
+                    Seasons mean score
+                </h5>
+                <div id="season_scores_mean" class="card-body scrollable">
+                    <script>
+                        var dataMean = {{dataMean | safe}}
+                        bar_chart("season_scores_mean", dataMean, 'Mean score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="card graphCard" id="main-result-card">
+                <h5 class="card-header">
+                    Seasons standard deviation score
+                </h5>
+                <div id="season_scores_std" class="card-body scrollable">
+                    <script>
+                        var dataStd = {{dataStd | safe}}
+                        bar_chart("season_scores_std", dataStd, 'Std score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header">
+                    Query: getScoreStatsPerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p>{{query}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

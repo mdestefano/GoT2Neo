@@ -1,0 +1,12 @@
+.scrollable{
+    overflow-y: auto;
+  }
+  
+  .graphCard{
+    max-height: 60vh;
+    min-height: 60vh;
+  }
+
+  .queryCard{
+    max-height: 30vh
+  }

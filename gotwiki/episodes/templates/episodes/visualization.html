@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "episodes/layout.html" %}
 {% block main_result_title %}
     Main Result    
 {% endblock %}
@@ -7,6 +7,7 @@
     <p>
         {% for rows in result %}
                 {{rows}}
+                -> {{rows.data()}}
             {% for row in rows %}
                     <p>row: <b>{{row}}</b></p>
             {% endfor %}
