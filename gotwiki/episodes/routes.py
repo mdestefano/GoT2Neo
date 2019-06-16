@@ -22,9 +22,10 @@ def visualization():
 ##ROUTE
 @episodes.route('/seasons')
 def seasons():
+    # Season: Get mean score and stDev for every season: (season, avgScore, stDevScore)
     result = seasonModel.getScoreStatsPerSeason()
     data = result["data"]
-    query = result["query"]
+    query_score = result["query"]
     
     scoresDataframe = DataFrame(data)
     season = scoresDataframe[0].tolist()
@@ -34,32 +35,48 @@ def seasons():
     dataMean = getUIParameter(season, mean)
     dataStd = getUIParameter(season, std)
 
-    return render_template('episodes/seasons.html', dataMean = dataMean, dataStd = dataStd, query = query)
-
-# Season: Get duration of each season: (season, toFloat(sum(seconds)) / 3600)
-@episodes.route('/season_duration')
-def season_duration():
+    # Season: Get duration of each season: (season, toFloat(sum(seconds)) / 3600)
     result = seasonModel.getDurationPerSeason()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/seasons.html', result = data)
+    query_duration = result["query"]
+    
+    durationDataframe = DataFrame(data)
+    seasonLabels = [go.Bar(x = durationDataframe[0].tolist())]
+    seasonLabels = json.dumps(seasonLabels, cls=plotly.utils.PlotlyJSONEncoder)
+    seasonDurations = [go.Bar(x = durationDataframe[1].tolist())]
+    seasonDurations = json.dumps(seasonDurations, cls=plotly.utils.PlotlyJSONEncoder)
 
-# Season: Get mean score and stDev for every season: (season, avgScore, stDevScore)
-@episodes.route('/score_season')
-def score_season():
-    result = seasonModel.getScoreStatsPerSeason()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/seasons.html', result = data)
-
-# Season: Get stats on viewers: (season, numberViewers, mean, std)
-@episodes.route('/viewer_stats')
-def viewer_stats():
+    # Season: Get stats on viewers: (season, numberViewers, mean, std)
     result = seasonModel.getViewersStatsPerSeason()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/seasons.html', result = data)
+    query_viewers = result["query"]
 
+    viewersDataframe = DataFrame(data)
+    season = viewersDataframe[0].tolist()
+    numbViewers = viewersDataframe[1].tolist()
+    mean = viewersDataframe[2].tolist()
+    std = viewersDataframe[3].tolist()
+
+    numbViewers = getUIParameter(season, numbViewers)
+    meanViewers = getUIParameter(season, mean)
+    stdViewers = getUIParameter(season, std)
+
+    return render_template('episodes/seasons.html', 
+                            dataMean = dataMean, 
+                            dataStd = dataStd,
+                            seasonLabels = seasonLabels,
+                            seasonDurations = seasonDurations,
+                            numbViewers = numbViewers,
+                            meanViewers = meanViewers,
+                            stdViewers = stdViewers,
+                            query_score = query_score,
+                            query_duration = query_duration,
+                            query_viewers = query_viewers
+                          )
+
+
+
+### useful?
 # Season: Get getTotalDuration of all season: (time)
 @episodes.route('/total_duration')
 def total_duration():
