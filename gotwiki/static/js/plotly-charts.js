@@ -17,7 +17,7 @@ function bar_chart(elementName, data, title, xTitle, yTitle){
         showline: false
       },
       width: containerWidth,  
-      height: containerHeight 
+      height: containerHeight,
     };
 
     Plotly.newPlot(elementName, data, layout);

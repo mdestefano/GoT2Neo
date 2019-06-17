@@ -7,10 +7,10 @@ class episodeModel:
         getScorePerEpisodeQuery = read_query('gotwiki/episodes/queries/getScorePerEpisode.cyp')
         return {"query": getScorePerEpisodeQuery, "data": GoT2Neo.run(getScorePerEpisodeQuery)}
 
-    def getDurationEpisodesPerGivenSeason(season):
+    def getDurationOfEachEpisode():
         GoT2Neo = getConnection()
-        getDurationEpisodesPerGivenSeasonQuery = read_query('gotwiki/episodes/queries/getDurationEpisodesPerGivenSeason.cyp')
-        return {"query": getDurationEpisodesPerGivenSeasonQuery, "data": GoT2Neo.run(getDurationEpisodesPerGivenSeasonQuery,season = season)}
+        getDurationOfEachEpisodeQuery = read_query('gotwiki/episodes/queries/getDurationOfEachEpisode.cyp')
+        return {"query": getDurationOfEachEpisodeQuery, "data": GoT2Neo.run(getDurationOfEachEpisodeQuery)}
 
     def getAllEpisodes():
         GoT2Neo = getConnection()

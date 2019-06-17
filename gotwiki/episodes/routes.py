@@ -140,6 +140,18 @@ def episodesStats():
     
     episodesMeanScores = encodeSingleParameter(scoresDataframe["meanScore"].tolist())
 
+    # Episode: Get duration of each episode: (episodeGlobal, toFloat(sum(seconds)) / 60)
+    result = episodeModel.getDurationOfEachEpisode()
+    data = result["data"]
+    query_episodes_duration = result["query"]
+    episodesDurationDataframe = DataFrame(data)
+
+    episodesGlobalNumb = episodesDurationDataframe[0].tolist()
+    episodesDuration = episodesDurationDataframe[1].tolist()
+
+
+    episodesDuration = encodeCoupleParameter(episodesGlobalNumb, episodesDuration)
+
     return render_template('episodes/episodes_stats.html',
                             titleList = titleList,
                             seasonList = seasonList,
@@ -152,8 +164,10 @@ def episodesStats():
                             scoreTitleList = scoreTitleList,
                             scoreSeasonList = scoreSeasonList,
                             scoreEpisodeList = scoreEpisodeList,
+                            episodesDuration = episodesDuration,
                             episodesMeanScores = episodesMeanScores,
-                            query_episodes_score = query_episodes_score
+                            query_episodes_score = query_episodes_score,
+                            query_episodes_duration = query_episodes_duration
                           )
 
 
@@ -163,7 +177,6 @@ def episodesStats():
     return render_template('episodes/visualization.html', result = data)
 
 # Episode: Get duration, given season, of each episode: (episode, toFloat(sum(seconds)) / 3600)
-#http://localhost:5000/episodes/episodes_duration?season=1
 @episodes.route('/episodes_duration')
 def episodes_duration():
     season = int(request.args.get('season'))

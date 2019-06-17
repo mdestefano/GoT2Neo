@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content_visualization %}
-   <!--   SCORES   -->
+   <!--   EPISODE TABLE   -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card graphCard" id="main-result-card" >
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-
+   <!--   SCORES   -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card graphCard" id="main-result-card" >
@@ -84,7 +84,7 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card queryCard" id="query-card">
                 <h5 class="card-header">
-                    Query: getScoreStatsPerSeason
+                    Query: getScorePerEpisode
                 </h5>
                 <div class="card-body scrollable">
                     <p><b>{{query_episodes_score}}</b></p>
@@ -94,4 +94,32 @@
     </div>
 <hr>
 
+    <!--   DURATION   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header">
+                    Duration of each episode in all seasons
+                </h5>
+                <div id="episodes_duration" class="card-body scrollable">
+                    <script>
+                        var episodesDuration = {{episodesDuration | safe}}
+                        bar_chart("episodes_duration", episodesDuration, 'Episode duration in minute', 'Episode number', 'Duration')
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header">
+                    Query: getDurationOfEachEpisode
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b><b>{{query_episodes_duration}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div> 
 {% endblock %}
