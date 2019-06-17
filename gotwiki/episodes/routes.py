@@ -172,54 +172,39 @@ def episodesStats():
 
 
 
-
-
-    return render_template('episodes/visualization.html', result = data)
-
-# Episode: Get duration, given season, of each episode: (episode, toFloat(sum(seconds)) / 3600)
-@episodes.route('/episodes_duration')
-def episodes_duration():
-    season = int(request.args.get('season'))
-    result = episodeModel.getDurationEpisodesPerGivenSeason(season)
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
-
-
-
 ############# SCENES #############
-
+### Not useful visualizations
 # Scene:Get number of scenes for each character: (characterName, numberOfScenes)
-@episodes.route('/num_scenes_characters')
-def num_scenes_characters():
-    result = scenesModel.getNumberOfScenesPerCharacter()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+# # # # @episodes.route('/num_scenes_characters')
+# # # # def num_scenes_characters():
+# # # #     result = scenesModel.getNumberOfScenesPerCharacter()
+# # # #     data = result["data"]
+# # # #     query = result["query"]
+# # # #     return render_template('episodes/visualization.html', result = data)
 
-# Scene: Get top longest scenes: info of the scene and minutes of that
-@episodes.route('/longest_scenes')
-def longest_scenes():
-    result = scenesModel.getTop10LongestScenes()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+# # # # # Scene: Get top longest scenes: info of the scene and minutes of that
+# # # # @episodes.route('/longest_scenes')
+# # # # def longest_scenes():
+# # # #     result = scenesModel.getTop10LongestScenes()
+# # # #     data = result["data"]
+# # # #     query = result["query"]
+# # # #     return render_template('episodes/visualization.html', result = data)
 
-# Scene: Get characters in longest scene for each episode: (episode, collectionCharacters)
-@episodes.route('/characters_longest_scene')
-def characters_longest_scene():
-    result = scenesModel.getCharactersInLongestScenePerEpisode()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+# # # # # Scene: Get characters in longest scene for each episode: (episode, collectionCharacters)
+# # # # @episodes.route('/characters_longest_scene')
+# # # # def characters_longest_scene():
+# # # #     result = scenesModel.getCharactersInLongestScenePerEpisode()
+# # # #     data = result["data"]
+# # # #     query = result["query"]
+# # # #     return render_template('episodes/visualization.html', result = data)
 
-# Scene: Get longest scenes for each episodes: (episode, time, collectionScenes)
-@episodes.route('/longest_scene_episode')
-def longest_scene_episode():
-    result = scenesModel.getLongestScenePerEpisode()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+# # # # # Scene: Get longest scenes for each episodes: (episode, time, collectionScenes)
+# # # # @episodes.route('/longest_scene_episode')
+# # # # def longest_scene_episode():
+# # # #     result = scenesModel.getLongestScenePerEpisode()
+# # # #     data = result["data"]
+# # # #     query = result["query"]
+# # # #     return render_template('episodes/visualization.html', result = data)
 
 
 
