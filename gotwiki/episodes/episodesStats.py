@@ -11,3 +11,8 @@ class episodeModel:
         GoT2Neo = getConnection()
         getDurationEpisodesPerGivenSeasonQuery = read_query('gotwiki/episodes/queries/getDurationEpisodesPerGivenSeason.cyp')
         return {"query": getDurationEpisodesPerGivenSeasonQuery, "data": GoT2Neo.run(getDurationEpisodesPerGivenSeasonQuery,season = season)}
+
+    def getAllEpisodes():
+        GoT2Neo = getConnection()
+        getAllEpisodesQuery = "MATCH (episode:Episode) RETURN episode ORDER BY episode.episodeGlobal"
+        return {"data": GoT2Neo.run(getAllEpisodesQuery)}

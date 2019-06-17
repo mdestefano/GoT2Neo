@@ -6,7 +6,7 @@ from .scenes import scenesModel
 from .mainEvents import eventsModel
 from .locations import locationModel
 from flask import render_template, request
-from .utilities import getUIParameter
+from .utilities import encodeCoupleParameter, encodeSingleParameter, getListForProperty
 import plotly
 import plotly.graph_objs as go
 import json
@@ -35,8 +35,8 @@ def seasons():
     mean = scoresDataframe[1].tolist()
     std = scoresDataframe[2].tolist()
 
-    dataMean = getUIParameter(season, mean)
-    dataStd = getUIParameter(season, std)
+    dataMean = encodeCoupleParameter(season, mean)
+    dataStd = encodeCoupleParameter(season, std)
 
     # Season: Get duration of each season: (season, toFloat(sum(seconds)) / 3600)
     result = seasonModel.getDurationPerSeason()
@@ -44,10 +44,8 @@ def seasons():
     query_duration = result["query"]
     
     durationDataframe = DataFrame(data)
-    seasonLabels = [go.Bar(x = durationDataframe[0].tolist())]
-    seasonLabels = json.dumps(seasonLabels, cls=plotly.utils.PlotlyJSONEncoder)
-    seasonDurations = [go.Bar(x = durationDataframe[1].tolist())]
-    seasonDurations = json.dumps(seasonDurations, cls=plotly.utils.PlotlyJSONEncoder)
+    seasonLabels = encodeSingleParameter(durationDataframe[0].tolist())
+    seasonDurations = encodeSingleParameter(durationDataframe[1].tolist())
 
     # Season: Get stats on viewers: (season, numberViewers, mean, std)
     result = seasonModel.getViewersStatsPerSeason()
@@ -60,9 +58,9 @@ def seasons():
     mean = viewersDataframe[2].tolist()
     std = viewersDataframe[3].tolist()
 
-    numbViewers = getUIParameter(season, numbViewers)
-    meanViewers = getUIParameter(season, mean)
-    stdViewers = getUIParameter(season, std)
+    numbViewers = encodeCoupleParameter(season, numbViewers)
+    meanViewers = encodeCoupleParameter(season, mean)
+    stdViewers = encodeCoupleParameter(season, std)
 
     return render_template('episodes/seasons.html', 
                             dataMean = dataMean, 
@@ -81,23 +79,87 @@ def seasons():
 
 ### useful?
 # Season: Get getTotalDuration of all season: (time)
-@episodes.route('/total_duration')
-def total_duration():
-    result = seasonModel.getTotalDuration()
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/seasons.html', result = data)
-
+# # # @episodes.route('/total_duration')
+# # # def total_duration():
+# # #     result = seasonModel.getTotalDuration()
+# # #     data = result["data"]
+# # #     query = result["query"]
+# # #     return render_template('episodes/seasons.html', result = data)
 
 
 ############# EPISODES #############
+##ROUTE
+@episodes.route('/episodesStats')
+def episodesStats():
+    #Get all episodes
+    result = episodeModel.getAllEpisodes()
+    data = result["data"]
+    episodesDataframe = DataFrame(data.data())
+    episodeNodes = episodesDataframe["episode"]
+    
+    titleList = getListForProperty(episodeNodes, "title")
+    titleList = encodeSingleParameter(titleList)
 
-# Episode: Get score for every episodes in order of score Desc: (episodeInfo, meanScore)
-@episodes.route('/score_episodes')
-def score_episodes():
+    seasonList = getListForProperty(episodeNodes, "season")
+    seasonList = encodeSingleParameter(seasonList)
+
+    episodeList = getListForProperty(episodeNodes, "episode")
+    episodeList = encodeSingleParameter(episodeList)
+
+    episodeGlobalList = getListForProperty(episodeNodes, "episodeGlobal")
+    episodeGlobalList = encodeSingleParameter(episodeGlobalList)
+
+    writerList = getListForProperty(episodeNodes, "writer")
+    writerList = encodeSingleParameter(writerList)
+    
+    directorList = getListForProperty(episodeNodes, "director")
+    directorList = encodeSingleParameter(directorList)
+    
+    viewersList = getListForProperty(episodeNodes, "viewers")
+    viewersList = encodeSingleParameter(viewersList)
+
+    airDateList = getListForProperty(episodeNodes, "airDate")
+    airDateList = encodeSingleParameter(airDateList)
+
+    # Episode: Get score for every episodes in order of score Desc: (episodeInfo, meanScore)
     result = episodeModel.getScorePerEpisode()
     data = result["data"]
-    query = result["query"]
+    query_episodes_score = result["query"]
+
+    scoresDataframe = DataFrame(data.data())
+    episodeNodes = scoresDataframe["episode"]
+    
+    scoreTitleList = getListForProperty(episodeNodes, "title")
+    scoreTitleList = encodeSingleParameter(scoreTitleList)
+
+    scoreSeasonList = getListForProperty(episodeNodes, "season")
+    scoreSeasonList = encodeSingleParameter(scoreSeasonList)
+
+    scoreEpisodeList = getListForProperty(episodeNodes, "episode")
+    scoreEpisodeList = encodeSingleParameter(scoreEpisodeList)
+    
+    episodesMeanScores = encodeSingleParameter(scoresDataframe["meanScore"].tolist())
+
+    return render_template('episodes/episodes_stats.html',
+                            titleList = titleList,
+                            seasonList = seasonList,
+                            episodeList = episodeList,
+                            episodeGlobalList = episodeGlobalList,
+                            writerList = writerList,
+                            directorList = directorList,
+                            viewersList = viewersList,
+                            airDateList = airDateList,
+                            scoreTitleList = scoreTitleList,
+                            scoreSeasonList = scoreSeasonList,
+                            scoreEpisodeList = scoreEpisodeList,
+                            episodesMeanScores = episodesMeanScores,
+                            query_episodes_score = query_episodes_score
+                          )
+
+
+
+
+
     return render_template('episodes/visualization.html', result = data)
 
 # Episode: Get duration, given season, of each episode: (episode, toFloat(sum(seconds)) / 3600)
