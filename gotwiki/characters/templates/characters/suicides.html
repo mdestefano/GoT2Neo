@@ -13,7 +13,11 @@
                     <table class="table">
                         <tr>
                             <td scope="row">Name</td>
-                            <td>{{ row['character']['name'] }}</td>
+                            <td>
+                                <a href="getCharacterInfo/{{ row['character']['name'] }}">
+                                    {{ row['character']['name'] }}
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td scope="row">Nickname</td>
@@ -26,7 +30,9 @@
                     </table>
                 </div>
                 <div class="col">
-                    <img src="{{ row['character']['imageFull'] }}"/>
+                    <a href="getCharacterInfo/{{ row['character']['name'] }}">
+                        <img src="{{ row['character']['imageFull'] }}"/>
+                    </a>
                 </div>
             {% endfor %}
         </div>

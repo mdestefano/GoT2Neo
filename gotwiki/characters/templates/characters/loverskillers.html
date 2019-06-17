@@ -18,8 +18,16 @@
             <tbody>
             {% for row in data %}
                 <tr>
-                    <td style="width: 33.33%"><img src="{{ row['killer']['imageThumb'] }}"/></td>
-                    <td style="width: 33.33%"><img src="{{ row['killed']['imageThumb'] }}"/></td>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['killer']['name'] }}">
+                            <img src="{{ row['killer']['imageThumb'] }}" alt="{{ row['killer']['name'] }}"/>
+                        </a>
+                    </td>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['killed']['name'] }}">
+                            <img src="{{ row['killed']['imageThumb'] }}" alt="{{ row['killed']['name'] }}"/>
+                        </a>
+                    </td>
                     <td style="width: 33.33%">{{ row['killing']['reason'] }}</td>
                 </tr>
             {% endfor %}

@@ -11,10 +11,14 @@
             <h5 class="card-header">
                 <div class="row">
                     <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
-                        {{ data[0]['killer']['name'] }}
+                        <a href="../getCharacterInfo/{{ data[0]['killer']['name'] }}">
+                            {{ data[0]['killer']['name'] }}
+                        </a>
                     </div>
                     <div class="col">
-                        <img src="{{ data[0]['killer']['imageFull'] }}" alt="N/A"/>
+                        <a href="../getCharacterInfo/{{ data[0]['killer']['name'] }}">
+                            <img src="{{ data[0]['killer']['imageFull'] }}" alt="{{ data[0]['killer']['name'] }}"/>
+                        </a>
                     </div>
                 </div>
             </h5>
@@ -37,7 +41,11 @@
                     <table class="table">
                         <tr>
                             <td scope="row">Name</td>
-                            <td>{{ row['dead']['name'] }}</td>
+                            <td>
+                                <a href="../getCharacterInfo/{{ row['dead']['name'] }}">
+                                    {{ row['dead']['name'] }}
+                                </a>
+                            </td>
                         </tr>
                         <tr>
                             <td scope="row">Nickname</td>
@@ -64,7 +72,9 @@
                     </table>
                 </div>
                 <div class="col">
-                    <img src="{{ row['dead']['imageFull'] }}" alt="N/A"/>
+                    <a href="../getCharacterInfo/{{ row['dead']['name'] }}">
+                        <img src="{{ row['dead']['imageThumb'] }}" alt="{{ row['dead']['name'] }}"/>
+                    </a>
                 </div>
             {% endfor %}
         </div>

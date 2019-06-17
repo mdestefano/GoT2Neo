@@ -2,17 +2,6 @@ from flask import json
 from py2neo import Graph
 
 
-class Character:
-    def __init__(self, name, actor, house, image_full, image_thumb, is_royal, nickname):
-        self.name = name
-        self.actor = actor
-        self.house = house
-        self.imageFull = image_full
-        self.imageThumb = image_thumb
-        self.isRoyal = is_royal
-        self.nickname = nickname
-
-
 class CharacterManager:
     def __init__(self):
         self.__url = 'bolt://localhost:7687'
@@ -20,12 +9,24 @@ class CharacterManager:
         self.__password = 'GoT2Neo'
         self.graph = Graph(self.__url, user=self.__username, password=self.__password)
 
+    def getCharacterInfo(self, characterName):
+        query = self.__read_query('gotwiki/characters/queries/getCharacterInfo.cyp')
+        cursor = self.graph.run(query, characterName=characterName)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
     def getDeathCountPerKillCategory(self):
         query = self.__read_query('gotwiki/characters/queries/getDeathCountPerKillCategory.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
         data_json = json.dumps(data)
         return {"query": query, "data": data_json}
+
+    def getIncests(self):
+        query = self.__read_query('gotwiki/characters/queries/getIncests.cyp')
+        cursor = self.graph.run(query)
+        data = cursor.data()
+        return {"query": query, "data": data}
 
     def getKillCountPerCharacter(self):
         query = self.__read_query('gotwiki/characters/queries/getKillCountPerCharacter.cyp')
@@ -36,6 +37,12 @@ class CharacterManager:
 
     def getLoversKillers(self):
         query = self.__read_query('gotwiki/characters/queries/getLoversKillers.cyp')
+        cursor = self.graph.run(query)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
+    def getMurdersAmongRelatives(self):
+        query = self.__read_query('gotwiki/characters/queries/getMurdersAmongRelatives.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
         return {"query": query, "data": data}
