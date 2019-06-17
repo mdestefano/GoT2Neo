@@ -17,8 +17,8 @@ def getConnection():
     GoT2NeoPassword = 'GoT2Neo'
     return Graph(GoT2NeoUrl, username = GoT2NeoUsername, password = GoT2NeoPassword)
 
-# Get Json for visualization in the page
-def getUIParameter(xValue, yValue):
+# Get Json for couple paramter in the page
+def encodeCoupleParameter(xValue, yValue):
     data = [
         go.Bar(
             x = xValue,
@@ -26,3 +26,18 @@ def getUIParameter(xValue, yValue):
         )
     ]
     return json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
+
+# Get Json for single paramter of UI
+def encodeSingleParameter(xValue):
+    data = [go.Bar(x = xValue)]
+
+    return json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
+
+# Create list for property
+def getListForProperty(nodeRecords, propertyName):
+    paramList = list()
+
+    for node in nodeRecords:
+        paramList.append(node[propertyName])
+
+    return paramList
