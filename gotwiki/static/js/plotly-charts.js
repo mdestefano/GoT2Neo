@@ -1,6 +1,9 @@
 graphsInPage = []
 
 function bar_chart(elementName, data, title, xTitle, yTitle){
+  var containerWidth = $("#"+elementName).width();
+  var containerHeight = $("#"+elementName).height();
+
   var layout = {
       title: title,
       xaxis: {
@@ -11,7 +14,9 @@ function bar_chart(elementName, data, title, xTitle, yTitle){
       yaxis: {
         title: yTitle,
         showline: false
-      }
+      },
+      width: containerWidth,  
+      height: containerHeight 
     };
 
     Plotly.plot(elementName, data, layout);
@@ -20,9 +25,8 @@ function bar_chart(elementName, data, title, xTitle, yTitle){
 }
 
 function pie_chart(elementName, pieValues, pieLabels, pieTitle){
-
-  pageWidth = window.innerWidth || document.body.clientWidth
-  pageHeight = window.innerHeight || document.body.clientHeight
+  var containerWidth = $("#"+elementName).width();
+  var containerHeight = $("#"+elementName).height();
 
   var data = [{
     values: pieValues[0].x,
@@ -33,8 +37,8 @@ function pie_chart(elementName, pieValues, pieLabels, pieTitle){
   var layout = {
     font: {size: 18},
     title: pieTitle,
-    height: pageHeight/1.8,
-    width: pageWidth/1.3
+    width: containerWidth,  
+    height: containerHeight
   };
   
   Plotly.newPlot(elementName, data, layout);
@@ -43,12 +47,12 @@ function pie_chart(elementName, pieValues, pieLabels, pieTitle){
 
 window.onresize = function() {
   graphsInPage.forEach(function(elementName) {
-    var x = $("#"+elementName).width();
-    var y = $("#"+elementName).height();
+    var containerWidth = $("#"+elementName).width();
+    var containerHeight = $("#"+elementName).height();
 
     var update = {
-        width: x,  
-        height: y 
+      width: containerWidth,  
+      height: containerHeight
     };
     Plotly.relayout(elementName, update);
   });
