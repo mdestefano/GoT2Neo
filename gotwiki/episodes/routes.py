@@ -16,7 +16,10 @@ import json
 def visualization():
     return render_template('episodes/episodesIndex.html')
 
-
+# Error page handler with redirection to "episodes" section
+@episodes.app_errorhandler(404)
+def page_not_found(e):
+    return render_template('errorPage.html', page ='/episodes')
 
 ############# SEASONS #############
 ##ROUTE
