@@ -1,3 +1,4 @@
+graphsInPage = []
 
 function bar_chart(elementName, data, title, xTitle, yTitle){
   var layout = {
@@ -14,6 +15,8 @@ function bar_chart(elementName, data, title, xTitle, yTitle){
     };
 
     Plotly.plot(elementName, data, layout);
+
+    graphsInPage.push(elementName)
 }
 
 function pie_chart(elementName, pieValues, pieLabels, pieTitle){
@@ -21,7 +24,6 @@ function pie_chart(elementName, pieValues, pieLabels, pieTitle){
   pageWidth = window.innerWidth || document.body.clientWidth
   pageHeight = window.innerHeight || document.body.clientHeight
 
-  console.log(pieLabels)
   var data = [{
     values: pieValues[0].x,
     labels: pieLabels,
@@ -36,4 +38,18 @@ function pie_chart(elementName, pieValues, pieLabels, pieTitle){
   };
   
   Plotly.newPlot(elementName, data, layout);
+  graphsInPage.push(elementName)
 }
+
+window.onresize = function() {
+  graphsInPage.forEach(function(elementName) {
+    var x = $("#"+elementName).width();
+    var y = $("#"+elementName).height();
+
+    var update = {
+        width: x,  
+        height: y 
+    };
+    Plotly.relayout(elementName, update);
+  });
+};
