@@ -210,8 +210,6 @@ def episodesStats():
 
 ############# MAIN EVENTS #############
 
-##### TODO: Aggiungere morti in numero per ogni stagione 
-
 @episodes.route('/eventsStats')
 def events():
     # Main event: Get death number for each season: (season number, deathNumber)  
@@ -285,29 +283,78 @@ def events():
 
 @episodes.route('/locationsStats')
 def locations():
-    return render_template('episodes/locations.html')
-
-# Location: Get location and count where a character belongs to a given a house has killed someone: (location, numbDeaths)
-@episodes.route('/kill_house_location')
-def kill_house_location():
-    house = request.args.get('house')
-    result = locationModel.getDeathCountOfHousePerLocation(house)
-    data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
-
-# Location: Get location and death count of the location : (location, numbDeaths)
-@episodes.route('/kill_location_numb')
-def kill_location_numb():
+    # Location: Get location and death count of the location : (location, numbDeaths)
     result = locationModel.getDeathCountPerLocation()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    queryDeathCountLocation = result["query"]
 
-# Location: Get location and number of scenes set in that location : (location, numbScenes)
-@episodes.route('/frequency_locations')
-def frequency_locations():
+    locationDeathsDataframe = DataFrame(data)
+    locationName = locationDeathsDataframe[0].tolist()
+    locationDeaths = locationDeathsDataframe[1].tolist()
+
+    locationAndDeaths = encodeCoupleParameter(locationName, locationDeaths)
+
+    locationName = encodeSingleParameter(locationName)
+    locationDeaths = encodeSingleParameter(locationDeaths)
+
+    # Location: Get location and count where characters that belong to a given a house have killed someone: (location, numbDeaths)
+    starkHouse = 'Stark'
+    result = locationModel.getDeathCountOfHousePerLocation(starkHouse)
+    data = result["data"]
+    queryStarkTarg = result["query"]
+
+    StarkLocationDeathsDataframe = DataFrame(data)
+    StarkLocationName = StarkLocationDeathsDataframe[0].tolist()
+    StarkLocationDeaths = StarkLocationDeathsDataframe[1].tolist()
+
+    StarkLocationAndDeaths = encodeCoupleParameter(StarkLocationName, StarkLocationDeaths)
+
+    StarkLocationName = encodeSingleParameter(StarkLocationName)
+    StarkLocationDeaths = encodeSingleParameter(StarkLocationDeaths)
+
+    TargaryenHouse = 'Targaryen'
+    result = locationModel.getDeathCountOfHousePerLocation(TargaryenHouse)
+    data = result["data"]
+
+    TargaryenLocationDeathsDataframe = DataFrame(data)
+    TargaryenLocationName = TargaryenLocationDeathsDataframe[0].tolist()
+    TargaryenLocationDeaths = TargaryenLocationDeathsDataframe[1].tolist()
+
+    TargaryenLocationAndDeaths = encodeCoupleParameter(TargaryenLocationName, TargaryenLocationDeaths)
+
+    TargaryenLocationName = encodeSingleParameter(TargaryenLocationName)
+    TargaryenLocationDeaths = encodeSingleParameter(TargaryenLocationDeaths)
+
+    # Location: Get location and number of scenes set in that location : (location, numbScenes)
     result = locationModel.getFrequencyPerLocation()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    querySceneLocation = result["query"]
+
+    FrequencyLocationDataframe = DataFrame(data)
+    FrequencyLocationName = FrequencyLocationDataframe[0].tolist()
+    FrequencyLocationNumber = FrequencyLocationDataframe[1].tolist()
+
+    FrequencyLocationAndDeaths = encodeCoupleParameter(FrequencyLocationName, FrequencyLocationNumber)
+
+    FrequencyLocationName = encodeSingleParameter(FrequencyLocationName)
+    FrequencyLocationNumber = encodeSingleParameter(FrequencyLocationNumber)
+
+    return render_template('episodes/locations.html',
+                            locationAndDeaths = locationAndDeaths,
+                            locationName = locationName,
+                            locationDeaths = locationDeaths,
+                            StarkLocationAndDeaths = StarkLocationAndDeaths,
+                            StarkLocationName = StarkLocationName,
+                            StarkLocationDeaths = StarkLocationDeaths,
+                            TargaryenLocationAndDeaths = TargaryenLocationAndDeaths,
+                            TargaryenLocationName = TargaryenLocationName,
+                            TargaryenLocationDeaths = TargaryenLocationDeaths,
+                            FrequencyLocationAndDeaths = FrequencyLocationAndDeaths,
+                            FrequencyLocationName = FrequencyLocationName,
+                            FrequencyLocationNumber = FrequencyLocationNumber,
+                            queryDeathCountLocation = queryDeathCountLocation,
+                            queryStarkTarg = queryStarkTarg,
+                            querySceneLocation = querySceneLocation
+                            )
+
+

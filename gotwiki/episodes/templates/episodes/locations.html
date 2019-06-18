@@ -1,0 +1,245 @@
+{% extends "episodes/layout.html" %}
+{% block script_block %}
+    <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script>
+{% endblock%}
+{% block section_name %}
+    Main events
+{% endblock %}
+{% block content_visualization %}
+
+   <!--   LOCATION AND DEATHS   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Deaths per location
+                </h5>
+                <div id="location_deaths_bar" class="card-body scrollable">
+                    <script>
+                        var locationAndDeaths = {{locationAndDeaths | safe}}
+                        bar_chart("location_deaths_bar", locationAndDeaths, 'Bar chart deaths for location', 'Location name', 'Death number')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Deaths per location
+                </h5>
+                <div id="location_deaths_pie" class="card-body scrollable">
+                    <script>
+                        var locationDeaths = {{locationDeaths | safe}}
+                        locationDeaths = locationDeaths[0].x
+
+                        var locationName = {{locationName | safe}}
+                        locationName = locationName[0].x
+
+
+                        var bubblesText = locationName.map((e, i) => "Location: "+ e);
+
+                        bubbleSize = []
+                        locationDeaths.forEach(function(element) {
+                            bubbleSize.push(element/20)
+                        });
+                        
+                        colors = []
+
+                        for (i of range(1, locationName.length)) {
+                            colors.unshift(i);
+                        }
+
+                        bubble_chart("location_deaths_pie", locationName, locationDeaths, bubblesText, colors, bubbleSize, "Deaths per Location: bigger bubble, greater number of deaths")
+                    </script>                
+
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getDeathPercentagesPerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{queryDeathCountLocation}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+<!--   STARK/TARGARYEN LOCATION AND DEATHS   -->
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Stark: kill per location
+                </h5>
+                <div id="starl_location_deaths_bar" class="card-body scrollable">
+                    <script>
+                        var StarkLocationAndDeaths = {{StarkLocationAndDeaths | safe}}
+                        bar_chart("starl_location_deaths_bar", StarkLocationAndDeaths, 'Kill by Starks for location', 'Location name', 'Death number')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Stark: kill per location
+                </h5>
+                <div id="stark_location_deaths_pie" class="card-body scrollable">
+                    <script>
+                        var StarkLocationDeaths = {{StarkLocationDeaths | safe}}
+                        StarkLocationDeaths = StarkLocationDeaths[0].x
+
+                        var StarkLocationName = {{StarkLocationName | safe}}
+                        StarkLocationName = StarkLocationName[0].x
+
+
+                        var bubblesText = StarkLocationName.map((e, i) => "Location: "+ e);
+
+                        bubbleSize = []
+                        StarkLocationDeaths.forEach(function(element) {
+                            bubbleSize.push(element/5)
+                        });
+                        
+                        colors = []
+
+                        for (i of range(1, StarkLocationName.length)) {
+                            colors.unshift(i);
+                        }
+
+                        bubble_chart("stark_location_deaths_pie", StarkLocationName, StarkLocationDeaths, bubblesText, colors, bubbleSize, "Bigger bubble, greater number of kill by Stark house")
+                    </script>                
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Targaryen: kill per location
+                </h5>
+                <div id="targaryen_location_deaths_bar" class="card-body scrollable">
+                    <script>
+                        var TargaryenLocationAndDeaths = {{TargaryenLocationAndDeaths | safe}}
+                        bar_chart("targaryen_location_deaths_bar", TargaryenLocationAndDeaths, 'Kill by Targaryens for location', 'Location name', 'Death number')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Targaryen: kill per location
+                </h5>
+                <div id="targaryen_location_deaths_pie" class="card-body scrollable">
+                    <script>
+                        var TargaryenLocationDeaths = {{TargaryenLocationDeaths | safe}}
+                        TargaryenLocationDeaths = TargaryenLocationDeaths[0].x
+
+                        var TargaryenLocationName = {{TargaryenLocationName | safe}}
+                        TargaryenLocationName = TargaryenLocationName[0].x
+
+                        var bubblesText = TargaryenLocationName.map((e, i) => "Location: "+ e);
+
+                        bubbleSize = []
+                        TargaryenLocationDeaths.forEach(function(element) {
+                            bubbleSize.push(element/5)
+                        });
+                        
+                        colors = []
+
+                        for (i of range(1, TargaryenLocationName.length)) {
+                            colors.unshift(i);
+                        }
+
+                        bubble_chart("targaryen_location_deaths_pie", TargaryenLocationName, TargaryenLocationDeaths, bubblesText, colors, bubbleSize, "Bigger bubble, greater number of kill by Targaryen house")
+                    </script>                
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getDeathCountOfHousePerLocation(HouseStark/ HouseTargaryen)
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{queryStarkTarg}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+   <!--   LOCATION AND DEATHS   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Frequency location in the series
+                </h5>
+                <div id="location_frequency_bar" class="card-body scrollable">
+                    <script>
+                        var FrequencyLocationAndDeaths = {{FrequencyLocationAndDeaths | safe}}
+                        bar_chart("location_frequency_bar", FrequencyLocationAndDeaths, 'Bar chart frequency for location', 'Location name', 'Frequency')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Frequency location in the series
+                </h5>
+                <div id="location_frequency_pie" class="card-body scrollable">
+                    <script>
+                        var FrequencyLocationNumber = {{FrequencyLocationNumber | safe}}
+                        FrequencyLocationNumber = FrequencyLocationNumber[0].x
+
+                        var FrequencyLocationName = {{FrequencyLocationName | safe}}
+                        FrequencyLocationName = FrequencyLocationName[0].x
+
+
+                        var bubblesText = FrequencyLocationName.map((e, i) => "Location: "+ e);
+
+                        bubbleSize = []
+                        FrequencyLocationNumber.forEach(function(element) {
+                            bubbleSize.push(element/10)
+                        });
+                        
+                        colors = []
+
+                        for (i of range(1, FrequencyLocationName.length)) {
+                            colors.unshift(i);
+                        }
+
+                        bubble_chart("location_frequency_pie", FrequencyLocationName, FrequencyLocationNumber, bubblesText, colors, bubbleSize, "Frequency per Location: bigger bubble, higher frequency")
+                    </script>                
+
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getFrequencyPerLocation
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{querySceneLocation}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+{% endblock %}
