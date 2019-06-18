@@ -15,7 +15,7 @@ def getConnection():
     GoT2NeoUrl = os.environ.get('GoT2NeoUrl',"http://localhost:7474/db/data/")
     GoT2NeoUsername = 'GoT2Neo'
     GoT2NeoPassword = 'GoT2Neo'
-    return Graph(GoT2NeoUrl, username = GoT2NeoUsername, password = GoT2NeoPassword)
+    return Graph(GoT2NeoUrl, auth = (GoT2NeoUsername, GoT2NeoPassword))
 
 # Get Json for couple paramter in the page
 def encodeCoupleParameter(xValue, yValue):
