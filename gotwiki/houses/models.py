@@ -68,14 +68,14 @@ class HouseModel:
         return graph.run(kill_count_query).to_data_frame()
     
     @classmethod
-    def get_kills_between_houses(self, house1, house2):
+    def get_houses_best_target(self):
         kills_btw_houses_query = '''
                                 MATCH
                                     (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
                                     (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}), (c1)-[k:KILLED]-(c2)
                                 RETURN h1.name as killer_house, c1.name as killer, h2.name as killed_house, c2.name as killed, k
                                 '''
-        return graph.run(kills_btw_houses_query,house1=house1,house2=house2).to_data_frame()
+        return graph.run(kills_btw_houses_query).to_data_frame()
 
 def test_connection():
     print(graph)
