@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block main_result_title %}
+    <div id="description">
+        {{ description }}
+    </div>
+{% endblock %}
+
+{% block main_result_body %}
+    <div class="container" id="data" data-data="{{ data }}">
+        <table class="table col-sm-12">
+            <thead>
+            <tr>
+                <th style="width: 33.33%">Lover #1</th>
+                <th style="width: 33.33%">Lover #2</th>
+                <th style="width: 33.33%">Kinship</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['first']['name'] }}">
+                            {% if row['first']['imageThumb'] != "N/A" %}
+                                <img src="{{ row['first']['imageThumb'] }}" alt="{{ row['first']['name'] }}"/>
+                            {% else %}
+                                <img src="default-avatar.png"/>
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['second']['name'] }}">
+                            {% if row['second']['imageThumb'] != "N/A" %}
+                                <img src="{{ row['second']['imageThumb'] }}" alt="{{ row['second']['name'] }}"/>
+                            {% else %}
+                                <img src="static/img/default-avatar.png"/>
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td style="width: 33.33%">
+                        {% if row['kinship'] == "SIBLING_OF" %}
+                            {{ "Siblings" }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block query_title %}
+    <div id="query_title" data-query_title="{{ query_title }}">
+        {{ query_title }}
+    </div>
+{% endblock %}
+
+{% block query_body %}
+    <div id="query">
+        {{ query }}
+    </div>
+{% endblock %}

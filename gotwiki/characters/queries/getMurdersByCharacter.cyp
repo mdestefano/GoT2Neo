@@ -1,2 +1,3 @@
-MATCH (c1:Character {name: {character_name}}), (c2:Character), (c1)-[r:KILLED]->(c2)
-RETURN c1, r, c2
+MATCH (c1:Character {name: {characterName}})-[r:KILLED]->(c2:Character)
+RETURN DISTINCT c2 AS dead, c1 AS killer, collect(r) AS killings, count(r) AS count
+  ORDER BY dead.name

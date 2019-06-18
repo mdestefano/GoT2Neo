@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block main_result_title %}
+    <div id="description">
+        {{ description }}
+    </div>
+{% endblock %}
+
+{% block main_result_body %}
+    <div class="container" id="data" data-data="{{ data }}">
+        <table class="table col-sm-12">
+            <thead>
+            <tr>
+                <th style="width: 33.33%">Killer</th>
+                <th style="width: 33.33%">Victim</th>
+                <th style="width: 33.33%">Reason</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['killer']['name'] }}">
+                            <img src="{{ row['killer']['imageThumb'] }}" alt="{{ row['killer']['name'] }}"/>
+                        </a>
+                    </td>
+                    <td style="width: 33.33%">
+                        <a href="getCharacterInfo/{{ row['killed']['name'] }}">
+                            <img src="{{ row['killed']['imageThumb'] }}" alt="{{ row['killed']['name'] }}"/>
+                        </a>
+                    </td>
+                    <td style="width: 33.33%">{{ row['killing']['reason'] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block query_title %}
+    <div id="query_title" data-query_title="{{ query_title }}">
+        {{ query_title }}
+    </div>
+{% endblock %}
+
+{% block query_body %}
+    <div id="query">
+        {{ query }}
+    </div>
+{% endblock %}

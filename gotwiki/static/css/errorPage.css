@@ -1,0 +1,19 @@
+body { 
+    background-image: url('/static/img/got_404.gif');
+    background-size: cover;
+}
+.error-template {
+    padding: 35vh 0vw;
+    text-align: center;
+    color: white;
+    font-size: large;
+    font-family: monospace;
+}
+
+.error-actions {
+    margin-top:5vh;
+}
+
+.error-actions .btn { 
+    margin-right:10px; 
+}

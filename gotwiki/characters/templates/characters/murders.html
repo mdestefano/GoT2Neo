@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block main_result_title %}
+    <div id="description">
+        {{ description }}
+    </div>
+{% endblock %}
+
+{% block main_result_body %}
+    <div class="container" id="data" data-data="{{ data }}">
+        <div class="card bg-dark text-light">
+            <h5 class="card-header">
+                <div class="row">
+                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                        <a href="../getCharacterInfo/{{ data[0]['killer']['name'] }}">
+                            {{ data[0]['killer']['name'] }}
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="../getCharacterInfo/{{ data[0]['killer']['name'] }}">
+                            <img src="{{ data[0]['killer']['imageFull'] }}" alt="{{ data[0]['killer']['name'] }}"/>
+                        </a>
+                    </div>
+                </div>
+            </h5>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td scope="row">Nickname</td>
+                        <td>{{ data[0]['killer']['nickname'] }}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Actor name</td>
+                        <td>{{ data[0]['killer']['actor'] }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row mb-5">
+            {% for row in data %}
+                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                    <table class="table">
+                        <tr>
+                            <td scope="row">Name</td>
+                            <td>
+                                <a href="../getCharacterInfo/{{ row['dead']['name'] }}">
+                                    {{ row['dead']['name'] }}
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Nickname</td>
+                            <td>{{ row['dead']['nickname'] }}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Actor name</td>
+                            <td>{{ row['dead']['actor'] }}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Times</td>
+                            <td>{{ row['count'] }}</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">When</td>
+                            <td>
+                                {% if row['count'] == 1 %}
+                                    {{ row['killings'][0]['season'] ~ "x" ~ row['killings'][0]['episode'] }}
+                                {% else %}
+                                    {{ "Various occasions" }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <a href="../getCharacterInfo/{{ row['dead']['name'] }}">
+                        <img src="{{ row['dead']['imageThumb'] }}" alt="{{ row['dead']['name'] }}"/>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block query_title %}
+    <div id="query_title" data-query_title="{{ query_title }}">
+        {{ query_title }}
+    </div>
+{% endblock %}
+
+{% block query_body %}
+    <div id="query">
+        {{ query }}
+    </div>
+{% endblock %}
