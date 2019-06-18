@@ -18,6 +18,7 @@ function bar_chart(elementName, data, title, xTitle, yTitle){
       },
       width: containerWidth,  
       height: containerHeight,
+      font: {size: 16}
     };
 
     Plotly.newPlot(elementName, data, layout);
@@ -37,7 +38,7 @@ function pie_chart(elementName, pieValues, pieLabels, pieTitle){
   }];
 
   var layout = {
-    font: {size: 18},
+    font: {size: 16},
     title: pieTitle,
     width: containerWidth,  
     height: containerHeight
@@ -100,7 +101,8 @@ function bubble_chart(elementName, xValues, yValues, bubblesText, colors, bubble
   var layout = {
     title: chartTitle,
     height: containerHeight,
-    width: containerWidth
+    width: containerWidth,
+    font: {size: 16}
   };
   
   Plotly.newPlot(elementName, data, layout);

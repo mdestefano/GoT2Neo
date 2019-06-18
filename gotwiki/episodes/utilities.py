@@ -7,7 +7,7 @@ import json
 # Reading query file
 def read_query(query_path):
     with open(query_path, 'r') as file:
-        query = file.read().replace('\n', ' ')
+        query = file.read()
     return query
 
 # Get connection for GoT2Neo database

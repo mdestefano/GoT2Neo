@@ -23,7 +23,7 @@ def page_not_found(e):
 
 ############# SEASONS #############
 ##ROUTE
-@episodes.route('/seasons')
+@episodes.route('/seasonsStats')
 def seasons():
     # Season: Get mean score and stDev for every season: (season, avgScore, stDevScore)
     result = seasonModel.getScoreStatsPerSeason()
@@ -212,33 +212,80 @@ def episodesStats():
 
 ##### TODO: Aggiungere morti in numero per ogni stagione 
 
-# Main event: Get deaths for each season: (season number, percentageOfDeaths)
-@episodes.route('/deaths_in_seasons')
-def deaths_in_seasons():
+@episodes.route('/eventsStats')
+def events():
+    # Main event: Get death number for each season: (season number, deathNumber)  
+    result = eventsModel.getDeathNumberPerSeason()
+    data = result["data"]
+    queryDeathNumber = result["query"]
+
+    deathsNumberDataframe = DataFrame(data)
+    deathSeason = deathsNumberDataframe[0].tolist()
+    deathNumber = deathsNumberDataframe[1].tolist()
+
+    seasonAndDeathNumber = encodeCoupleParameter(deathSeason, deathNumber)
+
+    deathNumber = encodeSingleParameter(deathNumber)
+    deathSeason = encodeSingleParameter(deathSeason)
+
+    # Main event: Get deaths for each season: (season number, percentageOfDeaths)
     result = eventsModel.getDeathPercentagesPerSeason()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    queryDeathPercentage = result["query"]
 
-# Main event: Get sex scenes number for each season: (season number, sexScenesNumber)
-@episodes.route('/sex_count')
-def sex_count():
+    deathsPercentageDataframe = DataFrame(data)
+
+    deathSeasonPercentage = deathsNumberDataframe[0].tolist()
+    deathPercentage = deathsPercentageDataframe[1].tolist()
+
+    seasonAndDeathPercentage = encodeCoupleParameter(deathSeasonPercentage, deathPercentage)
+
+    # Main event: Get sex scenes number for each season: (season number, sexScenesNumber)
     result = eventsModel.getSexScenesCountPerSeason()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    querySexNumber = result["query"]
 
-# Main event: Get sex scenes percentage for each season: (season number, sexScenesPercentage)
-@episodes.route('/sex_percentage')
-def sex_percentage():
+    sexNumberDataframe = DataFrame(data)
+    sexSeason = sexNumberDataframe[0].tolist()
+    sexNumber = sexNumberDataframe[1].tolist()
+
+    seasonAndSexNumber = encodeCoupleParameter(sexSeason, sexNumber)
+
+    sexNumber = encodeSingleParameter(sexNumber)
+    sexSeason = encodeSingleParameter(sexSeason)
+
+    # Main event: Get sex scenes percentage for each season: (season number, sexScenesPercentage)
     result = eventsModel.getSexScenesPercentagePerSeason()
     data = result["data"]
-    query = result["query"]
-    return render_template('episodes/visualization.html', result = data)
+    querySexPercentage = result["query"]
 
+    sexPercentageDataframe = DataFrame(data)
 
+    sexSeasonPercentage = sexNumberDataframe[0].tolist()
+    sexPercentage = sexPercentageDataframe[1].tolist()
+
+    seasonAndSexPercentage = encodeCoupleParameter(sexSeasonPercentage, sexPercentage)
+
+    return render_template('episodes/events.html',
+                            deathNumber = deathNumber,
+                            deathSeason = deathSeason,
+                            seasonAndDeathNumber = seasonAndDeathNumber,
+                            seasonAndDeathPercentage = seasonAndDeathPercentage,
+                            sexNumber = sexNumber,
+                            sexSeason = sexSeason,
+                            seasonAndSexNumber = seasonAndSexNumber,
+                            seasonAndSexPercentage = seasonAndSexPercentage,
+                            queryDeathNumber = queryDeathNumber,
+                            queryDeathPercentage = queryDeathPercentage,
+                            querySexNumber = querySexNumber,
+                            querySexPercentage = querySexPercentage
+                            )
 
 ############# LOCATIONS #############
+
+@episodes.route('/locationsStats')
+def locations():
+    return render_template('episodes/locations.html')
 
 # Location: Get location and count where a character belongs to a given a house has killed someone: (location, numbDeaths)
 @episodes.route('/kill_house_location')

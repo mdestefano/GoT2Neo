@@ -1,6 +1,7 @@
 {% extends "episodes/layout.html" %}
 {% block script_block %}
     <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script>
 {% endblock%}
 {% block section_name %}
     Episodes
@@ -11,7 +12,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card graphCard" id="main-result-card" >
-                <h5 class="card-header">
+                <h5 class="card-header" style="text-align:center">
                     All information of the episodes
                 </h5>
                 <div id="episodes_table" class="card-body scrollable">
@@ -37,17 +38,11 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card graphCard" id="main-result-card" >
-                <h5 class="card-header">
+                <h5 class="card-header" style="text-align:center">
                     Mean scores of the seasons
                 </h5>
                 <div id="episodes_scores_mean" class="card-body scrollable">
                     <script>
-                        function* range(start, end) {
-                            yield start;
-                            if (start === end) return;
-                            yield* range(start + 1, end);
-                        }
-
                         var episodesMeanScores = {{episodesMeanScores | safe}}
                         episodesMeanScores = episodesMeanScores[0].x
 
@@ -83,7 +78,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card queryCard" id="query-card">
-                <h5 class="card-header">
+                <h5 class="card-header" style="text-align:center">
                     Query: getScorePerEpisode
                 </h5>
                 <div class="card-body scrollable">
@@ -98,7 +93,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card graphCard" id="main-result-card" >
-                <h5 class="card-header">
+                <h5 class="card-header" style="text-align:center">
                     Duration of each episode in all seasons
                 </h5>
                 <div id="episodes_duration" class="card-body scrollable">
@@ -113,7 +108,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card queryCard" id="query-card">
-                <h5 class="card-header">
+                <h5 class="card-header" style="text-align:center">
                     Query: getDurationOfEachEpisode
                 </h5>
                 <div class="card-body scrollable">
@@ -121,5 +116,6 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
+<hr>
 {% endblock %}
