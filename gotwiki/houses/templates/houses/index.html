@@ -1,21 +1,25 @@
 {% extends "layout.html" %}
+
+{% block script_block %}
+    <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            var chart_data = {{barchart|safe}}//$('#kill-chart').attr('chart-data');
+            console.table(chart_data)
+            console.log(chart_data[0].x)
+            bar_chart('kill-chart',chart_data,'Kill counts per houses','Kills','Houses');
+        });
+    </script>
+{% endblock%}
+
 {% block main_result_title %}
     Main Result    
 {% endblock %}
 
-{% block main_result_body%}
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Praesent nec neque id enim dictum commodo at eu dolor. 
-        Aliquam ex quam, porttitor sed neque ac, feugiat mollis massa. 
-        Pellentesque imperdiet mollis pretium. 
-        Sed quis blandit urna, in tristique ante. 
-        Nulla facilisi. Suspendisse vitae neque dolor. 
-        Sed a tortor vel nisl fringilla consequat sed non est. 
-        Donec neque enim, elementum nec est sit amet, fringilla tristique est. 
-        Vestibulum auctor vulputate neque, nec convallis nisi hendrerit at. 
-        Cras auctor erat non enim ultrices sollicitudin. Ut ac urna magna.
-    </p>
+{% block main_result_body%}    
+    <div id="kill-chart" chart-data="">
+        
+    </div>
 {% endblock %}
 
 {% block query_title %}

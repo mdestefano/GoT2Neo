@@ -43,18 +43,39 @@ class HouseModel:
         alive_characters_query = '''
         MATCH (c:Character)-[:BELONGS_TO]->(h:House)
         WHERE c.isAlive = {alive} AND h.name = {name}
-        RETURN c.name
+        RETURN c.name as name
         '''
         
         alive_members = graph.run(alive_characters_query,alive=True,name=self.name).data()
-        
+        alive_members = [d['name'] for d in alive_members]
+
         dead_members = graph.run(alive_characters_query,alive=False,name=self.name).data()
+        dead_members = [d['name'] for d in dead_members]
 
         house = House(houseNode["name"],houseNode["region"],houseNode["seat"],houseNode["words"],houseNode["coa"],
                         houseNode["is_alive"],alive_members,dead_members,houseNode["religion"],houseNode["lord"])
         return house
 
+    @classmethod
+    def get_kill_count_per_houses(self):
         
+        kill_count_query = '''
+                            MATCH (h:House)<-[:BELONGS_TO]-(c:Character), (c)-[r:KILLED]->()
+                            WITH h, count(r) AS kills
+                            RETURN h.name as house, kills
+                            ORDER BY kills DESC
+                           '''
+        return graph.run(kill_count_query).to_data_frame()
+    
+    @classmethod
+    def get_houses_best_target(self):
+        kills_btw_houses_query = '''
+                                MATCH
+                                    (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
+                                    (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}), (c1)-[k:KILLED]-(c2)
+                                RETURN h1.name as killer_house, c1.name as killer, h2.name as killed_house, c2.name as killed, k
+                                '''
+        return graph.run(kills_btw_houses_query).to_data_frame()
 
 def test_connection():
     print(graph)

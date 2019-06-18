@@ -8,20 +8,38 @@
         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
             <table class="table">
                 <tr>
-                    <td scope="row">Region</td>
+                    <td scope="row"><b>Region:</b></td>
                     <td>{{house.region}}</td>
                 </tr>
                 <tr>
-                    <td scope="row">Seat</td>
+                    <td scope="row"><b>Seat:</b></td>
                     <td>{{house.seat}}</td>
                 </tr>
                 <tr>
-                    <td scope="row">Words</td>
+                    <td scope="row"><b>Words:</b></td>
                     <td>{{house.words}}</td>
                 </tr>
                 <tr scope="row">
-                    <td>Religion</td>
+                    <td><b>Religion:</b></td>
                     <td>{{house.religion}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Total Members:</b>                
+                    </td>
+                    <td>
+                        {{house.alive_c_no + house.dead_c_no}}
+                    </td>
+                </tr>
+                <tr>        
+                    <td>
+                        <b>
+                            Current Lord:
+                        </b>
+                    </td>
+                    <td>
+                        {{house.lord}}    
+                    </td>            
                 </tr>
             </table>
         </div>
@@ -39,26 +57,53 @@
     <div id="piechart" class="svg-container" graph-data="{{graphJSON | safe}}">
 
     </div>
-    <table class="tabel">
-        <tr>
-            <td>
-                <b>Total Members: </b>                
-            </td>
-            <td>
-                {{house.alive_c_no + house.dead_c_no}}
-            </td>
-        </tr>
-        <tr>        
-            <td>
-                <b>
-                    Current Lord:
-                </b>
-            </td>
-            <td>
-                {{house.lord}}    
-            </td>            
-        </tr>
-    </table>
+
+{% endblock %}
+
+{% block optional_result %}
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+            <div class="card card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Notable House Memebers</h4>                    
+                </div>
+                <div class="card-body">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                {% for member in house.alive_characters %}
+                                    <tr>
+                                        <td>{{member}}</td>
+                                        <td>Alive</td>
+                                    </tr>
+                                {% endfor %}
+                                
+                                {% for member in house.dead_characters %}
+                                    <tr>
+                                        <td>{{member}}</td>
+                                        <td>Dead</td>
+                                    </tr>
+                                {% endfor %}                                                                                                                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block script_block %}
@@ -67,6 +112,16 @@
 <script type="text/javascript">
     jQuery(document).ready(function(){
         
+        draw_pie_chart();
+        draw_clusters();
+
+    });
+
+    function draw_clusters(){
+
+    }
+
+    function draw_pie_chart(){
         var data = JSON.parse(jQuery('#piechart').attr('graph-data'));
         console.log(data);
         //console.log('ciao');
@@ -158,8 +213,7 @@
                 var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
                 return (midangle < Math.PI ? 'start' : 'end')
             })
-
-    });
+    }
     
 </script>
 
