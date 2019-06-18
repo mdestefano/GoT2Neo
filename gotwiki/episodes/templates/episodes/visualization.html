@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block main_result_title %}
+    Main Result    
+{% endblock %}
+
+{% block main_result_body%}
+    <p>
+        {% for rows in result %}
+                {{rows}}
+                -> {{rows.data()}}
+            {% for row in rows %}
+                    <p>row: <b>{{row}}</b></p>
+            {% endfor %}
+        {% endfor %}
+     </p>
+{% endblock %}

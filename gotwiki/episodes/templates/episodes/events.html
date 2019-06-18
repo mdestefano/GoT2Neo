@@ -1,0 +1,223 @@
+{% extends "episodes/layout.html" %}
+{% block script_block %}
+    <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script>
+{% endblock%}
+{% block section_name %}
+    Main events
+{% endblock %}
+{% block content_visualization %}
+
+   <!--   DEATHS NUMBER   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Total deaths for each season
+                </h5>
+                <div id="number_deaths_season_bar" class="card-body scrollable">
+                    <script>
+                        var seasonAndDeathNumber = {{seasonAndDeathNumber | safe}}
+                        bar_chart("number_deaths_season_bar", seasonAndDeathNumber, 'Death recorded on screen for every season  ', 'Season number', 'Deaths number')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Total deaths for each season
+                </h5>
+                <div id="number_deaths_season_bubble" class="card-body scrollable">
+                    <script>
+                        var deathNumber = {{deathNumber | safe}}
+                        deathNumber = deathNumber[0].x
+
+                        var deathSeason = {{deathSeason | safe}}
+                        deathSeason = deathSeason[0].x
+
+                        var bubblesText = deathSeason.map((e, i) => "Season: "+ e);
+
+                        bubbleSize = []
+                        deathNumber.forEach(function(element) {
+                            bubbleSize.push(element/25)
+                        });
+
+                        bubble_chart("number_deaths_season_bubble", deathSeason, deathNumber, bubblesText, deathSeason, bubbleSize, "Number of deaths : bigger bubble, greater number of deaths")
+                    </script>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getDeathNumberPerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{queryDeathNumber}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+   <!--   DEATHS PERCENTAGE   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Percentage of deaths for each season
+                </h5>
+                <div id="percengate_deaths_season_bar" class="card-body scrollable">
+                    <script>
+                        var seasonAndDeathPercentage = {{seasonAndDeathPercentage | safe}}
+                        bar_chart("percengate_deaths_season_bar", seasonAndDeathPercentage, 'Death recorded on screen for every season  ', 'Season number', 'Deaths percentage')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Percentage of deaths for each season
+                </h5>
+                <div id="percentage_deaths_season_pie" class="card-body scrollable">
+                    <script>
+                        var deathNumber = {{deathNumber | safe}}
+
+                        var deathSeason = {{deathSeason | safe}}
+
+                        var seasonLabels = deathSeason[0].x.map((e, i) => "Season: "+ e);
+
+
+                        pie_chart("percentage_deaths_season_pie", deathNumber, seasonLabels, 'Percentage of deaths in every season')
+                    </script>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getDeathPercentagesPerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{queryDeathPercentage}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+
+   <!--   SEX NUMBER   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Total sex event for each season
+                </h5>
+                <div id="number_sex_season_bar" class="card-body scrollable">
+                    <script>
+                        var seasonAndSexNumber = {{seasonAndSexNumber | safe}}
+                        bar_chart("number_sex_season_bar", seasonAndSexNumber, 'Sex scenes recorded on screen for every season  ', 'Season number', 'Sex number')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Total sex event for each season
+                </h5>
+                <div id="number_sex_season_bubble" class="card-body scrollable">
+                    <script>
+                        var sexNumber = {{sexNumber | safe}}
+                        sexNumber = sexNumber[0].x
+
+                        var sexSeason = {{sexSeason | safe}}
+                        sexSeason = sexSeason[0].x
+
+                        var bubblesText = sexSeason.map((e, i) => "Season: "+ e);
+
+                        bubbleSize = []
+                        sexNumber.forEach(function(element) {
+                            bubbleSize.push(element*5)
+                        });
+                        
+                        colors = [8, 7, 6 , 5, 4, 3, 2, 1]
+                        bubble_chart("number_sex_season_bubble", sexSeason, sexNumber, bubblesText, colors, bubbleSize, "Number of sex scenes : bigger bubble, greater number of the event")
+                    </script>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getSexScenesCountPerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{querySexNumber}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+   <!--   SEX PERCENTAGE   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Percentage of sex scenes for each season
+                </h5>
+                <div id="percengate_sex_season_bar" class="card-body scrollable">
+                    <script>
+                        var seasonAndSexPercentage = {{seasonAndSexPercentage | safe}}
+                        bar_chart("percengate_sex_season_bar", seasonAndSexPercentage, 'Sex recorded on screen in every season  ', 'Season number', 'Sex percentage')
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Percentage of sex scenes for each season
+                </h5>
+                <div id="percentage_sex_season_pie" class="card-body scrollable">
+                    <script>
+                        var sexNumber = {{sexNumber | safe}}
+
+                        var sexSeason = {{sexSeason | safe}}
+
+                        var seasonLabels = sexSeason[0].x.map((e, i) => "Season: "+ e);
+
+                        pie_chart("percentage_sex_season_pie", sexNumber, seasonLabels, 'Percentage of sex scenes in every season')
+                    </script>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getSexScenesPercentagePerSeason
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{querySexPercentage}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends "episodes/layout.html" %}
+{% block script_block %}
+    <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script>
+{% endblock%}
+{% block section_name %}
+    Episodes
+{% endblock %}
+
+{% block content_visualization %}
+   <!--   EPISODE TABLE   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card graphCard" id="main-result-card" style="min-height:100vh">
+                <h5 class="card-header" style="text-align:center">
+                    All information of the episodes
+                </h5>
+                <div id="episodes_table" class="card-body scrollable">
+                    <script>
+                        var titleList = {{titleList | safe}}
+                        var seasonList = {{seasonList | safe}}
+                        var episodeList = {{episodeList | safe}}
+                        var episodeGlobalList = {{episodeGlobalList | safe}}
+                        var writerList = {{writerList | safe}}
+                        var directorList = {{directorList | safe}}
+                        var airDateList = {{airDateList | safe}}
+                        var viewersList = {{viewersList | safe}}
+
+                        var episodes = new Array(titleList[0].x, seasonList[0].x, episodeList[0].x, episodeGlobalList[0].x, writerList[0].x, directorList[0].x, viewersList[0].x, airDateList[0].x)
+                        var tableHeaders = [["<b>Title</b>"], ["<b>Season</b>"],["<b>Episode</b>"], ["<b>Episode Global</b>"], ["<b>Writer</b>"], ["<b>Director</b>"],["<b>Viewers</b>"], ["<b>Air Date</b>"]]
+                        plotly_table("episodes_table", episodes, tableHeaders, "All episodes of the seasons with the information of the series")
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--   SCORES   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Mean scores of the seasons
+                </h5>
+                <div id="episodes_scores_mean" class="card-body scrollable">
+                    <script>
+                        var episodesMeanScores = {{episodesMeanScores | safe}}
+                        episodesMeanScores = episodesMeanScores[0].x
+
+                        var scoreTitleList = {{scoreTitleList | safe}}
+                        scoreTitleList = scoreTitleList[0].x
+
+                        var scoreSeasonList = {{scoreSeasonList | safe}}
+                        scoreSeasonList = scoreSeasonList[0].x
+
+                        var scoreEpisodeList = {{scoreEpisodeList | safe}}
+                        scoreEpisodeList = scoreEpisodeList[0].x
+
+                        var bubblesText = scoreTitleList.map((e, i) => "Title: '"+ e + "',\n Season: "+scoreSeasonList[i]+ ", Episode: "+scoreEpisodeList[i]);
+
+                        xValues = []
+
+                        for (i of range(1, 73)) {
+                            xValues.push(i);
+                        }
+
+                        bubbleSize = []
+                        episodesMeanScores.forEach(function(element) {
+                            bubbleSize.push(element*6)
+                        });
+
+                        bubble_chart("episodes_scores_mean", xValues, episodesMeanScores, bubblesText, xValues, bubbleSize, "Mean scores of each episodes ordered according to votes from users")
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getScorePerEpisode
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b>{{query_episodes_score}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+
+    <!--   DURATION   -->
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card graphCard" id="main-result-card" >
+                <h5 class="card-header" style="text-align:center">
+                    Duration of each episode in all seasons
+                </h5>
+                <div id="episodes_duration" class="card-body scrollable">
+                    <script>
+                        var episodesDuration = {{episodesDuration | safe}}
+                        bar_chart("episodes_duration", episodesDuration, 'Episode duration in minute', 'Episode number', 'Duration')
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: getDurationOfEachEpisode
+                </h5>
+                <div class="card-body scrollable">
+                    <p><b><b>{{query_episodes_duration}}</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+{% endblock %}

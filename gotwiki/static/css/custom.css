@@ -1,0 +1,17 @@
+.scrollable{
+    overflow-y: auto;
+    overflow: hidden;
+  }
+  
+  .graphCard{
+    min-height: 80vh;
+  }
+
+  .queryCard{
+    max-height: 30vh;
+    background-color: rgb(230, 255, 230)
+  }
+
+  hr { 
+    border-top: 5px double #8c8b8b;
+  }
