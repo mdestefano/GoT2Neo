@@ -356,5 +356,3 @@ def locations():
                             queryStarkTarg = queryStarkTarg,
                             querySceneLocation = querySceneLocation
                             )
-
-
