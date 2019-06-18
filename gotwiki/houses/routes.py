@@ -1,7 +1,7 @@
 from . import houses
 from flask import render_template,escape
 from .models import HouseModel,House
-import plotly
+#import plotly
 import json
 
 @houses.route('/')
