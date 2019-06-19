@@ -57,6 +57,13 @@ class HouseModel:
         return house
 
     @classmethod
+    def get_all(self):
+        house_query = "MATCH (h:House) return h.name as name"        
+        house_names = graph.run(house_query).to_data_frame()
+        house_names = house_names['name'].tolist()
+        return house_names
+
+    @classmethod
     def get_kill_count_per_houses(self):
         
         kill_count_query = '''
@@ -68,14 +75,28 @@ class HouseModel:
         return graph.run(kill_count_query).to_data_frame()
     
     @classmethod
-    def get_houses_best_target(self):
-        kills_btw_houses_query = '''
-                                MATCH
-                                    (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
-                                    (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}), (c1)-[k:KILLED]-(c2)
-                                RETURN h1.name as killer_house, c1.name as killer, h2.name as killed_house, c2.name as killed, k
-                                '''
-        return graph.run(kills_btw_houses_query).to_data_frame()
+    def get_kills_between(self,house1,house2):
+        kills_between_query = '''
+                            MATCH
+                            (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
+                            (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}), 
+                            (c1)-[k:KILLED]-(c2)
+                            RETURN (startNode(k).name) as killer, (endNode(k).name) as killed  
+        '''
+        return graph.run(kills_between_query, house1=house1, house2=house2).to_data_frame()
+
+    @classmethod
+    def get_sex_between(self,house1,house2):
+        sex_between_query = '''
+                            MATCH
+                            (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
+                            (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}),
+                            (c1)<-[i1:INVOLVES]-(e:Event {kind: 'sex'})-[i2:INVOLVES]->(c2)
+                            RETURN c1.name as character_1, c2.name as character_2  
+        '''
+        return graph.run(sex_between_query, house1=house1, house2=house2).to_data_frame()
+
+
 
 def test_connection():
     print(graph)
