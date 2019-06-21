@@ -7,7 +7,7 @@
     <div id="data" data-data="{{ data }}">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="card graphCard" id="main-result-card">
+                <div class="card" id="main-result-card">
                     <h5 class="card-header" style="text-align:center">
                         Character card
                     </h5>
@@ -20,7 +20,12 @@
                                             {{ data[0]['character']['name'] }}
                                         </div>
                                         <div class="col">
-                                            <img src="{{ data[0]['character']['imageFull'] }}" alt="N/A"/>
+                                            {% if data[0]['character']['imageFull'] != "N/A" %}
+                                                <img src="{{ data[0]['character']['imageFull'] }}" alt="N/A"/>
+                                            {% else %}
+                                                <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                     style="width: 100px; height: 100px;"/>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </h5>
@@ -69,21 +74,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-20">
                 <a href="/characters/murdersof/{{ data[0]['character']['name'] }}" class="change-section">
                     <div class="black-bg btn-menu">
                         <i class="fas fa-skull fa-5x"></i>
                         <br><br>
                         <h2>Murders</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
-                <a href="/characters/familytree/{{ data[0]['character']['name'] }}" class="change-section">
-                    <div class="black-bg btn-menu">
-                        <i class="fas fa-project-diagram fa-5x"></i>
-                        <br><br>
-                        <h2>Family Tree</h2>
                     </div>
                 </a>
             </div>

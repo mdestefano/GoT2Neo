@@ -11,8 +11,8 @@ class CharacterManager:
         self.__password = 'GoT2Neo'
         self.graph = Graph(self.__url, auth=(self.__username, self.__password))
 
-    def getCharacterInfo(self, characterName):
-        query = self.__read_query('gotwiki/characters/queries/getCharacterInfo.cyp')
+    def getCharacter(self, characterName):
+        query = self.__read_query('gotwiki/characters/queries/getCharacter.cyp')
         cursor = self.graph.run(query, characterName=characterName)
         data = cursor.data()
         return {"query": query, "data": data}
@@ -23,8 +23,8 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
-    def getDeathCountPerKillCategory(self):
-        query = self.__read_query('gotwiki/characters/queries/getDeathCountPerKillCategory.cyp')
+    def getDeathCountsPerKillCategory(self):
+        query = self.__read_query('gotwiki/characters/queries/getDeathCountsPerKillCategory.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
         deathcount_df = DataFrame(data)
@@ -62,15 +62,15 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
-    def getMurdersAmongRelatives(self):
-        query = self.__read_query('gotwiki/characters/queries/getMurdersAmongRelatives.cyp')
-        cursor = self.graph.run(query)
-        data = cursor.data()
-        return {"query": query, "data": data}
-
     def getMurdersByCharacter(self, killer_name):
         query = self.__read_query('gotwiki/characters/queries/getMurdersByCharacter.cyp')
         cursor = self.graph.run(query, character_name=killer_name)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
+    def getRelativesKillers(self):
+        query = self.__read_query('gotwiki/characters/queries/getRelativesKillers.cyp')
+        cursor = self.graph.run(query)
         data = cursor.data()
         return {"query": query, "data": data}
 
@@ -80,11 +80,16 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
-    def getSmallFamilyTree(self, character_name):
-        query = self.__read_query('gotwiki/characters/queries/getSmallFamilyTree.cyp')
-        cursor = self.graph.run(query, character_name=character_name)
-        data = cursor.data()
-        return {"query": query, "data": data}
+    # def getSmallFamilyTree(self, character_name):
+    #     query = self.__read_query('gotwiki/characters/queries/getSmallFamilyTree.cyp')
+    #     cursor = self.graph.run(query, character_name=character_name)
+    #     data = cursor.data()
+    #     family_tree_df = DataFrame(data)
+    #     character = family_tree_df['characters'][0]
+    #     parents = family_tree_df['parents'].tolist()
+    #     grand_parents = family_tree_df['gparents'].tolist()
+    #     print(grand_parents)
+    #     return {"query": query, "data": data}
 
     @staticmethod
     def __read_query(query_path):

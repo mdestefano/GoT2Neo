@@ -3,17 +3,15 @@ from . import characters
 from flask import render_template, make_response, escape, request
 
 index_template = 'characters/charactersIndex.html'
-longest_scenes_template = 'characters/charactersinlongestscenes.html'
 info_template = 'characters/character.html'
-relevant_template = 'characters/relevantcharacters.html'
+longest_scenes_template = 'characters/charactersinlongestscenes.html'
 deathcounts_template = 'characters/deathcounts.html'
 incests_template = 'characters/incests.html'
 killcounts_template = 'characters/killcounts.html'
 killmethods_template = 'characters/killmethods.html'
 lovers_killers_template = 'characters/loverskillers.html'
-relative_killing_template = 'characters/relative_killing.html'
-murders_template = 'characters/murders.html'
-familytree_template = 'characters/familytree.html'
+murders_of_template = 'characters/murdersof.html'
+relatives_killers_template = 'characters/relativeskillers.html'
 suicides_template = 'characters/suicides.html'
 error_template = 'errorPage.html'
 
@@ -31,9 +29,9 @@ def getCharacterInfo():
     if character_name is None:
         return render_template(error_template)
     else:
-        result = cm.getCharacterInfo(character_name)
+        result = cm.getCharacter(character_name)
         description = 'About ' + character_name
-        query_title = 'getCharacterInfo'
+        query_title = 'getCharacter'
         return __make_response(info_template, result, description, query_title)
 
 
@@ -47,11 +45,11 @@ def getCharactersInLongestScenes():
 
 
 @characters.route('/deathcounts')
-def getDeathCountPerKillCategory():
+def getDeathCountsPerKillCategory():
     cm = CharacterManager()
-    result = cm.getDeathCountPerKillCategory()
+    result = cm.getDeathCountsPerKillCategory()
     description = 'Death count for each kill category'
-    query_title = 'getDeathCountPerKillCategory'
+    query_title = 'getDeathCountsPerKillCategory'
     return __make_response(deathcounts_template, result, description, query_title)
 
 
@@ -91,31 +89,22 @@ def getLoversKillers():
     return __make_response(lovers_killers_template, result, description, query_title)
 
 
-@characters.route('/relativeskillers')
-def getMurdersAmongRelatives():
-    cm = CharacterManager()
-    result = cm.getMurdersAmongRelatives()
-    description = 'Relatives that killed each other'
-    query_title = 'getMurdersAmongRelatives'
-    return __make_response(relative_killing_template, result, description, query_title)
-
-
 @characters.route('/murdersof/<killer_name>')
 def getMurdersByCharacter(killer_name):
     cm = CharacterManager()
     result = cm.getMurdersByCharacter(killer_name)
     description = 'Murders of ' + killer_name
     query_title = 'getMurdersByCharacter'
-    return __make_response(murders_template, result, description, query_title)
+    return __make_response(murders_of_template, result, description, query_title)
 
 
-@characters.route('/familytree/<character_name>')
-def getSmallFamilyTree(character_name):
+@characters.route('/relativeskillers')
+def getRelativesKillers():
     cm = CharacterManager()
-    result = cm.getSmallFamilyTree(character_name)
-    description = 'Family Tree of ' + character_name
-    query_title = 'getSmallFamilyTree'
-    return __make_response(familytree_template, result, description, query_title)
+    result = cm.getRelativesKillers()
+    description = 'Relatives that killed each other'
+    query_title = 'getRelativesKillers'
+    return __make_response(relatives_killers_template, result, description, query_title)
 
 
 @characters.route('/suicides')
@@ -125,6 +114,15 @@ def getSuicides():
     description = 'Characters who committed suicide'
     query_title = 'getSuicides'
     return __make_response(suicides_template, result, description, query_title)
+
+
+# @characters.route('/familytree/<character_name>')
+# def getSmallFamilyTree(character_name):
+#     cm = CharacterManager()
+#     result = cm.getSmallFamilyTree(character_name)
+#     description = 'Family Tree of ' + character_name
+#     query_title = 'getSmallFamilyTree'
+#     return __make_response(familytree_template, result, description, query_title)
 
 
 def __make_response(template, result, description, query_title):
