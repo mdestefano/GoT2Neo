@@ -133,6 +133,12 @@ def __make_response(template, result, description, query_title):
             render_template(error_template))
     else:
         response = make_response(
-            render_template(template, description=escape(description), data=data, query=escape(query),
-                            query_title=escape(query_title)))
+                                render_template(
+                                    template,
+                                    description = escape(description),
+                                    data = data,
+                                    query = escape(query),
+                                    query_title = escape(query_title)
+                                    )
+                                )
     return response
