@@ -11,3 +11,7 @@ A Game of Thrones simple wiki built with Flask and Neo4j
 
 |:warning:**Warning: This project is just started. No working guarantees**:warning:|
 |---|
+
+### TODO
+- Fix tables in characters visualization
+- Change dataset of characters for "Houses" section
