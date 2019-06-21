@@ -54,7 +54,13 @@ class HouseModel:
 
         house = House(houseNode["name"],houseNode["region"],houseNode["seat"],houseNode["words"],houseNode["coa"],
                         houseNode["is_alive"],alive_members,dead_members,houseNode["religion"],houseNode["lord"])
-        return house
+        
+        query_list = [
+                    {'name': 'getAliveCharacters', 'value':alive_characters_query.format(alive='true',name=self.name)}, 
+                    {'name': 'getDeadCharacters', 'value':alive_characters_query.format(alive='false',name=self.name)}
+                    ]
+
+        return {'data':house, 'queries': query_list}
 
     @classmethod
     def get_all(self):
@@ -71,30 +77,38 @@ class HouseModel:
                             WITH h, count(r) AS kills
                             RETURN h.name as house, kills
                             ORDER BY kills DESC
-                           '''
-        return graph.run(kill_count_query).to_data_frame()
+                            '''
+        query_list = [{'name':'killCount','value':kill_count_query}]
+
+        return {'data': graph.run(kill_count_query).to_data_frame(), 'queries':query_list}
     
     @classmethod
     def get_kills_between(self,house1,house2):
         kills_between_query = '''
                             MATCH
-                            (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
-                            (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}), 
+                            (c1:Character)-[b1:BELONGS_TO]->(h1:House),
+                            (c2:Character)-[b2:BELONGS_TO]->(h2:House), 
                             (c1)-[k:KILLED]-(c2)
+                            WHERE h1.name = {house1} AND h2.name = {house2}
                             RETURN (startNode(k).name) as killer, (endNode(k).name) as killed  
         '''
-        return graph.run(kills_between_query, house1=house1, house2=house2).to_data_frame()
+        query_list = [
+                        {'name':'killsBetweenHouses','value':kills_between_query.format(house1=house1,house2=house2)}
+                    ]
+        return {'data':graph.run(kills_between_query, house1=house1, house2=house2).to_data_frame(),'queries':query_list}
 
     @classmethod
     def get_sex_between(self,house1,house2):
         sex_between_query = '''
                             MATCH
-                            (c1:Character)-[b1:BELONGS_TO]->(h1:House {name: {house1}}),
-                            (c2:Character)-[b2:BELONGS_TO]->(h2:House {name: {house2}}),
-                            (c1)<-[i1:INVOLVES]-(e:Event {kind: 'sex'})-[i2:INVOLVES]->(c2)
+                            (c1:Character)-[b1:BELONGS_TO]->(h1:House),
+                            (c2:Character)-[b2:BELONGS_TO]->(h2:House),
+                            (c1)<-[i1:INVOLVES]-(e:Event)-[i2:INVOLVES]->(c2)
+                            WHERE h1.name = {house1} AND h2.name = {house2} AND e.kind = 'sex'
                             RETURN c1.name as character_1, c2.name as character_2  
         '''
-        return graph.run(sex_between_query, house1=house1, house2=house2).to_data_frame()
+        query_list = [{'name':'sexBetweenHouses','value':sex_between_query.format(house1=house1,house2=house2)}]
+        return {'data':graph.run(sex_between_query, house1=house1, house2=house2).to_data_frame(),'queries':query_list}
 
 
 

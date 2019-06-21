@@ -76,7 +76,7 @@ GoT2Neo - House {{house.name}}
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
             <div class="card card-plain">
@@ -117,5 +117,29 @@ GoT2Neo - House {{house.name}}
                 </div>
             </div> 
         </div>
+
+        
+
+
     </div>
+
+    <div class="row">
+        <div class="col-12">
+            {% for query in queries %}
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: {{query['name']}}
+                </h5>
+                <div class="card-body scrollable">
+                    <p>
+                        <b>
+                            {{query['value']}}
+                        </b>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

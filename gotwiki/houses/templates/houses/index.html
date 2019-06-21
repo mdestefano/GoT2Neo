@@ -36,13 +36,13 @@
             <div class="card">
                 <h4 class="card-header">Compare Houses</h4>
                 <div class="card-body">
-                    <form action="" class="form-inline">
+                    <form action="{{url_for('houses.compare_houses')}}" class="form-inline">
                         <select name="house1" id="house1" class="form-control mr-5">
                             {% for house in houses %}
                                 <option>{{house}}</option>
                             {% endfor %}
                         </select>
-                        <select name="house1" id="house2" class="form-control mr-5">
+                        <select name="house2" id="house2" class="form-control mr-5">
                             {% for house in houses %}
                                 <option>{{house}}</option>
                             {% endfor %}
