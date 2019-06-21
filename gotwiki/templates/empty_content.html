@@ -17,6 +17,7 @@
   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='css/paper-dashboard.css') }}" rel="stylesheet" />
   <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo_main.css') }}">
 
    <!--   Core JS Files   -->
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -29,7 +30,7 @@
    {% endblock%}
 </head>
 <body class="">
-  <div class="wrapper ">    
+  <div class="wrapper ">
       <div class="sidebar" data-color="white" data-active-color="danger">
           <div class="logo">
             <a href="/" class="simple-text logo-medium">
@@ -41,24 +42,24 @@
           <div class="sidebar-wrapper ps-container ps-theme-default ps-active-x" data-ps-id="877dfda9-c8fd-0fc1-bbd8-28052e6cafb5">
             <ul class="nav">
                 <li>
-                <a href="#">
+                <a href="/characters">
                     <i class="nc-icon nc-circle-10"></i>
                     <p>Characters</p>
                 </a>
                 </li>
                 <li>
-                <a href="">
+                <a href="/houses">
                     <i class="nc-icon nc-istanbul"></i>
                     <p>Houses</p>
                 </a>
-                </li>     
+                </li>
                 <li>
                     <a href="/episodes">
                     <i class="nc-icon nc-button-play"></i>
                     <p>Episodes</p>
                     </a>
-                </li>         
-            </ul>            
+                </li>
+            </ul>
         <div class="ps-scrollbar-x-rail" style="width: 260px; left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 258px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
     </div>
     <div class="main-panel">
@@ -91,7 +92,7 @@
                     <span class="d-lg-inline d-md-block">Github Repo</span>
                   </p>
                 </a>
-              </li>              
+              </li>
             </ul>
           </div>
         </div>

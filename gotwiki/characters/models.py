@@ -1,5 +1,7 @@
-from flask import json
+from pandas import DataFrame
 from py2neo import Graph
+
+from gotwiki.utilities import encodeCoupleParameter
 
 
 class CharacterManager:
@@ -7,7 +9,7 @@ class CharacterManager:
         self.__url = 'bolt://localhost:7687'
         self.__username = 'GoT2Neo'
         self.__password = 'GoT2Neo'
-        self.graph = Graph(self.__url, user=self.__username, password=self.__password)
+        self.graph = Graph(self.__url, auth=(self.__username, self.__password))
 
     def getCharacterInfo(self, characterName):
         query = self.__read_query('gotwiki/characters/queries/getCharacterInfo.cyp')
@@ -15,12 +17,21 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
+    def getCharactersInLongestScenes(self):
+        query = self.__read_query('gotwiki/characters/queries/getCharactersInLongestScenes.cyp')
+        cursor = self.graph.run(query)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
     def getDeathCountPerKillCategory(self):
         query = self.__read_query('gotwiki/characters/queries/getDeathCountPerKillCategory.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
-        data_json = json.dumps(data)
-        return {"query": query, "data": data_json}
+        deathcount_df = DataFrame(data)
+        method_cats = deathcount_df['methodCat'].tolist()
+        counts = deathcount_df['count'].tolist()
+        deathcounts = encodeCoupleParameter(method_cats, counts)
+        return {"query": query, "data": deathcounts}
 
     def getIncests(self):
         query = self.__read_query('gotwiki/characters/queries/getIncests.cyp')
@@ -32,8 +43,18 @@ class CharacterManager:
         query = self.__read_query('gotwiki/characters/queries/getKillCountPerCharacter.cyp')
         cursor = self.graph.run(query)
         data = cursor.data()
-        data_json = json.dumps(data)
-        return {"query": query, "data": data_json}
+        killcount_df = DataFrame(data)
+        characters = killcount_df['character']
+        characters_name = [c.get('name') for c in characters]
+        counts = killcount_df['count'].tolist()
+        killcounts = encodeCoupleParameter(characters_name, counts)
+        return {"query": query, "data": killcounts}
+
+    def getKillMethodsPerCharacter(self):
+        query = self.__read_query('gotwiki/characters/queries/getKillMethodsPerCharacter.cyp')
+        cursor = self.graph.run(query)
+        data = cursor.data()
+        return {"query": query, "data": data}
 
     def getLoversKillers(self):
         query = self.__read_query('gotwiki/characters/queries/getLoversKillers.cyp')
@@ -47,9 +68,9 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
-    def getMurdersByCharacter(self, killerName):
+    def getMurdersByCharacter(self, killer_name):
         query = self.__read_query('gotwiki/characters/queries/getMurdersByCharacter.cyp')
-        cursor = self.graph.run(query, characterName=killerName)
+        cursor = self.graph.run(query, character_name=killer_name)
         data = cursor.data()
         return {"query": query, "data": data}
 
@@ -59,16 +80,14 @@ class CharacterManager:
         data = cursor.data()
         return {"query": query, "data": data}
 
+    def getSmallFamilyTree(self, character_name):
+        query = self.__read_query('gotwiki/characters/queries/getSmallFamilyTree.cyp')
+        cursor = self.graph.run(query, character_name=character_name)
+        data = cursor.data()
+        return {"query": query, "data": data}
+
     @staticmethod
     def __read_query(query_path):
         with open(query_path, 'r') as file:
             query = file.read().replace('\n', ' ')
         return query
-
-# Plot setup
-# bars = [method_cat['k.methodCat'] for method_cat in data]
-# length = np.arange(len(bars))
-# counts = [method_cat['count(k.methodCat)'] for method_cat in data]
-# pyplot.bar(length, counts)
-# pyplot.xticks(length, bars)
-# pyplot.show()

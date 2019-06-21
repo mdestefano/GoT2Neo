@@ -5,4 +5,4 @@ WITH
   ORDER BY minutes DESC
   LIMIT 5
 MATCH (c:Character)-[:APPEARS_IN]->(s)
-RETURN DISTINCT c
+RETURN DISTINCT c AS character, collect(s) AS scenes, collect(minutes) AS minutesList

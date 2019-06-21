@@ -1,6 +1,6 @@
 {% extends "empty_content.html" %}
 {% block section_name %}
-    Incests
+    Kill Methods
 {% endblock %}
 
 {% block content_visualization %}
@@ -15,40 +15,47 @@
                         <table class="table col-sm-12">
                             <thead>
                             <tr>
-                                <th style="width: 33.33%">Lover #1</th>
-                                <th style="width: 33.33%">Lover #2</th>
-                                <th style="width: 33.33%">Kinship</th>
+                                <th>Character</th>
+                                <th>Killing methods</th>
+                                <th>Counts</th>
                             </tr>
                             </thead>
                             <tbody>
                             {% for row in data %}
                                 <tr>
-                                    <td style="width: 33.33%">
-                                        <a href="character/{{ row['first']['name'] }}">
-                                            {% if row['first']['imageThumb'] != "N/A" %}
-                                                <img src="{{ row['first']['imageThumb'] }}"
-                                                     alt="{{ row['first']['name'] }}"/>
+                                    <td>
+                                        <a href="character/{{ row['character']['name'] }}">
+                                            {% if row['character']['imageThumb'] != "N/A" %}
+                                                <img src="{{ row['character']['imageThumb'] }}"
+                                                     alt="{{ row['character']['name'] }}"/>
                                             {% else %}
                                                 <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
                                                      style="width: 100px; height: 100px;"/>
                                             {% endif %}
                                         </a>
-                                    </td>
-                                    <td style="width: 33.33%">
-                                        <a href="character/{{ row['second']['name'] }}">
-                                            {% if row['second']['imageThumb'] != "N/A" %}
-                                                <img src="{{ row['second']['imageThumb'] }}"
-                                                     alt="{{ row['second']['name'] }}"/>
-                                            {% else %}
-                                                <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
-                                                     style="width: 100px; height: 100px;"/>
-                                            {% endif %}
+                                        <a href="character/{{ row['character']['name'] }}">
+                                            {{ row['character']['name'] }}
                                         </a>
                                     </td>
-                                    <td style="width: 33.33%">
-                                        {% if row['kinship'] == "SIBLING_OF" %}
-                                            {{ "Siblings" }}
-                                        {% endif %}
+                                    <td>
+                                        <table class="table col-sm-12">
+                                            {% set method_cats = row['methodCats'] %}
+                                            {% for mc in method_cats %}
+                                                <tr>
+                                                    <td>{{ mc }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table col-sm-12">
+                                            {% set counts = row['counts'] %}
+                                            {% for c in counts %}
+                                                <tr>
+                                                    <td>{{ c }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
                                     </td>
                                 </tr>
                             {% endfor %}

@@ -1,6 +1,6 @@
 {% extends "empty_content.html" %}
 {% block section_name %}
-    Suicides
+    Characters in longest scenes
 {% endblock %}
 
 {% block content_visualization %}
@@ -17,7 +17,7 @@
                                 <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
                                     <table class="table">
                                         <tr>
-                                            <td scope="row">Name</td>
+                                            <td>Name</td>
                                             <td>
                                                 <a href="character/{{ row['character']['name'] }}">
                                                     {{ row['character']['name'] }}
@@ -25,12 +25,16 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">Nickname</td>
+                                            <td>Nickname</td>
                                             <td>{{ row['character']['nickname'] }}</td>
                                         </tr>
                                         <tr>
-                                            <td scope="row">Actor name</td>
+                                            <td>Actor name</td>
                                             <td>{{ row['character']['actor'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Minutes</td>
+                                            <td>{{ row['minutesList'] | sum() }}</td>
                                         </tr>
                                     </table>
                                 </div>

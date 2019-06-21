@@ -1,0 +1,104 @@
+{% extends "empty_content.html" %}
+{% block section_name %}
+    Character info
+{% endblock %}
+
+{% block content_visualization %}
+    <div id="data" data-data="{{ data }}">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="card graphCard" id="main-result-card">
+                    <h5 class="card-header" style="text-align:center">
+                        Character card
+                    </h5>
+                    <div class="card-body scrollable">
+                        {% if data[0] | length > 0 %}
+                            <div class="card bg-dark text-light">
+                                <h5 class="card-header">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                            {{ data[0]['character']['name'] }}
+                                        </div>
+                                        <div class="col">
+                                            <img src="{{ data[0]['character']['imageFull'] }}" alt="N/A"/>
+                                        </div>
+                                    </div>
+                                </h5>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <tr>
+                                            <td scope="row">Nickname</td>
+                                            <td>{{ data[0]['character']['nickname'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Actor name</td>
+                                            <td>{{ data[0]['character']['actor'] }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">First appearance</td>
+                                            <td>
+                                                {% set first_episode = data[0]['episodes'][0] %}
+                                                {{ first_episode['title'] ~ ' ('
+                                                        ~ first_episode['season'] ~ 'x' ~ first_episode['episode']
+                                                        ~ ')' }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Last appearance</td>
+                                            <td>
+                                                {% set last_episode = data[0]['episodes'][-1] %}
+                                                {{ last_episode['title'] ~ ' ('
+                                                        ~ last_episode['season'] ~ 'x' ~ last_episode['episode']
+                                                        ~ ')' }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Episode appearances</td>
+                                            <td>
+                                                {{ data[0]['episodes'] | count }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        {% else %}
+                            Sorry, there is no information about this character :(
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                <a href="/characters/murdersof/{{ data[0]['character']['name'] }}" class="change-section">
+                    <div class="black-bg btn-menu">
+                        <i class="fas fa-skull fa-5x"></i>
+                        <br><br>
+                        <h2>Murders</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">
+                <a href="/characters/familytree/{{ data[0]['character']['name'] }}" class="change-section">
+                    <div class="black-bg btn-menu">
+                        <i class="fas fa-project-diagram fa-5x"></i>
+                        <br><br>
+                        <h2>Family Tree</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="card queryCard" id="query-card">
+                    <h5 class="card-header" style="text-align:center">
+                        Query: {{ query_title }}
+                    </h5>
+                    <div class="card-body scrollable">
+                        <p><b>{{ query }}</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
