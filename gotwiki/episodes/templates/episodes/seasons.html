@@ -1,23 +1,31 @@
 {% extends "empty_content.html" %}
 {% block script_block %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cypher-highlighting.css') }}">
     <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
-{% endblock%}
+    <script src="{{ url_for('static', filename='js/cypher.js')}}" type="text/javascript"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/styles/default.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+        hljs.registerLanguage("cypher", cypher);
+        hljs.initHighlightingOnLoad();
+    </script>
+{% endblock %}
 {% block section_name %}
-Seasons
+    Seasons
 {% endblock %}
 
 {% block content_visualization %}
-   <!--   SCORES   -->
+    <!--   SCORES   -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="card graphCard" id="main-result-card" >
+            <div class="card graphCard" id="main-result-card">
                 <h5 class="card-header" style="text-align:center">
                     Mean scores of the seasons
                 </h5>
                 <div id="season_scores_mean" class="card-body scrollable">
                     <script>
                         var dataMean = {{dataMean | safe}}
-                        bar_chart("season_scores_mean", dataMean, 'Mean score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
+                            bar_chart("season_scores_mean", dataMean, 'Mean score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
                     </script>
                 </div>
             </div>
@@ -30,7 +38,7 @@ Seasons
                 <div id="season_scores_std" class="card-body scrollable">
                     <script>
                         var dataStd = {{dataStd | safe}}
-                        bar_chart("season_scores_std", dataStd, 'Std score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
+                            bar_chart("season_scores_std", dataStd, 'Std score (RottenTomatoes/IMdB)', 'Seasons', 'Scores')
                     </script>
                 </div>
             </div>
@@ -43,28 +51,29 @@ Seasons
                     Query: getScoreStatsPerSeason
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b>{{query_score}}</b></p>
+                    <p><b>{{ query_score }}</b></p>
                 </div>
             </div>
         </div>
     </div>
-<hr>
+    <hr>
 
-<!--   DURATION   -->
+    <!--   DURATION   -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="card graphCard" id="main-result-card" >
+            <div class="card graphCard" id="main-result-card">
                 <h5 class="card-header" style="text-align:center">
                     Duration of the seasons
                 </h5>
                 <div id="season_duration" class="card-body scrollable">
                     <script>
-                        var tmpSeasonLabels = {{seasonLabels | safe}}
-                        
+                        var tmpSeasonLabels =
+                        {{seasonLabels | safe}}
+
                         var seasonDurations = {{seasonDurations | safe}}
-                        seasonLabels = []
-                        tmpSeasonLabels[0].x.forEach(function(element) {
-                            seasonLabels.push('Season: ' +element)
+                            seasonLabels = []
+                        tmpSeasonLabels[0].x.forEach(function (element) {
+                            seasonLabels.push('Season: ' + element)
                         });
 
                         pie_chart("season_duration", seasonDurations, seasonLabels, 'Total duration of the seasons in hours')
@@ -80,24 +89,26 @@ Seasons
                     Query: getDurationPerSeason
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b><b>{{query_duration}}</b></p>
+
+                        <pre><code class="cypher">{{ query_duration }}</code></pre>
+
                 </div>
             </div>
         </div>
-    </div> 
-<hr>
+    </div>
+    <hr>
 
     <!--   VIEWERS   -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="card graphCard" id="main-result-card" >
+            <div class="card graphCard" id="main-result-card">
                 <h5 class="card-header" style="text-align:center">
                     Total viewers for season calculated in millions
                 </h5>
                 <div id="season_total_viewers" class="card-body scrollable">
                     <script>
                         var numbViewers = {{numbViewers | safe}}
-                        bar_chart("season_total_viewers", numbViewers, 'Total viewers for season', 'Seasons', 'Viewers')
+                            bar_chart("season_total_viewers", numbViewers, 'Total viewers for season', 'Seasons', 'Viewers')
                     </script>
                 </div>
             </div>
@@ -105,14 +116,14 @@ Seasons
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="card graphCard" id="main-result-card" >
+            <div class="card graphCard" id="main-result-card">
                 <h5 class="card-header" style="text-align:center">
                     Mean viewers for season calculated in millions
                 </h5>
                 <div id="season_mean_viewers" class="card-body scrollable">
                     <script>
                         var meanViewers = {{meanViewers | safe}}
-                        bar_chart("season_mean_viewers", meanViewers, 'Mean viewers', 'Seasons', 'Mean viewers')
+                            bar_chart("season_mean_viewers", meanViewers, 'Mean viewers', 'Seasons', 'Mean viewers')
                     </script>
                 </div>
             </div>
@@ -125,12 +136,12 @@ Seasons
                 <div id="season_std_viewers" class="card-body scrollable">
                     <script>
                         var stdViewers = {{stdViewers | safe}}
-                        bar_chart("season_std_viewers", stdViewers, 'Std viewers', 'Seasons', 'Std viewers')
+                            bar_chart("season_std_viewers", stdViewers, 'Std viewers', 'Seasons', 'Std viewers')
                     </script>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card queryCard" id="query-card">
@@ -138,10 +149,10 @@ Seasons
                     Query: getViewersStatsPerSeason
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b><b>{{query_viewers}}</b></p>
+                    <p><b><b>{{ query_viewers }}</b></p>
                 </div>
             </div>
         </div>
     </div>
-<hr>
+    <hr>
 {% endblock %}
