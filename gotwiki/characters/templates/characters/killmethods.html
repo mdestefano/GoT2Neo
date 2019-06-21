@@ -24,17 +24,20 @@
                             {% for row in data %}
                                 <tr>
                                     <td>
-                                        <a href="character/{{ row['character']['name'] }}">
-                                            {% if row['character']['imageThumb'] != "N/A" %}
-                                                <img src="{{ row['character']['imageThumb'] }}"
-                                                     alt="{{ row['character']['name'] }}"/>
-                                            {% else %}
-                                                <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
-                                                     style="width: 100px; height: 100px;"/>
-                                            {% endif %}
-                                        </a>
-                                        <a href="character/{{ row['character']['name'] }}">
-                                            {{ row['character']['name'] }}
+                                        <a href="character?name={{ row['character']['name'] }}">
+                                            <figure class="figure">
+                                                {% if row['character']['imageThumb'] != "N/A" %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ row['character']['imageThumb'] }}"
+                                                         alt="{{ row['character']['name'] }}"/>
+                                                {% else %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                         style="width: 100px; height: 100px;"/>
+                                                {% endif %}
+                                                <figcaption class="figure-caption">{{ row['character']['name'] }}
+                                                </figcaption>
+                                            </figure>
                                         </a>
                                     </td>
                                     <td>

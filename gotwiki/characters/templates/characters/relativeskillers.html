@@ -24,10 +24,42 @@
                             <tbody>
                             {% for row in data %}
                                 <tr>
-                                    <td style="width: 25%"><img src="{{ row['killer']['imageThumb'] }}"/></td>
-                                    <td style="width: 25%"><img src="{{ row['killed']['imageThumb'] }}"/></td>
+                                    <td style="width: 25%">
+                                        <a href="character?name={{ row['killer']['name'] }}">
+                                            <figure class="figure">
+                                                {% if row['killer']['imageThumb'] != "N/A" %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ row['killer']['imageThumb'] }}"
+                                                         alt="{{ row['killer']['name'] }}"/>
+                                                {% else %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                         style="width: 100px; height: 100px;"/>
+                                                {% endif %}
+                                                <figcaption class="figure-caption">{{ row['killer']['name'] }}
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </td>
+                                    <td style="width: 25%">
+                                        <a href="character?name={{ row['killed']['name'] }}">
+                                            <figure class="figure">
+                                                {% if row['killed']['imageThumb'] != "N/A" %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ row['killed']['imageThumb'] }}"
+                                                         alt="{{ row['killed']['name'] }}"/>
+                                                {% else %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                         style="width: 100px; height: 100px;"/>
+                                                {% endif %}
+                                                <figcaption class="figure-caption">{{ row['killed']['name'] }}
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </td>
                                     <td style="width: 25%">{{ row['killing']['reason'] }}</td>
-                                    <td style="width: 25%">{{ row['relTypes'] }}</td>
+                                    <td style="width: 25%">{{ row['relTypes'][0] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>

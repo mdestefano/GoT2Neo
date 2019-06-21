@@ -19,7 +19,7 @@
                                         <tr>
                                             <td scope="row">Name</td>
                                             <td>
-                                                <a href="character/{{ row['character']['name'] }}">
+                                                <a href="character?name={{ row['character']['name'] }}">
                                                     {{ row['character']['name'] }}
                                                 </a>
                                             </td>
@@ -35,7 +35,7 @@
                                     </table>
                                 </div>
                                 <div class="col">
-                                    <a href="character/{{ row['character']['name'] }}">
+                                    <a href="character?name={{ row['character']['name'] }}">
                                         {% if row['character']['imageThumb'] != "N/A" %}
                                             <img src="{{ row['character']['imageThumb'] }}"
                                                  alt="{{ row['character']['name'] }}"/>

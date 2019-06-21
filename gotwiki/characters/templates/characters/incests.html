@@ -24,25 +24,35 @@
                             {% for row in data %}
                                 <tr>
                                     <td style="width: 33.33%">
-                                        <a href="character/{{ row['first']['name'] }}">
-                                            {% if row['first']['imageThumb'] != "N/A" %}
-                                                <img src="{{ row['first']['imageThumb'] }}"
-                                                     alt="{{ row['first']['name'] }}"/>
-                                            {% else %}
-                                                <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
-                                                     style="width: 100px; height: 100px;"/>
-                                            {% endif %}
+                                        <a href="character?name={{ row['first']['name'] }}">
+                                            <figure class="figure">
+                                                {% if row['first']['imageThumb'] != "N/A" %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ row['first']['imageThumb'] }}"
+                                                         alt="{{ row['first']['name'] }}"/>
+                                                {% else %}
+                                                    <img class="figure-img img-fluid rounded"
+                                                         src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                         style="width: 100px; height: 100px;"/>
+                                                {% endif %}
+                                                <figcaption class="figure-caption">{{ row['first']['name'] }}
+                                                </figcaption>
+                                            </figure>
                                         </a>
                                     </td>
                                     <td style="width: 33.33%">
-                                        <a href="character/{{ row['second']['name'] }}">
-                                            {% if row['second']['imageThumb'] != "N/A" %}
-                                                <img src="{{ row['second']['imageThumb'] }}"
-                                                     alt="{{ row['second']['name'] }}"/>
-                                            {% else %}
-                                                <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
-                                                     style="width: 100px; height: 100px;"/>
-                                            {% endif %}
+                                        <a href="character?name={{ row['second']['name'] }}">
+                                            <figure class="figure">
+                                                {% if row['second']['imageThumb'] != "N/A" %}
+                                                    <img src="{{ row['second']['imageThumb'] }}"
+                                                         alt="{{ row['second']['name'] }}"/>
+                                                {% else %}
+                                                    <img src="{{ url_for('static', filename='img/default-avatar.png')}}"
+                                                         style="width: 100px; height: 100px;"/>
+                                                {% endif %}
+                                                <figcaption class="figure-caption">{{ row['second']['name'] }}
+                                                </figcaption>
+                                            </figure>
                                         </a>
                                     </td>
                                     <td style="width: 33.33%">

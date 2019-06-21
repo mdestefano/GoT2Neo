@@ -21,7 +21,7 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a href="../character/{{ data[0]['killer']['name'] }}">
+                                        <a href="../character?name={{ data[0]['killer']['name'] }}">
                                             {% if data[0]['killer']['imageFull'] != "N/A" %}
                                                 <img src="{{ data[0]['killer']['imageFull'] }}"
                                                      alt="{{ data[0]['killer']['name'] }}"/>
@@ -53,7 +53,7 @@
                                         <tr>
                                             <td scope="row">Name</td>
                                             <td>
-                                                <a href="../character/{{ row['dead']['name'] }}">
+                                                <a href="../character?name={{ row['dead']['name'] }}">
                                                     {{ row['dead']['name'] }}
                                                 </a>
                                             </td>
@@ -83,7 +83,7 @@
                                     </table>
                                 </div>
                                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                                    <a href="../character/{{ row['dead']['name'] }}">
+                                    <a href="../character?name={{ row['dead']['name'] }}">
                                         {% if row['dead']['imageThumb'] != "N/A" %}
                                             <img src="{{ row['dead']['imageThumb'] }}"
                                                  alt="{{ row['dead']['name'] }}"/>
