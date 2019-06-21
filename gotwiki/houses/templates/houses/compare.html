@@ -1,0 +1,122 @@
+{% extends "empty_content.html" %}
+
+{% block section_name %}
+GoT2Neo - {{house_entity_1.name}} vs {{house_entity_2.name}} 
+{% endblock %}
+
+
+{% block content_visualization %}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <div class="card p-3">
+                <img class="img-fluid" src="{{house_entity_1.coa}}" alt="{{house_entity_1.name}}">
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card p-3">
+                <img class="img-fluid" src="{{house_entity_2.coa}}" alt="{{house_entity_2.name}}">
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <h4 class="card-header">Kills Between Them</h4>
+                <div class="card-body">                    
+                    {% if not kills_between_df.empty %}
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Killer
+                                </th>
+                                <th>
+                                    Killed
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for index,row in kills_between_df.iterrows() %}
+                                <tr>
+                                    <td>{{ row['killer'] }}</td>
+                                    <td>{{ row['killed'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <h2>NOPE</h2>
+                    {% endif%}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">                
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: {{queries[0]['name']}}
+                </h5>
+                <div class="card-body scrollable">
+                    <p>
+                        <b>
+                            {{queries[0]['value']}}
+                        </b>
+                    </p>
+                </div>
+            </div>                
+        </div> 
+
+        <div class="col-12">
+            <div class="card">
+                <h4 class="card-header">Sex Between Them</h4>
+                <div class="card-body">        
+                    {% if not kills_between_df.empty %}            
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Lover 1
+                                </th>
+                                <th>
+                                    Lover 2
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for index,row in sex_between_df.iterrows() %}
+                                <tr>
+                                    <td>{{ row['character_1'] }}</td>
+                                    <td>{{ row['character_2'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <h2>NOPE</h2>
+                    {% endif%}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">                
+            <div class="card queryCard" id="query-card">
+                <h5 class="card-header" style="text-align:center">
+                    Query: {{queries[1]['name']}}
+                </h5>
+                <div class="card-body scrollable">
+                    <p>
+                        <b>
+                            {{queries[1]['value']}}
+                        </b>
+                    </p>
+                </div>
+            </div>                
+        </div>
+    
+    </div>
+
+{% endblock %}
