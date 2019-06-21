@@ -1,7 +1,7 @@
 {% extends "empty_content.html" %}
 {% block script_block %}
     <script src="{{ url_for('static', filename='js/plotly-charts.js')}}" type="text/javascript"></script>
-    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/utility.js')}}" type="text/javascript"></script> 
 {% endblock%}
 {% block section_name %}
     Main events
@@ -64,7 +64,9 @@
                     Query: getDeathPercentagesPerSeason
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b>{{queryDeathCountLocation}}</b></p>
+                    <pre>
+                        <code class="cypher">{{ queryDeathCountLocation }}</code>
+                    </pre>
                 </div>
             </div>
         </div>
@@ -173,7 +175,9 @@
                     Query: getDeathCountOfHousePerLocation(HouseStark/ HouseTargaryen)
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b>{{queryStarkTarg}}</b></p>
+                    <pre>
+                        <code class="cypher">{{ queryStarkTarg }}</code>
+                    </pre>
                 </div>
             </div>
         </div>
@@ -236,7 +240,9 @@
                     Query: getFrequencyPerLocation
                 </h5>
                 <div class="card-body scrollable">
-                    <p><b>{{querySceneLocation}}</b></p>
+                    <pre>
+                        <code class="cypher">{{ querySceneLocation }}</code>
+                    </pre>
                 </div>
             </div>
         </div>

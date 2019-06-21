@@ -1,6 +1,5 @@
 .scrollable{
-    overflow-y: auto;
-    overflow: hidden;
+    overflow: auto;
   }
   
   .graphCard{
@@ -8,8 +7,8 @@
   }
 
   .queryCard{
-    max-height: 30vh;
-    background-color: rgb(230, 235, 230)
+    background-color: #F0F0F0;
+    max-height: 50vh;
   }
 
   hr { 
