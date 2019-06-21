@@ -61,11 +61,9 @@ GoT2Neo - {{house_entity_1.name}} vs {{house_entity_2.name}}
                     Query: {{queries[0]['name']}}
                 </h5>
                 <div class="card-body scrollable">
-                    <p>
-                        <b>
-                            {{queries[0]['value']}}
-                        </b>
-                    </p>
+                    <pre>
+                        <code class="cypher">{{ queries[0]['value'] }}</code>
+                    </pre>    
                 </div>
             </div>                
         </div> 
@@ -108,11 +106,9 @@ GoT2Neo - {{house_entity_1.name}} vs {{house_entity_2.name}}
                     Query: {{queries[1]['name']}}
                 </h5>
                 <div class="card-body scrollable">
-                    <p>
-                        <b>
-                            {{queries[1]['value']}}
-                        </b>
-                    </p>
+                    <pre>
+                        <code class="cypher">{{ queries[1]['value'] }}</code>
+                    </pre>    
                 </div>
             </div>                
         </div>

@@ -17,7 +17,6 @@ GoT2Neo - House {{house.name}}
 {% endblock %}
 
 {% block content_visualization %}  
-    
     <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="card">
@@ -69,14 +68,12 @@ GoT2Neo - House {{house.name}}
                 </div>
             </div>
         </div>
-
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card">
                 <div id="piechart"></div>
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
             <div class="card card-plain">
@@ -117,12 +114,7 @@ GoT2Neo - House {{house.name}}
                 </div>
             </div> 
         </div>
-
-        
-
-
     </div>
-
     <div class="row">
         <div class="col-12">
             {% for query in queries %}
@@ -131,15 +123,12 @@ GoT2Neo - House {{house.name}}
                     Query: {{query['name']}}
                 </h5>
                 <div class="card-body scrollable">
-                    <p>
-                        <b>
-                            {{query['value']}}
-                        </b>
-                    </p>
+                    <pre>
+                        <code class="cypher">{{ query['value'] }}</code>
+                    </pre>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
-
 {% endblock %}
